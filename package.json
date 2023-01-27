@@ -1,17 +1,29 @@
 {
-  "name": "Vanilla Project",
+  "name": "vanila_js_project",
   "version": "1.0.0",
-  "description": "멋쟁이 사자처럼 바닐라 프로젝트",
-  "main": "main.js",
-  "scripts": {},
-  "keywords": [
-    "html",
-    "css",
-    "javascript",
-    "시맨틱 마크업",
-    "웹표준",
-    "함수형 프로그래밍"
-  ],
-  "author": "담당자",
-  "license": "ISC"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server client --host=localhost --port=5500 --no-browser",
+    "serve": "npx json-server server/db/data.json",
+    "all": "run-p serve start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/market-karly/vanila_JS_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/market-karly/vanila_JS_project/issues"
+  },
+  "homepage": "https://github.com/market-karly/vanila_JS_project#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "json-server": "^0.17.1",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5"
+  }
 }
