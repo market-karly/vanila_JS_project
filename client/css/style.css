@@ -137,5 +137,23 @@
   color: var(--gray-400);
 }
 .header--nav-sub-menu {
+  position: absolute;
+  flex-flow: column nowrap;
+  background: var(--white);
+  font-size: 14px;
   display: none;
+}
+.header--nav-sub-menu a {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+.header--nav-sub-menu li:hover {
+  background-color: var(--gray-100);
+  color: var(--primary);
+}
+.header--nav-menu-item.closed .header--nav-sub-menu {
+  display: flex;
 }
