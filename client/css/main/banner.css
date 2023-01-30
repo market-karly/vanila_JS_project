@@ -1,0 +1,10 @@
+.main-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper {
+  flex-shrink: 0;
+  width: 1900px;
+}
