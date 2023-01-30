@@ -1,0 +1,101 @@
+.main{
+  max-width: 120rem;
+  display: flex;
+  justify-content: center;
+}
+
+.recommend{
+  max-width: var(--container-width);
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 3.125rem 0 2.5rem 0;
+}
+
+/* 추천 제목 */
+.recommend__title{
+  padding: var(--spacing-xs) 0;
+  margin-bottom: 2.5rem;
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+/* 추천 상품 */
+.product-brief{
+
+  margin-right: 1.125rem;
+}
+
+/* 추천 상품 - visual */
+.product-brief__visual{
+  position: relative;
+  margin-bottom: var(--spacing-base);
+}
+
+.product-brief__icon{
+  border: none;
+  background-color: transparent;
+  height: 45px;
+  width: 45px;
+  position:absolute;
+  z-index: 10;
+  right: 15px;
+  bottom: 17px;
+}
+
+.product-brief__icon img{
+  position: relative;
+  left: -7px;
+  top: -2px;
+}
+
+/* 추천 상품 - 정보 */
+.product-brief__info{
+  max-width: 249px;
+}
+
+.product-brief__title{
+  margin-bottom:var(--spacing-xs);
+}
+
+.product-brief__price{
+  display: block;
+  font-size: var(--text-md);
+  font-weight: 600;
+  margin-bottom:var(--spacing-xs);
+}
+
+.product-brief__info .is-sale{
+  position: relative;
+  font-size: var(--text-sm);
+  text-decoration: line-through;
+  margin-top: var(--spacing-xs);
+  color: var(--grey-400);
+}
+
+.product-brief__sale-ratio{
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--accent-yellow);
+  margin-right: var(--spacing-xs);
+}
+
+.product-brief__sale-price{
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+/* 스와이퍼 next 버튼 */
+.swiper-button-next{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url(../assets/mainPage/recommend/recommendArrow.jpg) no-repeat;
+  border-radius: 50%;
+  right:-16px;
+  top: 160px;
+}
+
+.swiper-button-next::after{
+  display: none;
+}
