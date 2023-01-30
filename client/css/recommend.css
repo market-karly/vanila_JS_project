@@ -1,7 +1,9 @@
 .main{
   max-width: 120rem;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 }
 
 .recommend{
@@ -12,7 +14,6 @@
   padding: 3.125rem 0 2.5rem 0;
 }
 
-/* 추천 제목 */
 .recommend__title{
   padding: var(--spacing-xs) 0;
   margin-bottom: 2.5rem;
@@ -20,13 +21,14 @@
   font-weight: 700;
 }
 
-/* 추천 상품 */
-.product-brief{
+.swiper-wrapper{
+  max-width: var(--container-width);
+}
 
+.product-brief{
   margin-right: 1.125rem;
 }
 
-/* 추천 상품 - visual */
 .product-brief__visual{
   position: relative;
   margin-bottom: var(--spacing-base);
@@ -49,7 +51,6 @@
   top: -2px;
 }
 
-/* 추천 상품 - 정보 */
 .product-brief__info{
   max-width: 249px;
 }
@@ -85,14 +86,13 @@
   font-weight: 600;
 }
 
-/* 스와이퍼 next 버튼 */
 .swiper-button-next{
   position: absolute;
   width: 60px;
   height: 60px;
   background: url(../assets/mainPage/recommend/recommendArrow.jpg) no-repeat;
   border-radius: 50%;
-  right:-16px;
+  right:-33px;
   top: 160px;
 }
 
