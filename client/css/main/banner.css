@@ -28,3 +28,15 @@
 .swiper-button-next::after {
   display: none;
 }
+
+.swiper-pagination {
+  background-color: rgba(40, 40, 40, 30%);
+  margin-left: 1463px;
+  margin-bottom: 28px;
+  border-radius: 15px;
+  width: 47px;
+  height: 18px;
+  line-height: 18px;
+  color: var(--white);
+  font-size: var(--text-sm);
+}
