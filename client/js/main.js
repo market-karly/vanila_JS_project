@@ -30,3 +30,16 @@ const swiper = new Swiper(".swiper", {
     type: "fraction",
   },
 });
+
+/* eslint no-undef:'warn' */
+/* eslint no-unused-vars:'off' */
+const swiper1 = new Swiper(".swiper-recommend", {
+  direction: "horizontal",
+  slidesPerView: 4,
+  spaceBetween: 18,
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-recommend-button-next",
+  },
+});
