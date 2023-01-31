@@ -17,27 +17,23 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/recommend.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
 
   <body>
     <main class="main">
-      <section>
-        <div class="swiper-1 product-swiper">
-          <div class="swiper-wrapper"></div>
-        </div>
-      </section>
 
       <section class="recommend">
         <h2 class="a11y-hidden">추천상품</h2>
         <p class="recommend__title">이 상품 어때요?</p>
-        <div class="swiper-container swiper-2 product-swiper">
+        <div class="swiper-recommend product-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productJjolmyeon.jpg"
+                    src="./assets/mainPage/recommend/product-jjolmyeon.jpg"
                     alt="풀무원 탱탱쫄면 4개입"
                     class="product-brief__img"
                   />
@@ -56,11 +52,11 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productSunCushion.jpg"
+                    src="./assets/mainPage/recommend/product-sun-cushion.jpg"
                     alt="온더바디 죠르디 시카 자석 선쿠션"
                     class="product-brief__img"
                   />
@@ -79,11 +75,11 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productBrownRice.jpg"
+                    src="./assets/mainPage/recommend/product-brown-rice.jpg"
                     alt="유기농 밀키퀸 현미 4kg"
                     class="product-brief__img"
                   />
@@ -100,11 +96,11 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productBabyDetergent.jpg"
+                    src="./assets/mainPage/recommend/product-baby-detergent.jpg"
                     alt="프로쉬 베이비 세탁세제"
                     class="product-brief__img"
                   />
@@ -123,25 +119,28 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-button-next"></div>
           </div>
+          <div class="swiper-button-next swiper-recommend-button-next"></div>
         </div>
       </section>
 
       <div class="line-banner">
-        <img src="./assets/mainPage/lineBanner/lineBanner.jpg" alt="적립률 높아지고 3종 쿠폰팩이 제공되는 10월 퍼플위크 배너" />
+        <img
+          src="./assets/mainPage/lineBanner/line-banner.jpg"
+          alt="적립률 높아지고 3종 쿠폰팩이 제공되는 10월 퍼플위크 배너"
+        />
       </div>
 
       <section class="recommend">
         <h2 class="a11y-hidden">추천할인</h2>
         <p class="recommend__title">놓치면 후회할 가격</p>
-        <div class="swiper-container swiper-3 product-swiper">
+        <div class="swiper-recommend product-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productJjolmyeon.jpg"
+                    src="./assets/mainPage/recommend/product-jjolmyeon.jpg"
                     alt="풀무원 탱탱쫄면 4개입"
                     class="product-brief__img"
                   />
@@ -160,11 +159,11 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productSunCushion.jpg"
+                    src="./assets/mainPage/recommend/product-sun-cushion.jpg"
                     alt="온더바디 죠르디 시카 자석 선쿠션"
                     class="product-brief__img"
                   />
@@ -183,11 +182,11 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productBrownRice.jpg"
+                    src="./assets/mainPage/recommend/product-brown-rice.jpg"
                     alt="유기농 밀키퀸 현미 4kg"
                     class="product-brief__img"
                   />
@@ -204,11 +203,11 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slides product-brief">
+            <div class="swiper-slide product-brief">
               <a href="#">
                 <div class="product-brief__visual">
                   <img
-                    src="./assets/mainPage/recommend/productBabyDetergent.jpg"
+                    src="./assets/mainPage/recommend/product-baby-detergent.jpg"
                     alt="프로쉬 베이비 세탁세제"
                     class="product-brief__img"
                   />
@@ -227,8 +226,8 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-button-next"></div>
           </div>
+          <div class="swiper-button-next swiper-recommend-button-next"></div>
         </div>
       </section>
     </main>
