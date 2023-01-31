@@ -164,6 +164,7 @@
   background: var(--white);
   font-size: 14px;
   display: none;
+  z-index: 10;
 }
 .header--nav-sub-menu a {
   padding: 8px;

@@ -1,4 +1,4 @@
-import { getNode, toggleClass, clearContents } from "./../lib/index.js";
+import { getNode, toggleClass, clearContents } from "../../lib/index.js";
 
 const dropdown = getNode(".header--nav-menu-item");
 const dropdownBtn = getNode(".header--nav-dropdown");

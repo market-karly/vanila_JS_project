@@ -4,6 +4,7 @@
 @import url(./theme.css);
 @import url(./base.css);
 @import url(./pretendard.css);
-@import url(./header.css);
-@import url(./aside.css);
-@import url(./footer.css);
+@import url(./main/banner.css);
+@import url(./main/header.css);
+@import url(./main/aside.css);
+@import url(./main/footer.css);
