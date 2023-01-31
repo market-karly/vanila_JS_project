@@ -7,19 +7,47 @@
 @import url(./aside.css);
 @import url(./footer.css);
 
-* {
-  color: var(--content);
-}
 .is-active {
   color: var(--primary);
 }
 
+/* 상위 배너 */
+.banner {
+  background-color: var(--primary);
+  display: block;
+}
+.banner--inner p,
+.banner--inner b {
+  color: var(--white);
+}
+.banner--inner {
+  max-width: var(--container-width);
+  margin: auto;
+  line-height: 2.625rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.banner--inner p {
+  flex-grow: 1;
+  text-align: center;
+}
+.banner--inner b {
+  font-weight: 600;
+}
+.banner--close-btn{
+  background-color: transparent;
+  border: none;
+  flex-shrink: 0;
+}
 /* 헤더 메인 */
 .header {
   max-width: var(--container-width);
   margin: 3.25rem auto;
   position: relative;
 }
+
 .header--main {
   display: flex;
   flex-flow: row nowrap;
@@ -29,18 +57,19 @@
   gap: 5.9375rem;
   position: relative;
 }
-.header-main-link-list {
+.header--main-link-list{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: var(--spacing-md);
-  font-weight: 600;
-  font-size: var(--text-md);
   line-height: 150%;
   position: relative;
   color: var(--gray-400);
+  font-weight: 600;
+  font-size: var(--text-md);
 }
-.header-main-link-list::after {
+
+.header--main-link-list::after {
   content: "";
   display: inline-block;
   width: 0.0938rem;
