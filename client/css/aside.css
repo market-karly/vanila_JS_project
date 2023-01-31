@@ -1,0 +1,54 @@
+@import url(./theme.css);
+
+.main {
+  position: relative;
+  margin-bottom: 2.5rem;
+  /* height: 1000vh; */
+}
+
+.aside {
+  position: absolute;
+  top: 10rem;
+  right: 7.5rem;
+  bottom: -11.25rem;
+  z-index: 1;
+  margin-top: 11.25rem;
+}
+
+.aside-bar {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5rem;
+  font-size: var(--text-sm);
+  line-height: 1rem;
+  color: var(--black);
+  letter-spacing: -0.3px;
+}
+
+.aside-box {
+  margin-top: 0.5rem;
+  border: 1px solid var(--gray-200);
+  background-color: var(--white);
+  text-align: center;
+  font-weight: 500;
+}
+
+.aside-img {
+  text-align: center;
+  font-weight: 500;
+}
+
+.aside-item {
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.aside-btn {
+  overflow: visible;
+  background-color: transparent;
+  border: none;
+}
