@@ -3,12 +3,12 @@
 .main {
   position: relative;
   margin-bottom: 2.5rem;
-  height: 1000vh;
+  /* height: 1000vh; */
 }
 
 .aside {
   position: absolute;
-  top: 32.25rem;
+  top: 10rem;
   right: 7.5rem;
   bottom: -11.25rem;
   z-index: 1;
