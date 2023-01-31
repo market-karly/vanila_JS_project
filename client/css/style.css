@@ -4,10 +4,8 @@
 @import url(./theme.css);
 @import url(./base.css);
 @import url(./pretendard.css);
+@import url(./main/banner.css);
 
-* {
-  color: var(--content);
-}
 .is-active {
   color: var(--primary);
 }
@@ -15,9 +13,10 @@
 /* 헤더 메인 */
 .header {
   max-width: var(--container-width);
-  margin: 3.25rem auto;
+  margin: 3.25rem auto 0;
   position: relative;
 }
+
 .header--main {
   display: flex;
   flex-flow: row nowrap;
@@ -27,6 +26,7 @@
   gap: 5.9375rem;
   position: relative;
 }
+
 .header-main-link-list {
   display: flex;
   flex-flow: row nowrap;
@@ -38,6 +38,7 @@
   position: relative;
   color: var(--gray-400);
 }
+
 .header-main-link-list::after {
   content: "";
   display: inline-block;
@@ -48,11 +49,13 @@
   top: 1.0625rem;
   right: 5.375rem;
 }
+
 .new-badge {
   position: absolute;
   top: var(--spacing-xs);
   right: -1rem;
 }
+
 .header--main-search {
   padding: var(--spacing-sm) 3.75rem var(--spacing-sm) var(--spacing-md);
   position: absolute;
@@ -63,6 +66,7 @@
   border: 0.125rem solid var(--primary);
   border-radius: 0.25rem;
 }
+
 .header--main-search:focus {
   outline: none;
 }
@@ -75,6 +79,7 @@
   padding: var(--spacing-xs);
   z-index: 10;
 }
+
 .header--main-icons {
   display: flex;
   flex-flow: row nowrap;
@@ -91,10 +96,12 @@
   top: -2.1875rem;
   right: 0;
 }
+
 .header--member a {
   padding: var(--spacing-xs);
   font-size: var(--text-sm);
 }
+
 .header--member li:nth-child(-n + 2)::after {
   content: "";
   display: inline-block;
@@ -110,12 +117,14 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: var(--spacing-sm) 0;
+  margin: var(--spacing-sm) 0 0;
   padding: var(--spacing-base) 0;
 }
+
 .header--nav-menu li {
   display: inline-block;
 }
+
 .header--nav-menu-item button {
   border: none;
   background-color: transparent;
@@ -124,10 +133,12 @@
   padding: var(--spacing-xs);
   display: inline-block;
 }
+
 .header-nav-hamburger {
   transform: translateY(1px);
   margin-right: var(--spacing-xs);
 }
+
 .delivery-btn {
   background-color: transparent;
   border: 1px solid var(--gray-500);
@@ -136,6 +147,7 @@
   font-size: var(--text-sm);
   color: var(--gray-400);
 }
+
 .header--nav-sub-menu {
   position: absolute;
   flex-flow: column nowrap;
@@ -143,6 +155,7 @@
   font-size: 14px;
   display: none;
 }
+
 .header--nav-sub-menu a {
   padding: 8px;
   display: flex;
@@ -150,10 +163,12 @@
   gap: 6px;
   font-weight: 600;
 }
+
 .header--nav-sub-menu li:hover {
   background-color: var(--gray-100);
   color: var(--primary);
 }
+
 .header--nav-menu-item.closed .header--nav-sub-menu {
   display: flex;
 }

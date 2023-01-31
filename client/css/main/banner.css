@@ -1,0 +1,42 @@
+.main-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper {
+  flex-shrink: 0;
+  width: 1900px;
+}
+
+.swiper-button {
+  width: 52px;
+  height: 52px;
+  background: url(../../assets/icons/Icon/Arrow.svg) no-repeat 0 0;
+}
+
+.swiper-button-prev {
+  margin-left: 350px;
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+  margin-right: 350px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-pagination {
+  background-color: rgba(40, 40, 40, 30%);
+  margin-left: 1463px;
+  margin-bottom: 28px;
+  border-radius: 15px;
+  width: 47px;
+  height: 18px;
+  line-height: 18px;
+  color: var(--white);
+  font-size: var(--text-sm);
+}
