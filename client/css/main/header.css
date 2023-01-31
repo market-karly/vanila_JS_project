@@ -35,7 +35,7 @@
 /* 헤더 메인 */
 .header {
   max-width: var(--container-width);
-  margin: 3.25rem auto;
+  margin: 3.25rem auto 0;
   position: relative;
 }
 
@@ -132,8 +132,8 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: var(--spacing-sm) 0;
-  padding: var(--spacing-base) 0;
+  margin: var(--spacing-sm) 0 0;
+  padding: var(--spacing-base) 0 0;
 }
 .header--nav-menu li {
   display: inline-block;
