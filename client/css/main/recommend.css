@@ -48,6 +48,14 @@
 
 .product-brief__title {
   margin-bottom: var(--spacing-xs);
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: normal;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .product-brief__price {
@@ -61,7 +69,7 @@
   font-size: var(--text-sm);
   text-decoration: line-through;
   margin-top: var(--spacing-xs);
-  color: var(--grey-400);
+  color: var(--gray-400);
 }
 
 .product-brief__sale-ratio {
@@ -88,7 +96,8 @@
 }
 
 .swiper-recommend-button-prev {
-  background: no-repeat center/100% url(../../assets/mainPage/recommend/recommend-arrow.jpg);
+  background: no-repeat center/100%
+    url(../../assets/mainPage/recommend/recommend-arrow.jpg);
   position: absolute;
   z-index: 10;
   width: 50px;
@@ -100,7 +109,8 @@
 }
 
 .swiper-recommend-button-next {
-  background: no-repeat center/100% url(../../assets/mainPage/recommend/recommend-arrow.jpg);
+  background: no-repeat center/100%
+    url(../../assets/mainPage/recommend/recommend-arrow.jpg);
   position: absolute;
   z-index: 10;
   width: 50px;
