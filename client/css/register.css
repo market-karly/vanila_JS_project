@@ -1,0 +1,94 @@
+.register {
+  width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.register--title {
+  margin-top: 80px;
+  font-size: var(--text-md);
+  font-weight: 600;
+  text-align: center;
+}
+
+.register--info-necessary {
+  line-height: 44px;
+  height: 44px;
+  font-size: 12px;
+  align-self: flex-end;
+}
+
+.register--table {
+  border-top: 2px var(--black) solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.register--item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+  line-height: 44px;
+}
+
+.register--input {
+  width: 333px;
+  height: 44px;
+  padding-left: 20px;
+}
+
+.register--info,
+.register--input {
+  margin-right: 8px;
+}
+
+.register--info {
+  display: block;
+  width: 139px;
+  height: 44px;
+  font-weight: 600;
+  padding-left: 4px;
+  margin-left: 4px;
+}
+
+.register--validation-button {
+  width: 143px;
+  height: 44px;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}
+
+.register--address-button {
+  width: 333px;
+  height: 44px;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}
+
+.register--address-info {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 4px;
+}
+
+.register--radio {
+  width: 333px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.register--necessary {
+  color: var(--info-error);
+}
