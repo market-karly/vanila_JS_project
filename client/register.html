@@ -158,7 +158,7 @@
   <main class="register">
     <h2 class="register--title">회원가입</h2>
     <p class="register--info-necessary"><span class="register--necessary">&#42;</span>필수입력사항</p>
-    <form action="#" method="post">
+    <form action="#" method="post" id="register">
       <fieldset>
         <legend class="a11y-hidden">회원 정보 입력</legend>
         <table>
@@ -269,8 +269,16 @@
             </tr>
             <tr class="register--item">
               <td><label class="register--info" for="birth">생년월일</label></td>
-              <td><input type="date" id="userPWcheck" /></td>
-              <td></td>
+              <td class="register--birth">
+                <input class="register--birth--input" type="text" id="birthYear" name="birthYear" placeholder="YYYY"
+                  value="" maxlength="4" />
+                &#47;
+                <input class="register--birth--input" type="text" id="birthMonth" name="birthMonth" placeholder="MM"
+                  value="" maxlength="2" />
+                &#47;
+                <input class="register--birth--input" type="text" id="birthDay" name="birthDay" placeholder="DD"
+                  value="" maxlength="2" />
+              </td>
             </tr>
             <tr class="register--item">
               <td><label class="register--info" for="etc">추가입력 사항</label></td>
@@ -288,7 +296,49 @@
           </tbody>
         </table>
       </fieldset>
+      <fieldset>
+        <legend class="a11y-hidden"></legend>
+        <table>
+          <tbody class="register-term">
+            <tr>
+              <th class="register-term--title">
+                <label class="register--info">
+                  이용약관 동의<span class="register--necessary">&#42;</span>
+                </label>
+              </th>
+            </tr>
+            <tr class="register-term--agree">
+              <td>
+                <input type="checkbox" id="agree-all" />
+                <label class="register-term--agree-all" for="agree-all">전체 동의합니다.</label>
+                <p class="register-term--agree-all-info">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+              </td>
+              <td class="register-term--detail">
+                <input type="checkbox" id="agree-using-term" />
+                <label for="agree-using-term">이용약관 동의 &#40;필수&#41;</label>
+                <a class="register--term-link" href="">약관보기</a>
+              </td>
+              <td class="register-term--detail">
+                <input type="checkbox" id="agree-personal-info" />
+                <label for="agree-personal-info">개인정보 수집 &#8226; 이용 동의 &#40;필수&#41;</label>
+                <a class="register--term-link" href="">약관보기</a>
+              </td>
+              <td class="register-term--detail">
+                <input type="checkbox" id="agree-benefit" />
+                <label for="agree-benefit">무료배송, 할인쿠폰 등 혜택&#47;정보 수신 동의 &#40;선택&#41;</label>
+                <a class="register--term-link" href="">약관보기</a>
+              </td>
+              <td class="register-term--detail">
+                <input type="checkbox" id="agree-age" />
+                <label for="agree-age">본인은 만 14세 이상입니다. &#40;필수&#41;</label>
+                <a class="register--term-link" href="">약관보기</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
     </form>
+    <button class="register--button-submit" type="submit" form="register">가입하기</button>
   </main>
 
   <footer class="footer">
