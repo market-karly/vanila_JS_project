@@ -1,4 +1,3 @@
-
 .login {
   width: 100%;
   height: 100%;
@@ -61,4 +60,49 @@
   position: absolute;
   top: 15.625rem;
   font-size: 0.875rem;
+}
+
+/* 경고창 */
+.alert {
+  width: 22.5rem;
+  height: fit-content;
+  background-color: var(--white);
+  padding: var(--spacing-base);
+  text-align: center;
+  font-weight: 600;
+  border-radius: var(--spacing-base);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none;
+}
+.alert--warning {
+  margin: 1.5rem auto 2.25rem auto;
+}
+.alert--button {
+  width: 306.4px;
+  display: block;
+  background-color: var(--white);
+  font-weight: 600;
+  margin: auto;
+  padding-top: var(--spacing-base);
+  padding-bottom: var(--spacing-xs);
+  border: none;
+  border-top: 1px solid var(--gray-50);
+}
+.alert--background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  display: none;
 }
