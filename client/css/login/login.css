@@ -1,0 +1,64 @@
+
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.login--title {
+  font-weight: 600;
+  font-size: 21.328px;
+  line-height: 150%;
+  margin: 2.75rem auto;
+}
+.login--form fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.login--form fieldset *,
+.login--mv-signUp {
+  width: 21.25rem;
+  height: 3.125rem;
+}
+.login--form input {
+  border: 0.0625rem solid var(--gray-200);
+  border-radius: 0.25rem;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+.login--form-button,
+.login--mv-signUp {
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+.login--form-button {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+  margin-top: 3.6875rem;
+  margin-bottom: var(--spacing-sm);
+}
+.login--mv-signUp {
+  background-color: transparent;
+  border: 0.0625rem solid var(--primary);
+  color: var(--primary);
+}
+.login--find li:nth-child(-n + 1)::after {
+  content: "";
+  margin-left: 0.25rem;
+  width: 0.0625rem;
+  height: 0.5625rem;
+  background-color: var(--content);
+  display: inline-block;
+}
+.login--find {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 21.25rem;
+  justify-content: end;
+  gap: 0.25rem;
+  position: absolute;
+  top: 15.625rem;
+  font-size: 0.875rem;
+}
