@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/login/login.js" type="module"></script>
+    <title>마켓칼리-로그인페이지</title>
+  </head>
+  <body>
+    <section class="login">
+      <h2 class="login--title">로그인</h2>
+      <form action="" class="login--form" method="">
+        <fieldset>
+          <legend>회원 로그인 폼</legend>
+          <input
+            type="text"
+            id="userId"
+            name="userId"
+            placeholder="아이디를 입력해주세요"
+            required
+          />
+          <input
+            type="password"
+            id="userPw"
+            name="userPw"
+            placeholder="비밀번호를 입력해주세요"
+            required
+          />
+          <button type="submit" class="login--form-button">로그인</button>
+        </fieldset>
+      </form>
+      <button type="button" class="login--mv-signUp">회원가입</button>
+      <ul class="login--find">
+        <li><a href="/">아이디 찾기</a></li>
+        <li><a href="/">비밀번호 찾기</a></li>
+      </ul>
+    </section>
+  </body>
+</html>
