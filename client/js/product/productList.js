@@ -1,4 +1,3 @@
-export * from "././product/ProductNav.js";
 import {
   renderProduct,
   renderSaleProduct,
