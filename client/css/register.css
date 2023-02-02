@@ -21,13 +21,13 @@
   align-self: flex-end;
 }
 
-.register--table {
+.register-table {
   border-top: 2px var(--black) solid;
   display: flex;
   flex-direction: column;
 }
 
-.register--item {
+.register-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -35,18 +35,20 @@
   line-height: 44px;
 }
 
-.register--input {
+.register-item__input {
   width: 333px;
   height: 44px;
   padding-left: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300);
 }
 
-.register--info,
-.register--input {
+.register-item__label,
+.register-item__input {
   margin-right: 8px;
 }
 
-.register--info {
+.register-item__label {
   display: block;
   width: 139px;
   height: 44px;
@@ -55,7 +57,7 @@
   margin-left: 4px;
 }
 
-.register--validation-button {
+.register-item__button-validation {
   width: 143px;
   height: 44px;
   font-weight: 600;
@@ -65,7 +67,7 @@
   border-radius: 4px;
 }
 
-.register--address-button {
+.register-item__button-address {
   width: 333px;
   height: 44px;
   font-weight: 600;
@@ -75,13 +77,14 @@
   border-radius: 4px;
 }
 
-.register--address-info {
+.register-item__info-address {
   font-size: 12px;
   line-height: 12px;
   margin-top: 4px;
+  line-height: 160%;
 }
 
-.register--radio {
+.register-item__wrapper-radio {
   width: 333px;
   display: flex;
   flex-direction: row;
@@ -89,16 +92,16 @@
   align-items: flex-start;
 }
 
-.register--item--radio-content {
+.register-item__radio {
   display: flex;
   align-items: center;
 }
 
-.register--input-radio {
+.register-item__input-radio {
   position: relative;
 }
 
-.register--input-radio::after {
+.register-item__input-radio::after {
   display: inline-block;
   content: "";
   position: absolute;
@@ -110,11 +113,11 @@
   height: 24px;
 }
 
-.register--input-radio:checked::after {
+.register-item__input-radio:checked::after {
   background: #fff url(../assets/icons/Icon/isSelected=true.svg) no-repeat;
 }
 
-.register--label-radio {
+.register-item__label-radio {
   padding-left: 20px;
 }
 
@@ -141,7 +144,7 @@
   color: var(--info-error);
 }
 
-.register-term {
+.register-term-table {
   width: 640px;
   display: flex;
   flex-flow: row nowrap;
@@ -150,22 +153,22 @@
   border-bottom: 1px var(--black) solid;
 }
 
-.register-term--title {
+.register-term-title {
   text-align: left;
 }
 
-.register-term--agree {
+.register-term-item {
   display: flex;
   flex-direction: column;
   width: 429px;
   position: relative;
 }
 
-.register-term__input-check {
+.register-term-item__input {
   position: relative;
 }
 
-.register-term__input-check::after {
+.register-term-item__input::after {
   display: inline-block;
   content: "";
   background: #fff url(../assets/icons/Icon/isChecked=false.svg) no-repeat;
@@ -177,45 +180,45 @@
   height: 24px;
 }
 
-.register-term__input-check:checked::after {
+.register-term-item__input:checked::after {
   background: #fff url(../assets/icons/Icon/isChecked=true.svg) no-repeat;
 }
 
-.register-term--agree-all,
-.register-term__label-check {
+.register-term-item__label-all,
+.register-term-item__label {
   padding-left: 20px;
 }
 
-.register-term--agree-all-info {
+.register-term-item__info-all {
   font-size: 12px;
   color: var(--gray-400);
   text-align: right;
   line-height: 20px;
 }
 
-.register-term--agree-all {
+.register-term-item__label-all {
   font-size: 21px;
   font-weight: 600;
 }
 
-.register-term__detail-all,
-.register-term__detail {
+.register-term-item__detail-all,
+.register-term-item__detail {
   padding: 12px 0;
   display: flex;
   align-items: center;
 }
 
-.register-term__detail-all {
+.register-term-item__detail-all {
   padding-bottom: 0;
 }
 
-.register--term-link {
+.register-term-item__link {
   position: absolute;
   right: 0;
   color: var(--primary);
 }
 
-.register--term-link::after {
+.register-term-item__link::after {
   content: '';
   background: url(../assets/icons/Icon/Arrow-term.svg) no-repeat;
   display: inline-block;
@@ -224,7 +227,7 @@
   height: 11px;
 }
 
-.register--button-submit {
+.register__button-submit {
   width: 340px;
   height: 54px;
   background-color: var(--primary);

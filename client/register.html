@@ -162,113 +162,113 @@
       <fieldset>
         <legend class="a11y-hidden">회원 정보 입력</legend>
         <table>
-          <tbody class="register--table">
-            <tr class="register--item">
+          <tbody class="register-table">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="userId">
+                <label class="register-item__label" for="userId">
                   아이디<span class="register--necessary">&#42;</span>
                 </label>
               </td>
               <td>
-                <input class="register--input" type="text" id="userId" placeholder="아이디를 입력해주세요" required />
+                <input class="register-item__input" type="text" id="userId" placeholder="아이디를 입력해주세요" required />
               </td>
               <td>
-                <button class="register--validation-button" type="button">
+                <button class="register-item__button-validation" type="button">
                   중복확인
                 </button>
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="userPW">
+                <label class="register-item__label" for="userPW">
                   비밀번호<span class="register--necessary">&#42;</span>
                 </label>
               </td>
               <td>
-                <input class="register--input" type="password" id="userPW" placeholder="비밀번호를 입력해주세요" required />
+                <input class="register-item__input" type="password" id="userPW" placeholder="비밀번호를 입력해주세요" required />
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="userPWcheck">비밀번호 확인<span
+                <label class="register-item__label" for="userPWcheck">비밀번호 확인<span
                     class="register--necessary">&#42;</span></label>
               </td>
               <td>
-                <input class="register--input" type="password" id="userPWcheck" placeholder="비밀번호를 한번 더 입력해주세요"
+                <input class="register-item__input" type="password" id="userPWcheck" placeholder="비밀번호를 한번 더 입력해주세요"
                   required />
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="name">
+                <label class="register-item__label" for="name">
                   이름<span class="register--necessary">&#42;</span>
                 </label>
               </td>
               <td>
-                <input class="register--input" type="text" id="name" placeholder="이름을 입력해주세요" required />
+                <input class="register-item__input" type="text" id="name" placeholder="이름을 입력해주세요" required />
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="email">
+                <label class="register-item__label" for="email">
                   이메일<span class="register--necessary">&#42;</span>
                 </label>
               </td>
               <td>
-                <input class="register--input" type="email" id="email" placeholder="예) marketkarly@karly.com"
+                <input class="register-item__input" type="email" id="email" placeholder="예) marketkarly@karly.com"
                   required />
               </td>
               <td>
-                <button class="register--validation-button" type="button">
+                <button class="register-item__button-validation" type="button">
                   중복확인
                 </button>
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="phone">
+                <label class="register-item__label" for="phone">
                   휴대폰<span class="register--necessary">&#42;</span>
                 </label>
               </td>
               <td>
-                <input class="register--input" type="tel" id="phone" placeholder="숫자만 입력해주세요" required />
+                <input class="register-item__input" type="tel" id="phone" placeholder="숫자만 입력해주세요" required />
               </td>
               <td>
-                <button class="register--validation-button" type="button" disabled>인증번호 받기</button>
+                <button class="register-item__button-validation" type="button" disabled>인증번호 받기</button>
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="address">
+                <label class="register-item__label" for="address">
                   주소<span class="register--necessary">&#42;</span>
                 </label>
               </td>
               <td>
-                <button class="register--address-button" type="button">주소 검색</button>
-                <p class="register--address-info">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+                <button class="register-item__button-address" type="button">주소 검색</button>
+                <p class="register-item__info-address">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
               </td>
             </tr>
-            <tr class="register--item">
+            <tr class="register-item">
               <td>
-                <label class="register--info" for="gender">성별</label>
+                <label class="register-item__label" for="gender">성별</label>
               </td>
-              <td class="register--radio">
-                <div class="register--item--radio-content">
-                  <input class="register--input-radio" type="radio" value="남성" id="man" name="gender" />
-                  <label class="register--label-radio" for="man">남성</label>
+              <td class="register-item__wrapper-radio">
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="남성" id="man" name="gender" />
+                  <label class="register-item__label-radio" for="man">남성</label>
                 </div>
-                <div class="register--item--radio-content">
-                  <input class="register--input-radio" type="radio" value="여성" id="woman" name="gender" />
-                  <label class="register--label-radio" for="woman">여성</label>
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="여성" id="woman" name="gender" />
+                  <label class="register-item__label-radio" for="woman">여성</label>
                 </div>
-                <div class="register--item--radio-content">
-                  <input class="register--input-radio" type="radio" value="선태안함" id="unselect" name="gender" />
-                  <label class="register--label-radio" for="unselect">선택안함</label>
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="선태안함" id="unselect" name="gender" />
+                  <label class="register-item__label-radio" for="unselect">선택안함</label>
                 </div>
               </td>
             </tr>
-            <tr class="register--item">
-              <td><label class="register--info" for="birth">생년월일</label></td>
+            <tr class="register-item">
+              <td><label class="register-item__label" for="birth">생년월일</label></td>
               <td class="register--birth">
                 <input class="register--birth--input" type="text" id="birthYear" name="birthYear" placeholder="YYYY"
                   value="" maxlength="4" />
@@ -280,16 +280,16 @@
                   value="" maxlength="2" />
               </td>
             </tr>
-            <tr class="register--item">
-              <td><label class="register--info" for="etc">추가입력 사항</label></td>
-              <td class="register--radio">
-                <div class="register--item--radio-content">
-                  <input class="register--input-radio" type="radio" value="friend" id="friend" name="etc" />
-                  <label class="register--label-radio" for="friend">친구초대 추천인 아이디</label>
+            <tr class="register-item">
+              <td><label class="register-item__label" for="etc">추가입력 사항</label></td>
+              <td class="register-item__wrapper-radio">
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="friend" id="friend" name="etc" />
+                  <label class="register-item__label-radio" for="friend">친구초대 추천인 아이디</label>
                 </div>
-                <div class="register--item--radio-content">
-                  <input class="register--input-radio" type="radio" value="event" id="event" name="etc" />
-                  <label class="register--label-radio" for="event">참여 이벤트명</label>
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="event" id="event" name="etc" />
+                  <label class="register-item__label-radio" for="event">참여 이벤트명</label>
                 </div>
               </td>
             </tr>
@@ -297,52 +297,52 @@
         </table>
       </fieldset>
       <fieldset>
-        <legend class="a11y-hidden"></legend>
+        <legend class="a11y-hidden">이용약관 동의 폼</legend>
         <table>
-          <tbody class="register-term">
+          <tbody class="register-term-table">
             <tr>
-              <th class="register-term--title">
-                <label class="register--info">
+              <th class="register-term-title">
+                <label class="register-item__label">
                   이용약관 동의<span class="register--necessary">&#42;</span>
                 </label>
               </th>
             </tr>
-            <tr class="register-term--agree">
+            <tr class="register-term-item">
               <td>
-                <div class="register-term__detail-all">
-                  <input class="register-term__input-check" type="checkbox" id="agree-all" />
-                  <label class="register-term--agree-all" for="agree-all">전체 동의합니다.</label>
+                <div class="register-term-item__detail-all">
+                  <input class="register-term-item__input" type="checkbox" id="agree-all" />
+                  <label class="register-term-item__label-all" for="agree-all">전체 동의합니다.</label>
                 </div>
-                <p class="register-term--agree-all-info">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+                <p class="register-term-item__info-all">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
               </td>
-              <td class="register-term__detail">
-                <input class="register-term__input-check" type="checkbox" id="agree-using-term" />
-                <label class="register-term__label-check" for="agree-using-term">이용약관 동의 &#40;필수&#41;</label>
-                <a class="register--term-link" href="">약관보기</a>
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-using-term" />
+                <label class="register-term-item__label" for="agree-using-term">이용약관 동의 &#40;필수&#41;</label>
               </td>
-              <td class="register-term__detail">
-                <input class="register-term__input-check" type="checkbox" id="agree-personal-info" />
-                <label class="register-term__label-check" for="agree-personal-info">개인정보 수집 &#8226; 이용 동의
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-personal-info" />
+                <label class="register-term-item__label" for="agree-personal-info">개인정보 수집 &#8226; 이용 동의
                   &#40;필수&#41;</label>
-                <a class="register--term-link" href="">약관보기</a>
               </td>
-              <td class="register-term__detail">
-                <input class="register-term__input-check" type="checkbox" id="agree-benefit" />
-                <label class="register-term__label-check" for="agree-benefit">무료배송, 할인쿠폰 등 혜택&#47;정보 수신 동의
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-benefit" />
+                <label class="register-term-item__label" for="agree-benefit">무료배송, 할인쿠폰 등 혜택&#47;정보 수신 동의
                   &#40;선택&#41;</label>
-                <a class="register--term-link" href="">약관보기</a>
               </td>
-              <td class="register-term__detail">
-                <input class="register-term__input-check" type="checkbox" id="agree-age" />
-                <label class="register-term__label-check" for="agree-age">본인은 만 14세 이상입니다. &#40;필수&#41;</label>
-                <a class="register--term-link" href="">약관보기</a>
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-age" />
+                <label class="register-term-item__label" for="agree-age">본인은 만 14세 이상입니다. &#40;필수&#41;</label>
               </td>
             </tr>
           </tbody>
         </table>
       </fieldset>
     </form>
-    <button class="register--button-submit" type="submit" form="register">가입하기</button>
+    <button class="register__button-submit" type="submit" form="register">가입하기</button>
   </main>
 
   <footer class="footer">
