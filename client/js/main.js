@@ -36,8 +36,8 @@ const swiper = new Swiper(".swiper", {
 const swiper1 = new Swiper(".swiper-recommend--product", {
   direction: "horizontal",
   slidesPerView: 4,
+  slidesPerGroup: 4,
   spaceBetween: 18,
-  loop: true,
 
   navigation: {
     nextEl: ".swiper-recommend--product--button-next",
@@ -49,7 +49,6 @@ const swiper2 = new Swiper(".swiper-recommend--price", {
   direction: "horizontal",
   slidesPerView: 4,
   spaceBetween: 18,
-  loop: true,
 
   navigation: {
     nextEl: ".swiper-recommend--price--button-next",
