@@ -80,7 +80,9 @@
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 9999;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
 }
 .alert--warning {
   margin: 1.5rem auto 2.25rem auto;
@@ -104,5 +106,7 @@
   top: 0;
   left: 0;
   z-index: 9998;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
 }
