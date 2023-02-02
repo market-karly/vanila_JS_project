@@ -8,36 +8,23 @@ main {
 .product {
   width: 801px;
   display: flex;
+  justify-content: space-between;
   /* flex-flow: column; */
 }
 
 .product-list {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   width: inherit;
   margin-bottom: 24px;
 }
 
 .product-brief__container {
   display: block;
-  margin-right: 18px;
   height: 580px;
 }
 
-/* class명 style에 있음 추가로 넣어야할 것 --------------------------------------------------- */
-.product-brief__title {
-  overflow: hidden;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.product-brief__info .is-sale {
-  color: var(--gray-400);
-}
-/* --------------------------------------------------- */
 .product-brief__img {
   width: 249px;
   height: 320px;
