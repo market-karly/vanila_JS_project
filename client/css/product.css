@@ -14,17 +14,15 @@
 .product-brief__container {
   display: block;
   margin-right: 18px;
-  height:580px;
+  height: 580px;
 }
 
 /* class명 style에 있음 추가로 넣어야할 것 --------------------------------------------------- */
 .product-brief__title {
-  display: inline-block;
-  word-wrap: break-word;
   overflow: hidden;
-  white-space: normal;
-  display: -webkit-box;
+  word-wrap: break-word;
   text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
