@@ -15,7 +15,6 @@ main {
 .product-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   width: inherit;
   margin-bottom: 24px;
 }
@@ -23,6 +22,7 @@ main {
 .product-brief__container {
   display: block;
   height: 580px;
+  margin-left: 18px;
 }
 
 .product-brief__img {
