@@ -1,3 +1,10 @@
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .product {
   width: 801px;
   display: flex;
@@ -44,6 +51,10 @@
   line-height: 18px;
   color: var(--gray-400);
   margin-bottom: var(--spacing-xs);
+}
+
+.product-brief__info .is-hidden{
+  display:none;
 }
 
 /* 제품설명 */
