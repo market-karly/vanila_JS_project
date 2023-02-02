@@ -1,109 +1,110 @@
-.main{
-  max-width: 120rem;
+.main {
+  /* max-width: 120rem; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.recommend{
+.recommend {
   max-width: var(--container-width);
-  display:flex;
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 3.125rem 0 2.5rem 0;
 }
 
-.recommend__title{
+.recommend__title {
   padding: var(--spacing-xs) 0;
   margin-bottom: 2.5rem;
   font-size: var(--text-lg);
   font-weight: 700;
 }
 
-.product-brief__visual{
+.product-brief__visual {
   position: relative;
   margin-bottom: var(--spacing-base);
 }
 
-.product-brief__icon{
+.product-brief__icon {
   border: none;
   background-color: transparent;
   height: 45px;
   width: 45px;
-  position:absolute;
+  position: absolute;
   z-index: 10;
   right: 18px;
   bottom: 17px;
 }
 
-.product-brief__icon img{
+.product-brief__icon img {
   position: relative;
   left: -7px;
   top: -2px;
 }
 
-.product-brief__info{
+.product-brief__info {
   max-width: 249px;
 }
 
-.product-brief__title{
-  margin-bottom:var(--spacing-xs);
+.product-brief__title {
+  margin-bottom: var(--spacing-xs);
 }
 
-.product-brief__price{
+.product-brief__price {
   display: block;
   font-size: var(--text-md);
   font-weight: 600;
-  margin-bottom:var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
 }
 
-.product-brief__info .is-sale{
+.product-brief__info .is-sale {
   font-size: var(--text-sm);
   text-decoration: line-through;
   margin-top: var(--spacing-xs);
   color: var(--grey-400);
 }
 
-.product-brief__sale-ratio{
+.product-brief__sale-ratio {
   font-size: var(--text-md);
   font-weight: 600;
   color: var(--accent-yellow);
   margin-right: var(--spacing-xs);
 }
 
-.product-brief__sale-price{
+.product-brief__sale-price {
   font-size: var(--text-md);
   font-weight: 600;
 }
 
-.swiper-recommend{
+.swiper-recommend {
   max-width: var(--container-width);
   position: relative;
   overflow: hidden;
 }
 
-.swiper-recommend-button-next{
-  background:no-repeat center/100% url(../assets/mainPage/recommend/recommend-arrow.jpg);
+.swiper-recommend-button-next {
+  background: no-repeat center/100%
+    url(../assets/mainPage/recommend/recommend-arrow.jpg);
   position: absolute;
-  z-index:1;
+  z-index: 1;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  right:0;
+  right: 0;
   top: 160px;
 }
 
-.swiper-button-next::after{
+.swiper-button-next::after {
   display: none;
 }
 
-.line-banner{
+.line-banner {
   padding: 2.5rem 0;
   max-width: inherit;
 }
 
-.line-banner img{
+.line-banner img {
   max-width: inherit;
   height: 139px;
 }
