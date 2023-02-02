@@ -42,7 +42,7 @@ button {
 .nav-filter_button {
   display: flex;
   align-items: center;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .nav-filter_text-init {
@@ -112,14 +112,12 @@ button {
   transform: rotateZ(0deg);
 }
 
-.nav-menu_ul {
-  display: none;
-}
-.nav-menu_ul2 {
-  display: none;
-}
+.nav-menu_ul,
+.nav-menu_ul2,
 .nav-menu_ul3 {
-  display: none;
+  max-height: 0px;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
 }
 
 .nav-menu_ul-list:first-of-type {
@@ -178,26 +176,14 @@ input[type="checkbox"] {
   transform: rotateZ(180deg);
 }
 
-.nav-menu_ul.closed1 {
-  display: flex;
-  flex-flow: column nowrap;
-  height: auto;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
-.nav-menu_ul2.closed2 {
-  display: flex;
-  flex-flow: column nowrap;
-  height: auto;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
+.nav-menu_ul.closed1,
+.nav-menu_ul2.closed2,
 .nav-menu_ul3.closed3 {
   display: flex;
   flex-flow: column nowrap;
-  height: auto;
+  opacity: 1;
+  max-height: 100vh;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
 }
 
 .nav-menu_ul-list {
