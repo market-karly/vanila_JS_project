@@ -290,6 +290,8 @@
       </nav>
     </header>
     <main>
+      <span class="product-list__title">베스트</span>
+
       <section class="product">
         <div class="product-list-nav">
           <div class="product-list-nav-filter">
@@ -615,91 +617,152 @@
             </div>
           </div>
         </div>
-        <h2 class="a11y-hidden">상품리스트</h2>
-        <ul class="product-list">
-          <li class="product-brief-wrap">
-            <a href="#" class="product-brief__container">
-              <div class="product-brief__visual">
-                <img
-                  src="./assets/mainPage/recommend/product-baby-detergent.jpg"
-                  alt="프로쉬 베이비 세탁세제"
-                  class="product-brief__img"
-                />
-                <button type="button" class="product-brief__icon">
+        <div class="product-list-wrapper">
+          <h2 class="a11y-hidden">상품리스트</h2>
+          <!-- 정렬기능 -->
+          <div class="product-list--filtering-wrapper">
+            <span class="product-count">총 284건</span>
+            <ul class="product-filter">
+              <li>추천순</li>
+              <div class="question-icon">
+                <svg width="14" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.9932 0.700195C8.73506 0.700195 10.3116 1.40557 11.4528 2.54565C12.5943 3.68594 13.3002 5.26111 13.3002 7.0002C13.3002 8.73928 12.5943 10.3145 11.4528 11.4547C10.3116 12.5948 8.73506 13.3002 6.9932 13.3002C5.25512 13.3002 3.68233 12.595 2.54387 11.4554C1.40457 10.315 0.700195 8.73952 0.700195 7.0002C0.700195 5.26087 1.40457 3.68541 2.54387 2.54497C3.68233 1.40537 5.25512 0.700195 6.9932 0.700195Z" stroke="#ccc" stroke-width="1.4"></path><path d="M4.5 5.21081H5.77027C5.81351 4.55135 6.26216 4.12973 6.95946 4.12973C7.64054 4.12973 8.09459 4.53514 8.09459 5.0973C8.09459 5.58784 7.90383 5.86944 7.35576 6.22524L7.1973 6.32432C6.45135 6.76216 6.13784 7.24865 6.18649 8.05946L6.19189 8.42703H7.44595V8.11892C7.44595 7.58378 7.64595 7.30811 8.35405 6.89189C9.08919 6.45405 9.5 5.87568 9.5 5.04865C9.5 3.85405 8.51081 3 7.02973 3C5.42432 3 4.54324 3.92973 4.5 5.21081ZM6.87838 11.0054C6.33784 11.0054 5.98108 10.6649 5.98108 10.1459C5.98108 9.62162 6.33784 9.28108 6.87838 9.28108C7.42973 9.28108 7.77568 9.62162 7.77568 10.1459C7.77568 10.6649 7.42973 11.0054 6.87838 11.0054Z" fill="#ccc"></path></svg>
+              </div>
+              <li><a href="#">신상품순</a></li>
+              <li><a href="#">판매량순</a></li>
+              <li><a href="#">혜택순</a></li>
+              <li><a href="#">낮은 가격순</a></li>
+              <li><a href="#">높은 가격순</a></li>
+            </ul>
+          </div>
+          <!-- //정렬기능  -->
+          <!-- 상품 리스트 -->
+          <ul class="product-list">
+            <li class="product-brief-wrap">
+              <a href="#" class="product-brief__container">
+                <div class="product-brief__visual">
                   <img
-                    src="./assets/icons/Icon/Cart.svg"
-                    alt="장바구니 아이콘"
+                    src="./assets/mainPage/recommend/product-baby-detergent.jpg"
+                    alt="프로쉬 베이비 세탁세제"
+                    class="product-brief__img"
                   />
-                </button>
-              </div>
-              <div class="product-brief__info">
-                <span class="badge_faster">샛별배송</span>
-                <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
-                <span class="product-brief__sale-ratio">24%</span>
-                <span class="product-brief__sale-price">18,900원</span>
-                <span class="product-brief__price is-sale">24,900원</span>
-                <span class="product-brief__description"
-                  >성분을 꼼꼼히 따져 골라 더욱 편안한</span
-                >
-              </div>
-              <div class="product-brief__review">
-                <img
-                  class="review__img"
-                  src="./assets/product/review.svg"
-                  alt="리뷰 아이콘"
-                />
-                <span>후기 999+</span>
-              </div>
-              <div class="product-brief__badge">
-                <span class="badge badge__karly-only">Karly Only</span>
-                <span class="badge badge__limit-q">한정수량</span>
-              </div>
-            </a>
-          </li>
-          <li class="product-brief-wrap">
-            <a href="#" class="product-brief__container">
-              <div class="product-brief__visual">
-                <img
-                  src="./assets/mainPage/recommend/product-baby-detergent.jpg"
-                  alt="프로쉬 베이비 세탁세제"
-                  class="product-brief__img"
-                />
-                <button type="button" class="product-brief__icon">
+                  <button type="button" class="product-brief__icon">
+                    <img
+                      src="./assets/icons/Icon/Cart.svg"
+                      alt="장바구니 아이콘"
+                    />
+                  </button>
+                </div>
+                <div class="product-brief__info">
+                  <span class="badge_faster">샛별배송</span>
+                  <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
+                  <span class="product-brief__sale-ratio">24%</span>
+                  <span class="product-brief__sale-price">18,900원</span>
+                  <span class="product-brief__price is-sale">24,900원</span>
+                  <span class="product-brief__description"
+                    >성분을 꼼꼼히 따져 골라 더욱 편안한</span
+                  >
+                </div>
+                <div class="product-brief__review">
                   <img
-                    src="./assets/icons/Icon/Cart.svg"
-                    alt="장바구니 아이콘"
+                    class="review__img"
+                    src="./assets/product/review.svg"
+                    alt="리뷰 아이콘"
                   />
-                </button>
-              </div>
-              <div class="product-brief__info">
-                <span class="badge_faster">샛별배송</span>
-                <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
-                <span class="product-brief__sale-ratio is-hidden">24%</span>
-                <span class="product-brief__sale-price is-hidden"
-                  >18,900원</span
-                >
-                <span class="product-brief__price">24,900원</span>
-                <span class="product-brief__description"
-                  >성분을 꼼꼼히 따져 골라 더욱 편안한</span
-                >
-              </div>
-              <div class="product-brief__review">
-                <img
-                  class="review__img"
-                  src="./assets/product/review.svg"
-                  alt="리뷰 아이콘"
-                />
-                <span>후기 999+</span>
-              </div>
-              <div class="product-brief__badge">
-                <span class="badge badge__karly-only">Karly Only</span>
-                <span class="badge badge__limit-q">한정수량</span>
-              </div>
-            </a>
-          </li>
-        </ul>
+                  <span>후기 999+</span>
+                </div>
+                <div class="product-brief__badge">
+                  <span class="badge badge__karly-only">Karly Only</span>
+                  <span class="badge badge__limit-q">한정수량</span>
+                </div>
+              </a>
+            </li>
+            <li class="product-brief-wrap">
+              <a href="#" class="product-brief__container">
+                <div class="product-brief__visual">
+                  <img
+                    src="./assets/mainPage/recommend/product-baby-detergent.jpg"
+                    alt="프로쉬 베이비 세탁세제"
+                    class="product-brief__img"
+                  />
+                  <button type="button" class="product-brief__icon">
+                    <img
+                      src="./assets/icons/Icon/Cart.svg"
+                      alt="장바구니 아이콘"
+                    />
+                  </button>
+                </div>
+                <div class="product-brief__info">
+                  <span class="badge_faster">샛별배송</span>
+                  <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
+                  <span class="product-brief__sale-ratio is-hidden">24%</span>
+                  <span class="product-brief__sale-price is-hidden"
+                    >18,900원</span
+                  >
+                  <span class="product-brief__price">24,900원</span>
+                  <span class="product-brief__description"
+                    >성분을 꼼꼼히 따져 골라 더욱 편안한</span
+                  >
+                </div>
+                <div class="product-brief__review">
+                  <img
+                    class="review__img"
+                    src="./assets/product/review.svg"
+                    alt="리뷰 아이콘"
+                  />
+                  <span>후기 999+</span>
+                </div>
+                <div class="product-brief__badge">
+                  <span class="badge badge__karly-only">Karly Only</span>
+                  <span class="badge badge__limit-q">한정수량</span>
+                </div>
+              </a>
+            </li>
+            <li class="product-brief-wrap">
+              <a href="#" class="product-brief__container">
+                <div class="product-brief__visual">
+                  <img
+                    src="./assets/mainPage/recommend/product-baby-detergent.jpg"
+                    alt="프로쉬 베이비 세탁세제"
+                    class="product-brief__img"
+                  />
+                  <button type="button" class="product-brief__icon">
+                    <img
+                      src="./assets/icons/Icon/Cart.svg"
+                      alt="장바구니 아이콘"
+                    />
+                  </button>
+                </div>
+                <div class="product-brief__info">
+                  <span class="badge_faster">샛별배송</span>
+                  <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
+                  <span class="product-brief__sale-ratio is-hidden">24%</span>
+                  <span class="product-brief__sale-price is-hidden"
+                    >18,900원</span
+                  >
+                  <span class="product-brief__price">24,900원</span>
+                  <span class="product-brief__description"
+                    >성분을 꼼꼼히 따져 골라 더욱 편안한</span
+                  >
+                </div>
+                <div class="product-brief__review">
+                  <img
+                    class="review__img"
+                    src="./assets/product/review.svg"
+                    alt="리뷰 아이콘"
+                  />
+                  <span>후기 999+</span>
+                </div>
+                <div class="product-brief__badge">
+                  <span class="badge badge__karly-only">Karly Only</span>
+                  <span class="badge badge__limit-q">한정수량</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-item--first">
@@ -917,3 +980,4 @@
     </footer>
   </body>
 </html>
+
