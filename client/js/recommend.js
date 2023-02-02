@@ -1,3 +1,4 @@
+import { getNode, parse, renderRecommendProduct , renderRecommendSaleProduct} from "./../lib/index.js";
 /* eslint no-undef:'warn' */
 /* eslint no-unused-vars:'off' */
 const swiper1 = new Swiper(".swiper-recommend--product", {
@@ -23,3 +24,30 @@ const swiper2 = new Swiper(".swiper-recommend--price", {
     prevEl: ".swiper-recommend--price--button-prev",
   },
 });
+
+
+const recommendContainer = getNode(".recommend-product");
+const recommendSaleContainer = getNode(".recommend-sale");
+
+async function rendingProductList() {
+  try {
+    let response = await parse.get("http://localhost:3000/products");
+    let productData = response.data;
+    console.log(productData);
+
+    productData.forEach((data) => {
+      if (data.saleRatio === 0) {
+        renderRecommendProduct(recommendContainer, data);
+      } else if (data.saleRatio !== 0) {
+        console.log(data.saleRatio);
+        renderRecommendSaleProduct(recommendContainer, data);
+        renderRecommendSaleProduct(recommendSaleContainer, data);
+      }
+      
+    });
+  } catch (err) {
+    console.log("error");
+  }
+}
+
+rendingProductList();

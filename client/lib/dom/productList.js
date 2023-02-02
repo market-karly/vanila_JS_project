@@ -1,5 +1,72 @@
 import { insertLast } from "./index.js";
 
+const createRecommend = ({
+  name = "",
+  price = "",
+  saleRatio = "",
+  salePrice = "",
+  image = {
+    thumbnail: "",
+    alt: "",
+  },
+} = {}) => {
+  return /* html */ `
+  <div class="swiper-slide product-brief">
+  <a href="#">
+    <div class="product-brief__visual">
+      <img
+        src="${image.thumbnail}"
+        alt=${image.alt}
+        class="product-brief__img"
+      />
+      <button type="button" class="product-brief__icon">
+        <img src="./assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+      </button>
+    </div>
+    <div class="product-brief__info">
+      <h3 class="product-brief__title">${name}</h3>
+      <span class="product-brief__sale-ratio is-hidden">${saleRatio * 100}%</span>
+      <span class="product-brief__sale-price is-hidden">${salePrice}원</span>
+      <span class="product-brief__price">${price}원</span>
+    </div>
+  </a>
+<div>`;
+};
+
+const createRecommendSale = ({
+  name = "",
+  price = "",
+  saleRatio = "",
+  salePrice = "",
+  image = {
+    thumbnail: "",
+    alt: "",
+  },
+} = {}) => {
+  return /* html */ `
+  <div class="swiper-slide product-brief">
+  <a href="#">
+    <div class="product-brief__visual">
+      <img
+        src="${image.thumbnail}"
+        alt=${image.alt}
+        class="product-brief__img"
+      />
+      <button type="button" class="product-brief__icon">
+        <img src="./assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+      </button>
+    </div>
+    <div class="product-brief__info">
+      <h3 class="product-brief__title">${name}</h3>
+      <span class="product-brief__sale-ratio">${saleRatio * 100}%</span>
+      <span class="product-brief__sale-price">${salePrice}원</span>
+      <span class="product-brief__price is-sale">${price}원</span>
+    </div>
+  </a>
+<div>`;
+};
+
+
 const createSaleProduct = ({
   name = "",
   description = "",
@@ -95,6 +162,14 @@ const createProduct = ({
   </a>
 </li>`;
 };
+
+export function renderRecommendProduct(target, data) {
+  insertLast(target, createRecommend(data));
+}
+
+export function renderRecommendSaleProduct(target, data) {
+  insertLast(target, createRecommendSale(data));
+}
 
 export function renderProduct(target, data) {
   insertLast(target, createProduct(data));
