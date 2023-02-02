@@ -16,19 +16,11 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
+    <script defer src="./js/product.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
 
   <body>
-    <div class="banner">
-      <div class="banner--inner">
-        <p>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</p>
-        <button type="button" class="banner--close-btn">
-          <img src="./assets/icons/Icon/banner-close.svg" alt="닫기 버튼" />
-        </button>
-      </div>
-    </div>
     <header class="header">
       <div class="header--main">
         <h1 class="a11y-hidden">마켓컬리</h1>
@@ -278,7 +270,7 @@
             </ul>
           </li>
           <li class="header--nav-menu-item">
-            <button type="button"><a href="./product.html">신상품</a></button>
+            <button type="button">신상품</button>
           </li>
           <li class="header--nav-menu-item">
             <button type="button">베스트</button>
@@ -297,328 +289,417 @@
         </ul>
       </nav>
     </header>
-    <main class="main">
-      <section class="main-banner">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner01.png"
-                  alt="컬리 과일 가게. 앵콜 특가 멜론 9900원. 10월 20일부터 10월 27일까지"
-              /></a>
+    <main>
+      <section class="product">
+        <div class="product-list-nav">
+          <div class="product-list-nav-filter">
+            <span class="nav-fillter_text">필터</span>
+            <button type="button" class="nav-filter_button">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.78 3.96303C12.504 2.16973 10.4086 1 8.04 1C4.15192 1 1 4.15192 1 8.04C1 11.9281 4.15192 15.08 8.04 15.08C11.9281 15.08 15.08 11.9281 15.08 8.04"
+                  stroke="#ddd"
+                  stroke-width="1.6"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M14.4933 1L14.4933 4.52H10.9733"
+                  stroke="#ddd"
+                  stroke-width="1.6"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <span class="nav-filter_text-init">초기화</span>
+            </button>
+          </div>
+          <div class="product-list-nav-menu">
+            <div class="nav-menu_category">
+              <button class="nav-menu-btn">
+                <span>카테고리</span>
+                <img
+                  src="./assets/icons/Icon/arrow-no-background.png"
+                  class="nav-menu_category-svg"
+                  alt="화살표 아래방향에 위치"
+                />
+              </button>
+              <ul class="nav-menu_ul">
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box1" />
+                    <label for="check-box1"></label>
+                    <label for="check-box1">
+                      <span class="ul-list_text">과일·견과·쌀</span>
+                      <span class="ul-list_count">26</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box2" />
+                    <label for="check-box2"></label>
+                    <label for="check-box2">
+                      <span class="ul-list_text">간식·과자·떡</span>
+                      <span class="ul-list_count">21</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box3" />
+                    <label for="check-box3"></label>
+                    <label for="check-box3">
+                      <span class="ul-list_text">국·반찬·메인요리</span>
+                      <span class="ul-list_count">17</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box4" />
+                    <label for="check-box4"></label>
+                    <label for="check-box4">
+                      <span class="ul-list_text">면·양념·오일</span>
+                      <span class="ul-list_count">14</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box5" />
+                    <label for="check-box5"></label>
+                    <label for="check-box5">
+                      <span class="ul-list_text">건강식품</span>
+                      <span class="ul-list_count">12</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box6" />
+                    <label for="check-box6"></label>
+                    <label for="check-box6">
+                      <span class="ul-list_text">샐러드·간편식</span>
+                      <span class="ul-list_count">12</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box7" />
+                    <label for="check-box7"></label>
+                    <label for="check-box7">
+                      <span class="ul-list_text">수산·해산·건어물</span>
+                      <span class="ul-list_count">10</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box8" />
+                    <label for="check-box8"></label>
+                    <label for="check-box8">
+                      <span class="ul-list_text">헤어·바디·구강</span>
+                      <span class="ul-list_count">7</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box9" />
+                    <label for="check-box9"></label>
+                    <label for="check-box9">
+                      <span class="ul-list_text">생수·음료·우유·커피</span>
+                      <span class="ul-list_count">7</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box10" />
+                    <label for="check-box10"></label>
+                    <label for="check-box10">
+                      <span class="ul-list_text">생활용품·리빙·캠핑</span>
+                      <span class="ul-list_count">6</span>
+                    </label>
+                  </a>
+                </li>
+                <button class="nav-menu_category-plus">
+                  카테고리 더보기
+                  <img
+                    src="./assets/icons/Icon/arrow-no-background.png"
+                    alt="화살표 아래방향"
+                  />
+                </button>
+              </ul>
             </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner02.png"
-                  alt="한눈에 보는 이달의 카드 혜택. 최대 10% 카드 쿠폰 받기 10월 1일부터 10월 31일까지"
-              /></a>
+
+            <div class="nav-menu_brand">
+              <button class="nav-menu-btn2">
+                <span>브랜드</span>
+                <img
+                  src="./assets/icons/Icon/arrow-no-background.png"
+                  alt="화살표 아래방향에 위치"
+                  class="nav-menu_brand-svg"
+                />
+              </button>
+              <ul class="nav-menu_ul2">
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box11" />
+                    <label for="check-box11"></label>
+                    <label for="check-box11">
+                      <span class="ul-list_text">감자밭</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box12" />
+                    <label for="check-box12"></label>
+                    <label for="check-box12">
+                      <span class="ul-list_text">강남면옥</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box13" />
+                    <label for="check-box13"></label>
+                    <label for="check-box13">
+                      <span class="ul-list_text">경남제약</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box14" />
+                    <label for="check-box14"></label>
+                    <label for="check-box14">
+                      <span class="ul-list_text">경복궁</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box15" />
+                    <label for="check-box15"></label>
+                    <label for="check-box15">
+                      <span class="ul-list_text">고래사</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box16" />
+                    <label for="check-box16"></label>
+                    <label for="check-box16">
+                      <span class="ul-list_text">고메공방</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box17" />
+                    <label for="check-box17"></label>
+                    <label for="check-box17">
+                      <span class="ul-list_text">고온어다이어트</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box18" />
+                    <label for="check-box18"></label>
+                    <label for="check-box18">
+                      <span class="ul-list_text">교토마블</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box19" />
+                    <label for="check-box19"></label>
+                    <label for="check-box19">
+                      <span class="ul-list_text">그래놀라 하우스</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box20" />
+                    <label for="check-box20"></label>
+                    <label for="check-box20">
+                      <span class="ul-list_text">그리츠 시그니처 램</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <button class="nav-menu_category-plus">
+                  브랜드 더보기
+                  <img
+                    src="./assets/icons/Icon/arrow-no-background.png"
+                    alt="화살표 아래방향"
+                  />
+                </button>
+              </ul>
             </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner03.png"
-                  alt="컬리 퍼플 위크. 적립률UP + 3종 쿠폰팩, 더 풍성해진 혜택! 10월 24일부터 10월 28일까지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner05.png"
-                  alt="이 주의 특가 한 눈에 보기. 우측 상단 특가, 혜택에서 확인하세요!"
-              /></a>
+
+            <div class="nav-menu_price">
+              <button class="nav-menu-btn3">
+                <span>가격</span>
+                <img
+                  src="./assets/icons/Icon/arrow-no-background.png"
+                  class="nav-menu_price-svg"
+                  alt="화살표 아래방향에 위치"
+                />
+              </button>
+              <ul class="nav-menu_ul3">
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box21" />
+                    <label for="check-box21"></label>
+                    <label for="check-box21">
+                      <span class="ul-list_text">5,950원 미만</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box22" />
+                    <label for="check-box22"></label>
+                    <label for="check-box22">
+                      <span class="ul-list_text">5,950원~9,900원</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box23" />
+                    <label for="check-box23"></label>
+                    <label for="check-box23">
+                      <span class="ul-list_text">9,900원~14,900원</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+                <li class="nav-menu_ul-list">
+                  <a href="#">
+                    <input type="checkbox" id="check-box24" />
+                    <label for="check-box24"></label>
+                    <label for="check-box24">
+                      <span class="ul-list_text">14,900원 이상</span>
+                      <span class="ul-list_count">1</span>
+                    </label>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div
-            class="swiper-button-prev swiper-button main-banner--button-prev"
-          ></div>
-          <div
-            class="swiper-button-next swiper-button main-banner--button-next"
-          ></div>
-          <div class="swiper-pagination"></div>
         </div>
-      </section>
-
-      <section class="recommend">
-        <h2 class="a11y-hidden">추천상품</h2>
-        <p class="recommend__title">이 상품 어때요?</p>
-        <div class="slider-wrapper">
-          <div class="swiper-recommend--product product-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-jjolmyeon.jpg"
-                      alt="풀무원 탱탱쫄면 4개입"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">
-                      [풀무원] 탱탱쫄면 (4개입)
-                    </h3>
-                    <span class="product-brief__price">4,980원</span>
-                  </div>
-                </a>
+        <h2 class="a11y-hidden">상품리스트</h2>
+        <ul class="product-list">
+          <li class="product-brief-wrap">
+            <a href="#" class="product-brief__container">
+              <div class="product-brief__visual">
+                <img
+                  src="./assets/mainPage/recommend/product-baby-detergent.jpg"
+                  alt="프로쉬 베이비 세탁세제"
+                  class="product-brief__img"
+                />
+                <button type="button" class="product-brief__icon">
+                  <img
+                    src="./assets/icons/Icon/Cart.svg"
+                    alt="장바구니 아이콘"
+                  />
+                </button>
               </div>
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-sun-cushion.jpg"
-                      alt="온더바디 죠르디 시카 자석 선쿠션"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
-                    <span class="product-brief__price">32,500원</span>
-                  </div>
-                </a>
+              <div class="product-brief__info">
+                <span class="badge_faster">샛별배송</span>
+                <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
+                <span class="product-brief__sale-ratio">24%</span>
+                <span class="product-brief__sale-price">18,900원</span>
+                <span class="product-brief__price is-sale">24,900원</span>
+                <span class="product-brief__description"
+                  >성분을 꼼꼼히 따져 골라 더욱 편안한</span
+                >
               </div>
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-brown-rice.jpg"
-                      alt="유기농 밀키퀸 현미 4kg"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">유기농 밀키퀸 현미 4kg</h3>
-                    <span class="product-brief__price">25,000원</span>
-                  </div>
-                </a>
+              <div class="product-brief__review">
+                <img
+                  class="review__img"
+                  src="./assets/product/review.svg"
+                  alt="리뷰 아이콘"
+                />
+                <span>후기 999+</span>
               </div>
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-baby-detergent.jpg"
-                      alt="프로쉬 베이비 세탁세제"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">
-                      [프로쉬] 베이비 세탁세제
-                    </h3>
-                    <span class="product-brief__sale-ratio">24%</span>
-                    <span class="product-brief__sale-price">18,900원</span>
-                    <span class="product-brief__price is-sale">24,900원</span>
-                  </div>
-                </a>
+              <div class="product-brief__badge">
+                <span class="badge badge__karly-only">Karly Only</span>
+                <span class="badge badge__limit-q">한정수량</span>
               </div>
-            </div>
-          </div>
-          <div
-            class="swiper-recommend--product--button-prev swiper-recommend-button-prev"
-          ></div>
-          <div
-            class="swiper-recommend--product--button-next swiper-recommend-button-next"
-          ></div>
-        </div>
-      </section>
-
-      <div class="line-banner">
-        <img
-          src="./assets/mainPage/lineBanner/line-banner.jpg"
-          alt="적립률 높아지고 3종 쿠폰팩이 제공되는 10월 퍼플위크 배너"
-        />
-      </div>
-
-      <section class="recommend">
-        <h2 class="a11y-hidden">추천할인</h2>
-        <p class="recommend__title">놓치면 후회할 가격</p>
-        <div class="slider-wrapper">
-          <div class="swiper-recommend--price product-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-jjolmyeon.jpg"
-                      alt="풀무원 탱탱쫄면 4개입"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">
-                      [풀무원] 탱탱쫄면 (4개입)
-                    </h3>
-                    <span class="product-brief__price">4,980원</span>
-                  </div>
-                </a>
+            </a>
+          </li>
+          <li class="product-brief-wrap">
+            <a href="#" class="product-brief__container">
+              <div class="product-brief__visual">
+                <img
+                  src="./assets/mainPage/recommend/product-baby-detergent.jpg"
+                  alt="프로쉬 베이비 세탁세제"
+                  class="product-brief__img"
+                />
+                <button type="button" class="product-brief__icon">
+                  <img
+                    src="./assets/icons/Icon/Cart.svg"
+                    alt="장바구니 아이콘"
+                  />
+                </button>
               </div>
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-sun-cushion.jpg"
-                      alt="온더바디 죠르디 시카 자석 선쿠션"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
-                    <span class="product-brief__price">32,500원</span>
-                  </div>
-                </a>
+              <div class="product-brief__info">
+                <span class="badge_faster">샛별배송</span>
+                <h3 class="product-brief__title">[프로쉬] 베이비 세탁세제</h3>
+                <span class="product-brief__sale-ratio is-hidden">24%</span>
+                <span class="product-brief__sale-price is-hidden"
+                  >18,900원</span
+                >
+                <span class="product-brief__price">24,900원</span>
+                <span class="product-brief__description"
+                  >성분을 꼼꼼히 따져 골라 더욱 편안한</span
+                >
               </div>
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-brown-rice.jpg"
-                      alt="유기농 밀키퀸 현미 4kg"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">유기농 밀키퀸 현미 4kg</h3>
-                    <span class="product-brief__price">25,000원</span>
-                  </div>
-                </a>
+              <div class="product-brief__review">
+                <img
+                  class="review__img"
+                  src="./assets/product/review.svg"
+                  alt="리뷰 아이콘"
+                />
+                <span>후기 999+</span>
               </div>
-              <div class="swiper-slide product-brief">
-                <a href="#">
-                  <div class="product-brief__visual">
-                    <img
-                      src="./assets/mainPage/recommend/product-baby-detergent.jpg"
-                      alt="프로쉬 베이비 세탁세제"
-                      class="product-brief__img"
-                    />
-                    <button type="button" class="product-brief__icon">
-                      <img
-                        src="./assets/icons/Icon/Cart.svg"
-                        alt="장바구니 아이콘"
-                      />
-                    </button>
-                  </div>
-                  <div class="product-brief__info">
-                    <h3 class="product-brief__title">
-                      [프로쉬] 베이비 세탁세제
-                    </h3>
-                    <span class="product-brief__sale-ratio">24%</span>
-                    <span class="product-brief__sale-price">18,900원</span>
-                    <span class="product-brief__price is-sale">24,900원</span>
-                  </div>
-                </a>
+              <div class="product-brief__badge">
+                <span class="badge badge__karly-only">Karly Only</span>
+                <span class="badge badge__limit-q">한정수량</span>
               </div>
-            </div>
-          </div>
-          <div
-            class="swiper-recommend--price--button-prev swiper-recommend-button-prev"
-          ></div>
-          <div
-            class="swiper-recommend--price--button-next swiper-recommend-button-next"
-          ></div>
-        </div>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
-
-    <div class="aside">
-      <div class="aside-bar">
-        <div class="aside-box">
-          <button
-            aria-disabled="true"
-            type="button"
-            name="prev"
-            class="aside-btn"
-          >
-            <svg
-              width="10"
-              height="10"
-              fill="#999999"
-              stroke="#ddd"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-                stroke="#ddd"
-                stroke-width="1.3"
-              />
-            </svg>
-          </button>
-          <p>최근&nbsp;본&nbsp;상품</p>
-          <div class="aside-img">
-            <ul class="aside-item"></ul>
-          </div>
-          <button
-            aria-disabled="true"
-            type="button"
-            name="next"
-            class="aside-btn"
-          >
-            <svg
-              width="10"
-              height="10"
-              fill="#999999"
-              stroke="#ddd"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                stroke="#ddd"
-                stroke-width="1.3"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-item--first">
