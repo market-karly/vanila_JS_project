@@ -162,7 +162,7 @@
   display: inline-block;
 }
 
-.header-nav-hamburger {
+.header--nav-hamburger {
   transform: translateY(1px);
   margin-right: var(--spacing-xs);
 }
