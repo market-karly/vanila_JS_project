@@ -188,15 +188,24 @@
   background: var(--white);
   font-size: 0.875rem;
   display: none;
-  z-index: 10;
+  z-index: 100;
+  width: 15.4375rem;
 }
-
+.header--nav-sub-menu li {
+  width: 100%;
+  padding-left: 0.25rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.header--nav-sub-menu img {
+  margin-right: 0.25rem;
+}
 .header--nav-sub-menu a {
   padding: var(--spacing-xs);
   display: flex;
   align-items: center;
   gap: 0.375rem;
   font-weight: 600;
+  font-size: var(--text-base);
 }
 
 .header--nav-sub-menu li:hover {
