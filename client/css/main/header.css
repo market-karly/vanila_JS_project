@@ -167,7 +167,7 @@
   display: inline-block;
 }
 
-.header--nav-menu-item button {
+.header--nav-menu-item a,.header--nav-menu-item button {
   border: none;
   background-color: transparent;
   color: var(--black);
