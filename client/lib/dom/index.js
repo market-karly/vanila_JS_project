@@ -10,3 +10,4 @@ export * from './getInputValue.js';
 export * from './clearContents.js';
 export * from './controlElement.js';
 export * from './productList.js';
+export * from './price.js';
