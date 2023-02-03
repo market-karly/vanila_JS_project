@@ -14,7 +14,7 @@
 }
 
 .banner--inner {
-  max-width: var(--container-width);
+  width: var(--container-width);
   margin: auto;
   line-height: 2.625rem;
   display: flex;
@@ -40,9 +40,14 @@
 
 /* 헤더 메인 */
 .header {
-  max-width: var(--container-width);
-  margin: 3.25rem auto 0;
+  box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.1);
   position: relative;
+}
+.header--inner {
+  width: var(--container-width);
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .header--main {
@@ -122,13 +127,13 @@
 
 /* 헤더 멤버스 */
 .header--member {
+  order: -1;
+  justify-content: end;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 10px;
-  position: absolute;
-  top: -2.1875rem;
-  right: 0;
+  gap: 0.625rem;
+  margin: 0.625rem 0;
 }
 
 .header--member a {
