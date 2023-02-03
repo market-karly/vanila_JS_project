@@ -3,22 +3,21 @@ import {
   renderProduct,
   renderSaleProduct,
   getNode,
-  parse,
+  comma,
 } from "../lib/index.js";
 
 const productContainer = getNode(".product-list");
 
 async function rendingProductList() {
   try {
-    let response = await parse.get("http://localhost:3000/products");
-    let productData = response.data;
-    console.log(productData);
+    
+    const resultData = comma;
 
-    productData.forEach((data) => {
+    /* 기본, 세일 구분 */
+    resultData.forEach((data) => {
       if (data.saleRatio === 0) {
         renderProduct(productContainer, data);
       } else if (data.saleRatio !== 0) {
-        console.log(data.saleRatio);
         renderSaleProduct(productContainer, data);
       }
     });
