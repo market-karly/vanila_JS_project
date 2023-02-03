@@ -5,6 +5,7 @@
   flex-flow: column nowrap;
   align-items: center;
   margin-bottom: 2.75rem;
+  position: relative;
 }
 .login--title {
   font-weight: 600;
@@ -59,7 +60,7 @@
   justify-content: end;
   gap: 0.25rem;
   position: absolute;
-  top: 430px;
+  top: 250px;
   font-size: 0.875rem;
 }
 
