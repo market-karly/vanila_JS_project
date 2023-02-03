@@ -1,0 +1,39 @@
+.popup-box {
+  position: relative;
+  background-color: coral;
+  margin: 0 auto;
+  top: 247px;
+  width: 440px;
+  height: 672px;
+  border-radius: 16px 16px;
+  box-shadow: 0 0 30px 1px rgba(0,0,0,0.2);
+}
+
+.popup-image {
+  border-radius: 16px 16px 0 0;
+  cursor: pointer;
+}
+
+.close-during-oneday {
+  width: 220px;
+  height: 86px;
+
+  background-color: #fff;
+  border: none;
+  border-radius: 0 0 0 16px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.close {
+  width: 220px;
+  height: 86px;
+  background-color: #fff;
+  border: none;
+  border-radius: 0 0 16px 0;
+  border-left: 1px solid #eee;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
