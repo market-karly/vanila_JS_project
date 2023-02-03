@@ -84,34 +84,40 @@
   right: -1rem;
 }
 
-.header--main-search {
-  padding: var(--spacing-sm) 3.75rem var(--spacing-sm) var(--spacing-md);
-  position: absolute;
-  width: 25rem;
-  height: 3.75rem;
-  left: 21.875rem;
-  top: -0.6875rem;
-  border: 0.125rem solid var(--primary);
-  border-radius: 0.25rem;
-}
-
-.header--main-search:focus {
-  outline: none;
-}
-
-.header--main-search-icon {
-  position: absolute;
-  top: 0.0625rem;
-  right: 20rem;
-  cursor: pointer;
-  padding: var(--spacing-xs);
-  z-index: 10;
-}
-
-.header--main-icons {
+/* 헤더 검색창 */
+.header--main-search-form-inner {
   display: flex;
   flex-flow: row nowrap;
-  gap: var(--spacing-md);
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary);
+  border-radius: .25rem;
+  width: 25rem;
+  height: 3.75rem;
+}
+.form-group {
+  flex-grow: 1;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.form-group-input {
+  width: 100%;
+  height: 80%;
+  border: none;
+}
+.form-group-input:focus {
+  outline: none;
+}
+.form-group-button {
+  background-color: transparent;
+  border: none;
+  flex-shrink: 0;
+  padding: var(--spacing-base);
+}
+.header--main-icons a {
+  margin-left: var(--spacing-md);
 }
 
 /* 헤더 멤버스 */
@@ -200,4 +206,11 @@
 
 .header--nav-menu-item.closed .header--nav-sub-menu {
   display: flex;
+}
+
+.header--nav-menu-group{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
 }
