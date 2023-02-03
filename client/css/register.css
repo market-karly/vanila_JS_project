@@ -33,6 +33,7 @@
   justify-content: flex-start;
   margin: 20px 0;
   line-height: 44px;
+  position: relative;
 }
 
 .register-item__input {
@@ -55,6 +56,14 @@
   font-weight: 600;
   padding-left: 4px;
   margin-left: 4px;
+}
+
+.register-item__error {
+  color: var(--info-error);
+  font-size: 12px;
+  position: absolute;
+  margin-top: -8px;
+  padding-left: 8px;
 }
 
 .register-item__button-validation {

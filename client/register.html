@@ -11,6 +11,7 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/main.js" type="module"></script>
+  <script src="./js/register.js" type="module" defer></script>
   <title>마켓칼리</title>
 </head>
 
@@ -158,7 +159,7 @@
   <main class="register">
     <h2 class="register--title">회원가입</h2>
     <p class="register--info-necessary"><span class="register--necessary">&#42;</span>필수입력사항</p>
-    <form action="#" method="post" id="register">
+    <form class="register-form" action="#" method="post" id="register">
       <fieldset>
         <legend class="a11y-hidden">회원 정보 입력</legend>
         <table>
@@ -170,7 +171,9 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" type="text" id="userId" placeholder="아이디를 입력해주세요" required />
+                <input class="register-item__input" data-type="userId" type="text" id="userId" placeholder="아이디를 입력해주세요"
+                  maxlength="16" required />
+                <p class="register-item__error"></p>
               </td>
               <td>
                 <button class="register-item__button-validation" type="button">
@@ -185,7 +188,9 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" type="password" id="userPW" placeholder="비밀번호를 입력해주세요" required />
+                <input class="register-item__input" data-type="userPW" type="password" id="userPW"
+                  placeholder="비밀번호를 입력해주세요" maxlength="16" required />
+                <p class="register-item__error"></p>
               </td>
             </tr>
             <tr class="register-item">
@@ -194,8 +199,9 @@
                     class="register--necessary">&#42;</span></label>
               </td>
               <td>
-                <input class="register-item__input" type="password" id="userPWcheck" placeholder="비밀번호를 한번 더 입력해주세요"
-                  required />
+                <input class="register-item__input" data-type="userPWcheck" type="password" id="userPWcheck"
+                  placeholder="비밀번호를 한번 더 입력해주세요" maxlength="16" required />
+                <p class="register-item__error"></p>
               </td>
             </tr>
             <tr class="register-item">
@@ -205,7 +211,9 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" type="text" id="name" placeholder="이름을 입력해주세요" required />
+                <input class="register-item__input" data-type="name" type="text" id="name" placeholder="이름을 입력해주세요"
+                  required />
+                <p class="register-item__error"></p>
               </td>
             </tr>
             <tr class="register-item">
@@ -215,8 +223,9 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" type="email" id="email" placeholder="예) marketkarly@karly.com"
-                  required />
+                <input class="register-item__input" data-type="email" type="email" id="email"
+                  placeholder="예) marketkarly@karly.com" required />
+                <p class="register-item__error"></p>
               </td>
               <td>
                 <button class="register-item__button-validation" type="button">
@@ -231,7 +240,9 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" type="tel" id="phone" placeholder="숫자만 입력해주세요" required />
+                <input class="register-item__input" data-type="phone" type="tel" id="phone" placeholder="숫자만 입력해주세요"
+                  maxlength="11" required />
+                <p class="register-item__error"></p>
               </td>
               <td>
                 <button class="register-item__button-validation" type="button" disabled>인증번호 받기</button>
