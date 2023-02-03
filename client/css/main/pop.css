@@ -1,7 +1,8 @@
 .popup-box {
-  position: relative;
-  background-color: coral;
-  margin: 0 auto;
+  z-index: 100;
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-55%);
   top: 247px;
   width: 440px;
   height: 672px;
