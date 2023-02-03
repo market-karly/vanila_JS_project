@@ -7,12 +7,17 @@
       "price": 6900,
       "saleRatio": 0.24,
       "salePrice": 5244,
+      "review": 1,
       "image": {
         "thumbnail": "../../assets/product/ubuho/thumbnail.jpg",
         "view": "../../assets/product/ubuho/detail_view.jpg",
         "banner": "../../assets/product/ubuho/detail_banner.jpg",
         "info": "../../assets/product/ubuho/detail_info.jpg",
         "alt": "유부호 만두"
+      },
+      "badge" :{
+        "karly":"",
+        "limit":""
       },
       "stock": 3
     },
@@ -23,12 +28,17 @@
       "price": 4980,
       "saleRatio": 0,
       "salePrice": 0,
+      "review": 3,
       "image": {
         "thumbnail": "../../assets/product/tangtang/thumbnail.jpg",
         "view": "../../assets/product/tangtang/detail_view.jpg",
         "banner": "../../assets/product/tangtang/detail_banner.jpg",
         "info": "../../assets/product/tangtang/detail_info.jpg",
         "alt": "풀무원 탱탱쫄면"
+      },
+      "badge" :{
+        "karly":"hidden",
+        "limit":"hidden"
       },
       "stock": 10
     },
@@ -39,12 +49,17 @@
       "price": 7900,
       "saleRatio": 0.13,
       "salePrice": 6800,
+      "review": 2,
       "image": {
         "thumbnail": "../../assets/product/jukkumi/thumbnail.jpg",
         "view": "../../assets/product/jukkumi/detail_view.jpg",
         "banner": "../../assets/product/jukkumi/detail_banner.jpg",
         "info": "../../assets/product/jukkumi/detail_info.jpg",
         "alt": "홍대 주꾸미"
+      },
+      "badge" :{
+        "karly":"",
+        "limit":"hidden"
       },
       "stock": 8
     },
@@ -55,12 +70,17 @@
       "price": 29800,
       "saleRatio": 0,
       "salePrice": 0,
+      "review": 2,
       "image": {
         "thumbnail": "../../assets/product/kangnam/thumbnail.jpg",
         "view": "../../assets/product/kangnam/detail_view.jpg",
         "banner": "../../assets/product/kangnam/detail_banner.jpg",
         "info": "../../assets/product/kangnam/detail_info.jpg",
         "alt": "강남면옥 소갈비찜"
+      },
+      "badge" :{
+        "karly":"hidden",
+        "limit":""
       },
       "stock": 2
     },
@@ -71,12 +91,17 @@
       "price": 4500,
       "saleRatio": 0.25,
       "salePrice": 3375,
+      "review": 4,
       "image": {
         "thumbnail": "../../assets/product/bacon/thumbnail.jpg",
         "view": "../../assets/product/bacon/detail_view.jpg",
         "banner": "../../assets/product/bacon/detail_banner.jpg",
         "info": "../../assets/product/bacon/detail_info.jpg",
         "alt": "칼리 한돈 삼겹 베이컨"
+      },
+      "badge" :{
+        "karly":"",
+        "limit":""
       },
       "stock": 13
     },
@@ -87,12 +112,17 @@
       "price": 32500,
       "saleRatio": 0.17,
       "salePrice": 26900,
+      "review": 2,
       "image": {
         "thumbnail": "../../assets/product/cushion/thumbnail.jpg",
         "view": "../../assets/product/cushion/detail_view.jpg",
         "banner": "../../assets/product/cushion/detail_banner.jpg",
         "info": "../../assets/product/cushion/detail_info.jpg",
         "alt": "온더바디 죠르디 선쿠션"
+      },
+      "badge" :{
+        "karly":"hidden",
+        "limit":""
       },
       "stock": 16
     },
@@ -103,12 +133,17 @@
       "price": 12900,
       "saleRatio": 0.18,
       "salePrice": 10500,
+      "review": 5,
       "image": {
         "thumbnail": "../../assets/product/frosh/thumbnail.jpg",
         "view": "../../assets/product/frosh/detail_view.jpg",
         "banner": "../../assets/product/frosh/detail_banner.jpg",
         "info": "../../assets/product/frosh/detail_info.jpg",
         "alt": "프로쉬 베이비 세탁세제"
+      },
+      "badge" :{
+        "karly":"",
+        "limit":"hidden"
       },
       "stock": 5
     },
@@ -119,12 +154,17 @@
       "price": 26900,
       "saleRatio": 0,
       "salePrice": 0,
+      "review": 1,
       "image": {
         "thumbnail": "../../assets/product/queen/thumbnail.jpg",
         "view": "../../assets/product/queen/detail_view.jpg",
         "banner": "../../assets/product/queen/detail_banner.jpg",
         "info": "../../assets/product/queen/detail_info.jpg",
         "alt": "유기농 밀키퀸 현미"
+      },
+      "badge" :{
+        "karly":"hidden",
+        "limit":"hidden"
       },
       "stock": 7
     }
