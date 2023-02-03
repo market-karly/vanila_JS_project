@@ -91,7 +91,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--primary);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   width: 25rem;
   height: 3.75rem;
 }
@@ -186,16 +186,16 @@
   position: absolute;
   flex-flow: column nowrap;
   background: var(--white);
-  font-size: 14px;
+  font-size: 0.875rem;
   display: none;
   z-index: 10;
 }
 
 .header--nav-sub-menu a {
-  padding: 8px;
+  padding: var(--spacing-xs);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   font-weight: 600;
 }
 
@@ -208,10 +208,10 @@
   display: flex;
 }
 
-.header--nav-menu-group{
+.header--nav-menu-group {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  gap: 80px;
-  margin-left: 50px;
+  gap: 5rem;
+  margin-left: 3.125rem;
 }
