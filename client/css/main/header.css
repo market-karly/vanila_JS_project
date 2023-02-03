@@ -5,7 +5,8 @@
 /* 상위 배너 */
 .banner {
   background-color: var(--primary);
-  display: block;
+  width: 100%;
+  min-width: var(--container-width);
 }
 
 .banner--inner p,
@@ -42,6 +43,8 @@
 .header {
   box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.1);
   position: relative;
+  width: 100%;
+  min-width: var(--container-width);
 }
 .header--inner {
   width: var(--container-width);
@@ -164,7 +167,7 @@
   display: inline-block;
 }
 
-.header--nav-menu-item button {
+.header--nav-menu-item a,.header--nav-menu-item button {
   border: none;
   background-color: transparent;
   color: var(--black);
