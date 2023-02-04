@@ -1,4 +1,10 @@
-@import url("./css/main.css");
+@import url("./reset.css");
+@import url("./a11y.css");
+@import url("./theme.css");
+@import url("./base.css");
+@import url("./pretendard.css");
+@import url("./main/header.css");
+@import url("./main/footer.css");
 @import url("./product/productNav.css");
 @import url("./product/productList.css");
-@import url("./product/productTop.css");
+@import url("./product/productTop.css"); ;

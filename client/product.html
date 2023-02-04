@@ -9,13 +9,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
     <link
-      rel="modulepreload"
+      rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
+    <link rel="stylesheet" type="text/css" href="./css/product.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/product.js" type="module"></script>
@@ -309,24 +309,16 @@
             </ul>
             <ul class="header--nav-menu-group">
               <li class="header--nav-menu-item">
-                <button type="button" class="header--nav-menu-btn">
-                  <a href="./product.html">신상품</a>
-                </button>
+                <a href="./product.html"> 신상품 </a>
               </li>
               <li class="header--nav-menu-item">
-                <button type="button" class="header--nav-menu-btn">
-                  <a href="./product.html"> 베스트 </a>
-                </button>
+                <a href="./product.html"> 베스트 </a>
               </li>
               <li class="header--nav-menu-item">
-                <button type="button" class="header--nav-menu-btn">
-                  <a href="./product.html"> 알뜰쇼핑 </a>
-                </button>
+                <a href="./product.html"> 알뜰쇼핑 </a>
               </li>
               <li class="header--nav-menu-item">
-                <button type="button" class="header--nav-menu-btn">
-                  <a href="./product.html"> 특가/혜택 </a>
-                </button>
+                <a href="./product.html"> 특가/혜택 </a>
               </li>
             </ul>
             <ul>
@@ -390,11 +382,10 @@
                     id="check-box"
                     name="checkbox"
                     title
-                    onclick="check-button"
                     class
                   />
-                  <label for="check-box1"></label>
-                  <label for="check-box1">
+
+                  <label for="check-box">
                     <span class="ul-list_text">과일·견과·쌀</span>
                     <span class="ul-list_count">26</span>
                   </label>
@@ -471,14 +462,16 @@
                     <span class="ul-list_count">6</span>
                   </label>
                 </li>
+                <li>
+                  <a href="#" class="nav-menu_category-plus">
+                    카테고리 더보기
+                    <img
+                      src="./assets/icons/Icon/arrow-no-background.png"
+                      alt="화살표 아래방향"
+                    />
+                  </a>
+                </li>
               </ul>
-              <button class="nav-menu_category-plus">
-                카테고리 더보기
-                <img
-                  src="./assets/icons/Icon/arrow-no-background.png"
-                  alt="화살표 아래방향"
-                />
-              </button>
             </div>
 
             <div class="nav-menu_brand">
@@ -571,14 +564,16 @@
                     <span class="ul-list_count">1</span>
                   </label>
                 </li>
+                <li>
+                  <a href="#" class="nav-menu_category-plus">
+                    브랜드 더보기
+                    <img
+                      src="./assets/icons/Icon/arrow-no-background.png"
+                      alt="화살표 아래방향"
+                    />
+                  </a>
+                </li>
               </ul>
-              <button class="nav-menu_category-plus">
-                브랜드 더보기
-                <img
-                  src="./assets/icons/Icon/arrow-no-background.png"
-                  alt="화살표 아래방향"
-                />
-              </button>
             </div>
 
             <div class="nav-menu_price">
