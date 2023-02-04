@@ -1,4 +1,11 @@
-import { getNode, toggleClass, clearContents, comma, renderRecommendProduct , renderRecommendSaleProduct } from "./../lib/index.js";
+import {
+  getNode,
+  toggleClass,
+  clearContents,
+  comma,
+  renderRecommendProduct,
+  renderRecommendSaleProduct,
+} from "./../lib/index.js";
 
 const dropdown = getNode(".header--nav-menu-item");
 const dropdownBtn = getNode(".header--nav-dropdown");
@@ -57,23 +64,13 @@ const swiper2 = new Swiper(".swiper-recommend--price", {
   },
 });
 
-
-function getImgHandler() {
-  let json = JSON.stringify(data);
-  return console.log(json);
-}
-
-getImg.addEventListener("click", getImgHandler);
-
-
-// 팝업 닫기 기능 
-let modal = document.querySelector('.popup-box');
-let modalCloseOneDayBtn = document.querySelector('.close-during-oneday');
-let modalCloseBtn = document.querySelector('.close');
-let body = document.querySelector('body');
-let popUpBox = document.querySelector('.popup-box');
-let isClose = document.querySelector('.is-open');
-
+// 팝업 닫기 기능
+let modal = document.querySelector(".popup-box");
+let modalCloseOneDayBtn = document.querySelector(".close-during-oneday");
+let modalCloseBtn = document.querySelector(".close");
+let body = document.querySelector("body");
+let popUpBox = document.querySelector(".popup-box");
+let isClose = document.querySelector(".is-open");
 
 // 모달 창 하루동안 닫기 기능
 function onCloseOneDayHandler(e) {
@@ -86,12 +83,11 @@ function onCloseModalHandler(e) {
   e.preventDefault();
   popUpBox.parentNode.removeChild(popUpBox);
 }
-  
-modalCloseBtn.addEventListener('click', onCloseModalHandler);
-modalCloseOneDayBtn.addEventListener('click',onCloseOneDayHandler);
 
+modalCloseBtn.addEventListener("click", onCloseModalHandler);
+modalCloseOneDayBtn.addEventListener("click", onCloseOneDayHandler);
 
-//추천 상품 및 할인 상품 받아오기 
+//추천 상품 및 할인 상품 받아오기
 const recommendContainer = getNode(".recommend-product");
 const recommendSaleContainer = getNode(".recommend-sale");
 
@@ -106,7 +102,6 @@ async function rendingProductList() {
         renderRecommendSaleProduct(recommendContainer, data);
         renderRecommendSaleProduct(recommendSaleContainer, data);
       }
-      
     });
   } catch (err) {
     console.log("error");

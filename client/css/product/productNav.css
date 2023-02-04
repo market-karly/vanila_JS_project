@@ -43,17 +43,9 @@ button {
 .nav-filter_button {
   display: flex;
   align-items: center;
-  /* pointer-events: none; */
-}
-
-.nav-filter_text-init {
-  margin-left: 5px;
-  font-weight: 500;
-  color: var(--gray-100);
-  border: 0;
-  background: transparent;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
+  color: var(--gray-300);
 }
 
 .nav-menu_category {
