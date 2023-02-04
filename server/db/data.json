@@ -377,11 +377,11 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/granola/thumbnail.png",
-        "view": "../../assets/product/granola/detail_view.png",
-        "banner": "../../assets/product/granola/detail_banner.png",
-        "info": "../../assets/product/granola/detail_info.png",
-        "alt": "고디바 초콜렛 골드 디스커버리 컬렉션"
+        "thumbnail": "../../assets/product/granola/thumbnail.jpg",
+        "view": "../../assets/product/granola/detail_view.jpg",
+        "banner": "../../assets/product/granola/detail_banner.jpg",
+        "info": "../../assets/product/granola/detail_info.jpg",
+        "alt": "유기농 그래놀라"
       },
       "badge": {
         "karly": "hidden",

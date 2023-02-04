@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
+    <meta name="description" content="market Karly clone site" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +34,10 @@
 
     <div class="popup-box">
       <a href="#"
-        ><img src="./assets/main/popup/popup-image.png" class="popup-image"
+        ><img
+          src="./assets/main/popup/popup-image.png"
+          class="popup-image"
+          alt="이벤트 이미지"
       /></a>
       <button class="close-during-oneday is-open">오늘 하루 안 보기</button>
       <button class="close is-open">닫기</button>
@@ -317,32 +321,16 @@
             </ul>
             <ul class="header--nav-menu-group">
               <li class="header--nav-menu-item">
-                <a href="./product.html">
-                  <button type="button" class="header--nav-menu-btn">
-                    신상품
-                  </button>
-                </a>
+                <a href="./product.html"> 신상품 </a>
               </li>
               <li class="header--nav-menu-item">
-                <a href="./product.html">
-                  <button type="button" class="header--nav-menu-btn">
-                    베스트
-                  </button>
-                </a>
+                <a href="./product.html"> 베스트 </a>
               </li>
               <li class="header--nav-menu-item">
-                <a href="./product.html">
-                  <button type="button" class="header--nav-menu-btn">
-                    알뜰쇼핑
-                  </button>
-                </a>
+                <a href="./product.html"> 알뜰쇼핑 </a>
               </li>
               <li class="header--nav-menu-item">
-                <a href="./product.html">
-                  <button type="button" class="header--nav-menu-btn">
-                    특가/혜택
-                  </button>
-                </a>
+                <a href="./product.html"> 특가/혜택 </a>
               </li>
             </ul>
             <ul>
@@ -358,6 +346,7 @@
     </header>
     <main class="main">
       <section class="main-banner">
+        <h2 class="a11y-hidden">메인 배너</h2>
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -404,11 +393,14 @@
         <p class="recommend__title">이 상품 어때요?</p>
         <div class="slider-wrapper">
           <div class="swiper-recommend--product product-swiper">
-            <div class="swiper-wrapper recommend-product">
-            </div>
+            <div class="swiper-wrapper recommend-product"></div>
           </div>
-          <div class="swiper-recommend--product--button-prev swiper-recommend-button-prev"></div>
-          <div class="swiper-recommend--product--button-next swiper-recommend-button-next"></div>
+          <div
+            class="swiper-recommend--product--button-prev swiper-recommend-button-prev"
+          ></div>
+          <div
+            class="swiper-recommend--product--button-next swiper-recommend-button-next"
+          ></div>
         </div>
       </section>
 
@@ -424,67 +416,69 @@
         <p class="recommend__title">놓치면 후회할 가격</p>
         <div class="slider-wrapper">
           <div class="swiper-recommend--price product-swiper">
-            <div class="swiper-wrapper recommend-sale">
-            </div>
+            <div class="swiper-wrapper recommend-sale"></div>
           </div>
-          <div class="swiper-recommend--price--button-prev swiper-recommend-button-prev"></div>
-          <div class="swiper-recommend--price--button-next swiper-recommend-button-next"></div>
+          <div
+            class="swiper-recommend--price--button-prev swiper-recommend-button-prev"
+          ></div>
+          <div
+            class="swiper-recommend--price--button-next swiper-recommend-button-next"
+          ></div>
         </div>
       </section>
-    </main>
-
-    <div class="aside">
-      <div class="aside-bar">
-        <div class="aside-box">
-          <button
-            aria-disabled="true"
-            type="button"
-            name="prev"
-            class="aside-btn"
-          >
-            <svg
-              width="10"
-              height="10"
-              fill="#999999"
-              stroke="#ddd"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
+      <div class="aside">
+        <div class="aside-bar">
+          <div class="aside-box">
+            <button
+              aria-disabled="true"
+              type="button"
+              title="prev"
+              class="aside-btn"
             >
-              <path
-                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+              <svg
+                width="10"
+                height="10"
+                fill="#999999"
                 stroke="#ddd"
-                stroke-width="1.3"
-              />
-            </svg>
-          </button>
-          <p>최근&nbsp;본&nbsp;상품</p>
-          <div class="aside-img">
-            <ul class="aside-item"></ul>
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                  stroke="#ddd"
+                  stroke-width="1.3"
+                />
+              </svg>
+            </button>
+            <p>최근&nbsp;본&nbsp;상품</p>
+            <div class="aside-img">
+              <ul class="aside-item"></ul>
+            </div>
+            <button
+              aria-disabled="true"
+              type="button"
+              title="next"
+              class="aside-btn"
+            >
+              <svg
+                width="10"
+                height="10"
+                fill="#999999"
+                stroke="#ddd"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  stroke="#ddd"
+                  stroke-width="1.3"
+                />
+              </svg>
+            </button>
           </div>
-          <button
-            aria-disabled="true"
-            type="button"
-            name="next"
-            class="aside-btn"
-          >
-            <svg
-              width="10"
-              height="10"
-              fill="#999999"
-              stroke="#ddd"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                stroke="#ddd"
-                stroke-width="1.3"
-              />
-            </svg>
-          </button>
         </div>
       </div>
-    </div>
+    </main>
 
     <footer class="footer">
       <div class="footer-inner">
@@ -554,7 +548,7 @@
               <dl>
                 <dt>법인명(상호) :</dt>
                 <dd>주식회사 칼리</dd>
-                <span class="vertical-line"></span>
+                <dd class="vertical-line"></dd>
                 <dt>사업자등록번호 :</dt>
                 <dd>261-81-23567</dd>
                 <dd><a href="#">사업자정보 확인</a></dd>
@@ -562,21 +556,21 @@
               <dl>
                 <dt>통신판매업 :</dt>
                 <dd>제 2018-서울강남-01646 호</dd>
-                <span class="vertical-line"></span>
+                <dd class="vertical-line"></dd>
                 <dt>개인정보보호책임자 :</dt>
                 <dd>이원준</dd>
               </dl>
               <dl>
                 <dt>주소 :</dt>
                 <dd>서울특별시 강남구 테헤란로 133, 18층(역삼동)</dd>
-                <span class="vertical-line"></span>
+                <dd class="vertical-line"></dd>
                 <dt>대표이사 :</dt>
                 <dd>김슬아</dd>
               </dl>
               <dl>
                 <dt>입점문의 :</dt>
                 <dd><a href="#">입점문의하기</a></dd>
-                <span class="vertical-line"></span>
+                <dd class="vertical-line"></dd>
                 <dt>제휴문의 :</dt>
                 <dd>
                   <a href="mailto:business@karlycorp.com">business@karly.com</a>
@@ -596,49 +590,66 @@
               </dl>
             </div>
             <ul class="footer-sns">
-              <a
-                href="https://instagram.com/marketkurly"
-                target="_blank"
-                rel="noreferrer"
-                class="footer-sns--instagram"
-              >
-                <img
-                  src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
-                  alt="컬리 인스타그램 바로가기" /></a
-              ><a
-                href="https://www.facebook.com/marketkurly"
-                target="_blank"
-                rel="noreferrer"
-                class="footer-sns--facebook"
-              >
-                <img
-                  src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
-                  alt="컬리 페이스북 바로가기" /></a
-              ><a
-                href="https://blog.naver.com/marketkurly"
-                target="_blank"
-                rel="noreferrer"
-                class="footer-sns--blog"
-                ><img
-                  src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
-                  alt="컬리 네이버블로그 바로가기" /></a
-              ><a
-                href="https://m.post.naver.com/marketkurly"
-                target="_blank"
-                rel="noreferrer"
-                class="footer-sns--naverpost"
-                ><img
-                  src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
-                  alt="컬리 네이버포스트 바로가기" /></a
-              ><a
-                href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
-                target="_blank"
-                rel="noreferrer"
-                class="footer-sns--youtube"
-                ><img
-                  src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
-                  alt="컬리 유튜브 바로가기"
-              /></a>
+              <li>
+                <a
+                  href="https://instagram.com/marketkurly"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="footer-sns--instagram"
+                >
+                  <img
+                    src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
+                    alt="컬리 인스타그램 바로가기"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/marketkurly"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="footer-sns--facebook"
+                >
+                  <img
+                    src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
+                    alt="컬리 페이스북 바로가기"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://blog.naver.com/marketkurly"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="footer-sns--blog"
+                  ><img
+                    src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
+                    alt="컬리 네이버블로그 바로가기"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://m.post.naver.com/marketkurly"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="footer-sns--naverpost"
+                  ><img
+                    src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
+                    alt="컬리 네이버포스트 바로가기"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="footer-sns--youtube"
+                  ><img
+                    src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
+                    alt="컬리 유튜브 바로가기"
+                /></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -648,44 +659,52 @@
               src="https://res.kurly.com/pc/ico/2208/logo_isms.svg"
               alt="isms 로고"
               class="footer-item-second-img"
+              width="45px"
+              height="45px"
             />
-            <p class="footer-item-second-text">
+            <span class="footer-item-second-text">
               [인증범위] 컬리 쇼핑몰 서비스 개발·운영<br />(심사받지 않은 물리적
               인프라 제외)<br />[유효기간] 2022.01.19 ~ 2025.01.18
-            </p>
+            </span>
           </button>
           <button type="button" class="footer--first-button">
             <img
               src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg"
               alt="eprivacy plus 로고"
               class="footer-item-second-img"
+              width="45px"
+              height="45px"
             />
-            <p class="footer-item-second-text">
+            <span class="footer-item-second-text">
               개인정보보호 우수 웹사이트 ·<br />개인정보처리시스템 인증
               (ePRIVACY PLUS)
-            </p>
+            </span>
           </button>
           <button type="button" class="footer--first-button">
             <img
               src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg"
               alt="payments 로고"
               class="footer-item-second-img"
+              width="105px"
+              height="30px"
             />
-            <p class="footer-item-second-text">
+            <span class="footer-item-second-text">
               토스페이먼츠 구매안전(에스크로)<br />서비스를 이용하실 수
               있습니다.
-            </p>
+            </span>
           </button>
           <button type="button" class="footer--first-button">
             <img
               src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg"
               alt="우리은행 로고"
               class="footer-item-second-img"
+              width="45px"
+              height="45px"
             />
-            <p class="footer-item-second-text">
+            <span class="footer-item-second-text">
               고객님이 현금으로 결제한 금액에 대해 우리은행과<br />채무지급보증
               계약을 체결하여 안전거래를 보장하고<br />있습니다.
-            </p>
+            </span>
           </button>
         </div>
       </div>
