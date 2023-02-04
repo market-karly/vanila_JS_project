@@ -27,12 +27,16 @@ body {
 }
 
 /* layout */
-/* .header,
-.main,
+.header,
 .footer {
   width: 1920px;
-  margin: 0 auto;
-} */
+}
+
+.main {
+  width: 1050px;
+  margin-left: 435px;
+  margin-right: 435px;
+}
 
 input::-ms-clear,
 input::-ms-reveal {

@@ -26,14 +26,14 @@
 --blue-900: #001433;
 --info-error: #f03f40;
 
---spacing-xs: 0.5rem;
---spacing-sm: 0.75rem;
---spacing-base: 1rem; 
---spacing-md: 1.25rem; 
+--spacing-xs: 0.5rem; /* 8px */
+--spacing-sm: 0.75rem; /* 12px */
+--spacing-base: 1rem; /* 16px */
+--spacing-md: 1.25rem; /* 20px */
 
---text-sm: 0.75rem; 
---text-base: 1rem; 
---text-md: 1.375rem; 
---text-lg: 2.375rem;  
---container-width: 65.625rem;
+--text-sm: 0.75rem; /* 12px */
+--text-base: 1rem; /* 16px */
+--text-md: 1.375rem; /* 22px */
+--text-lg: 2.375rem;  /* 38px */
+--container-width: 65.625rem; /* 1050px */
 }

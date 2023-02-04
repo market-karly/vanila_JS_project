@@ -5,25 +5,28 @@ main {
   align-items: center;
 }
 
+.product-list-wrapper {
+  width: 783px;
+}
+
 .product {
   width: 1050px;
   display: flex;
   justify-content: space-between;
-  /* flex-flow: column; */
+  flex-flow: row nowrap;
 }
 
 .product-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  width: 850px;
   margin-bottom: 24px;
+  margin-top: 40px;
 }
 
 .product-brief__container {
   display: block;
-  /* margin-right: 18px; */
   height: 580px;
+  margin-left: 12px;
 }
 
 .product-brief__img {

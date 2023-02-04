@@ -5,12 +5,13 @@ button {
 }
 
 .product-list-nav {
+  margin-top: 14px;
   position: sticky;
   width: 13.75rem;
   flex-shrink: 0;
   height: 100%;
   max-height: calc(100vh - 120px);
-  top: 80px;
+  top: 20px;
   margin-right: 45px;
   border-bottom: var(--gray-100);
   overflow: hidden scroll;
@@ -42,13 +43,9 @@ button {
 .nav-filter_button {
   display: flex;
   align-items: center;
-  pointer-events: none;
-}
-
-.nav-filter_text-init {
-  margin-left: 5px;
-  font-weight: 500;
-  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-300);
 }
 
 .nav-menu_category {
@@ -112,46 +109,61 @@ button {
   transform: rotateZ(0deg);
 }
 
-.nav-menu_ul {
-  display: none;
-}
-.nav-menu_ul2 {
-  display: none;
-}
+.nav-menu_ul,
+.nav-menu_ul2,
 .nav-menu_ul3 {
-  display: none;
+  max-height: 0px;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.nav-menu_ul-list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 .nav-menu_ul-list:first-of-type {
   margin-top: 0.625rem;
 }
 
-label {
-  cursor: pointer;
-}
-
-input[type="checkbox"] + label {
-  display: inline-block;
-  margin: 0 5px;
+.nav-menu_ul-list input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  background: url("../../assets/icons/Icon/check-box-round.svg") no-repeat 0 0px /
-    contain;
-  vertical-align: middle;
+  background: url("../../assets/icons/Icon/check-box-round.svg") no-repeat 0 0px;
+  background-size: 18px 18px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  z-index: 10;
+  appearance: none;
 }
 
-input[type="checkbox"]:checked + label {
+.nav-menu_ul-list input[type="checkbox"] + label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  z-index: 5;
+}
+
+/* .nav-menu_ul-list input[type="checkbox"] + label::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  z-index: 5;
+  content: "";
+  position: absolute;
+} */
+
+.nav-menu_ul-list input[type="checkbox"]:checked + label {
   background: url("../../assets/icons/Icon/checked-box-round.svg") no-repeat 0
-    1px / contain;
-  vertical-align: middle;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-.nav-menu_ul-list label {
-  vertical-align: baseline;
+    0px;
+  background-size: 19px 19px;
+  background-position: 3px;
+  z-index: 18;
 }
 
 .ul-list_count {
@@ -178,32 +190,14 @@ input[type="checkbox"] {
   transform: rotateZ(180deg);
 }
 
-.nav-menu_ul.closed1 {
-  display: flex;
-  flex-flow: column nowrap;
-  height: auto;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
-.nav-menu_ul2.closed2 {
-  display: flex;
-  flex-flow: column nowrap;
-  height: auto;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
+.nav-menu_ul.closed1,
+.nav-menu_ul2.closed2,
 .nav-menu_ul3.closed3 {
   display: flex;
   flex-flow: column nowrap;
-  height: auto;
+  opacity: 1;
+  max-height: 100vh;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
-
-.nav-menu_ul-list {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
 }
 
 .nav-menu_category-svg.swich-icon--active1,

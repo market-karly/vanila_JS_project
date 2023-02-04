@@ -7,6 +7,7 @@
       "price": 6900,
       "saleRatio": 0.24,
       "salePrice": 5244,
+      "review": 1,
       "image": {
         "thumbnail": "../../assets/product/ubuho/thumbnail.jpg",
         "view": "../../assets/product/ubuho/detail_view.jpg",
@@ -14,7 +15,13 @@
         "info": "../../assets/product/ubuho/detail_info.jpg",
         "alt": "유부호 만두"
       },
-      "stock": 3
+      "badge": {
+        "karly": "",
+        "limit": ""
+      },
+      "stock": 3,
+      "category": "피자·핫도그·만두",
+      "brand": "대구 반할만떡"
     },
     {
       "id": "product-ekfk",
@@ -23,6 +30,7 @@
       "price": 4980,
       "saleRatio": 0,
       "salePrice": 0,
+      "review": 3,
       "image": {
         "thumbnail": "../../assets/product/tangtang/thumbnail.jpg",
         "view": "../../assets/product/tangtang/detail_view.jpg",
@@ -30,7 +38,13 @@
         "info": "../../assets/product/tangtang/detail_info.jpg",
         "alt": "풀무원 탱탱쫄면"
       },
-      "stock": 10
+      "badge": {
+        "karly": "hidden",
+        "limit": "hidden"
+      },
+      "stock": 10,
+      "category": "파스타·면류",
+      "brand": "풀무원"
     },
     {
       "id": "product-akqk",
@@ -39,6 +53,7 @@
       "price": 7900,
       "saleRatio": 0.13,
       "salePrice": 6800,
+      "review": 2,
       "image": {
         "thumbnail": "../../assets/product/jukkumi/thumbnail.jpg",
         "view": "../../assets/product/jukkumi/detail_view.jpg",
@@ -46,7 +61,13 @@
         "info": "../../assets/product/jukkumi/detail_info.jpg",
         "alt": "홍대 주꾸미"
       },
-      "stock": 8
+      "badge": {
+        "karly": "",
+        "limit": "hidden"
+      },
+      "stock": 8,
+      "category": "수산가공품",
+      "brand": "홍대쭈꾸미"
     },
     {
       "id": "product-tkwk",
@@ -55,6 +76,7 @@
       "price": 29800,
       "saleRatio": 0,
       "salePrice": 0,
+      "review": 2,
       "image": {
         "thumbnail": "../../assets/product/kangnam/thumbnail.jpg",
         "view": "../../assets/product/kangnam/detail_view.jpg",
@@ -62,7 +84,13 @@
         "info": "../../assets/product/kangnam/detail_info.jpg",
         "alt": "강남면옥 소갈비찜"
       },
-      "stock": 2
+      "badge": {
+        "karly": "hidden",
+        "limit": ""
+      },
+      "stock": 2,
+      "category": "양념육·돈까스",
+      "brand": "강남면옥"
     },
     {
       "id": "product-ckzk",
@@ -71,6 +99,7 @@
       "price": 4500,
       "saleRatio": 0.25,
       "salePrice": 3375,
+      "review": 4,
       "image": {
         "thumbnail": "../../assets/product/bacon/thumbnail.jpg",
         "view": "../../assets/product/bacon/detail_view.jpg",
@@ -78,7 +107,312 @@
         "info": "../../assets/product/bacon/detail_info.jpg",
         "alt": "칼리 한돈 삼겹 베이컨"
       },
-      "stock": 13
+      "badge": {
+        "karly": "",
+        "limit": ""
+      },
+      "stock": 13,
+      "category": "베이컨·햄·통조림",
+      "brand": "Kalry's"
+    },
+    {
+      "id": "product-cushion",
+      "name": "[온더바디] 죠르디 시카 자석 선쿠션",
+      "description": "끈적임 없이 보송한 무기자차 선쿠션",
+      "price": 32500,
+      "saleRatio": 0.17,
+      "salePrice": 26900,
+      "review": 2,
+      "image": {
+        "thumbnail": "../../assets/product/cushion/thumbnail.jpg",
+        "view": "../../assets/product/cushion/detail_view.jpg",
+        "banner": "../../assets/product/cushion/detail_banner.jpg",
+        "info": "../../assets/product/cushion/detail_info.jpg",
+        "alt": "온더바디 죠르디 선쿠션"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": ""
+      },
+      "stock": 16,
+      "category": "선케어",
+      "brand": "온더바디"
+    },
+    {
+      "id": "product-frosh",
+      "name": "[프로쉬] 베이비 세탁세제",
+      "description": "성분을 꼼꼼히 따져 골라 더욱 편안한",
+      "price": 12900,
+      "saleRatio": 0.18,
+      "salePrice": 10500,
+      "review": 5,
+      "image": {
+        "thumbnail": "../../assets/product/frosh/thumbnail.jpg",
+        "view": "../../assets/product/frosh/detail_view.jpg",
+        "banner": "../../assets/product/frosh/detail_banner.jpg",
+        "info": "../../assets/product/frosh/detail_info.jpg",
+        "alt": "프로쉬 베이비 세탁세제"
+      },
+      "badge": {
+        "karly": "",
+        "limit": "hidden"
+      },
+      "stock": 5,
+      "category": "세제·청소용품",
+      "brand": "프로쉬"
+    },
+    {
+      "id": "product-queen",
+      "name": "유기농 밀키퀸 현미 4kg",
+      "description": "구수한 향미와 찰기를 더해줄",
+      "price": 26900,
+      "saleRatio": 0,
+      "salePrice": 0,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/queen/thumbnail.jpg",
+        "view": "../../assets/product/queen/detail_view.jpg",
+        "banner": "../../assets/product/queen/detail_banner.jpg",
+        "info": "../../assets/product/queen/detail_info.jpg",
+        "alt": "유기농 밀키퀸 현미"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": "hidden"
+      },
+      "stock": 7,
+      "category": "쌀·잡곡",
+      "brand": "밀키퀸"
+    },
+    {
+      "id": "product-porkrib",
+      "name": "[빕스] 바베큐 폭립 오리지날 450g",
+      "description": "집에서 즐기는 빕스의 대표 메뉴",
+      "price": 15800,
+      "saleRatio": 0.1,
+      "salePrice": 14220,
+      "review": 2,
+      "image": {
+        "thumbnail": "../../assets/product/porkrib/thumbnail.jpg",
+        "view": "../../assets/product/porkrib/detail_view.jpg",
+        "banner": "../../assets/product/porkrib/detail_banner.jpg",
+        "info": "../../assets/product/porkrib/detail_info.jpg",
+        "alt": "빕스 바베큐 폭립 오리지날"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": "hidden"
+      },
+      "stock": 4,
+      "category": "샐러드·간편식",
+      "brand": "빕스"
+    },
+    {
+      "id": "product-shrimp",
+      "name": "[우주] 프리미엄 손질 생새우살 200g (냉동)(26/30사이즈)",
+      "description": "두루 사용하기 좋은 간편 새우",
+      "price": 8400,
+      "saleRatio": 0.27,
+      "salePrice": 6100,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/shrimp/thumbnail.jpg",
+        "view": "../../assets/product/shrimp/detail_view.jpg",
+        "banner": "../../assets/product/shrimp/detail_banner.jpg",
+        "info": "../../assets/product/shrimp/detail_info.jpg",
+        "alt": "우주 손질 생새우살 냉동"
+      },
+      "badge": {
+        "karly": "",
+        "limit": "hidden"
+      },
+      "stock": 4,
+      "category": "수산·해산·건어물",
+      "brand": "우주"
+    },
+    {
+      "id": "product-lotion",
+      "name": "[일리윤] 세라마이드 아토 로션 528ml",
+      "description": "온 가족이 사용하는 순한 로션",
+      "price": 32900,
+      "saleRatio": 0.39,
+      "salePrice": 19800,
+      "review": 3,
+      "image": {
+        "thumbnail": "../../assets/product/lotion/thumbnail.jpg",
+        "view": "../../assets/product/lotion/detail_view.jpg",
+        "banner": "../../assets/product/lotion/detail_banner.jpg",
+        "info": "../../assets/product/lotion/detail_info.jpg",
+        "alt": "일리윤 아토 로션"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": ""
+      },
+      "stock": 10,
+      "category": "헤어·바디·구강",
+      "brand": "일리윤"
+    },
+    {
+      "id": "product-milk",
+      "name": "[연세우유 X 마켓컬리] 전용목장우유 900mL",
+      "description": "가격, 퀄리티 모두 만족스러운 1A등급 우유",
+      "price": 2250,
+      "saleRatio": 0,
+      "salePrice": 0,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/milk/thumbnail.jpg",
+        "view": "../../assets/product/milk/detail_view.jpg",
+        "banner": "../../assets/product/milk/detail_banner.jpg",
+        "info": "../../assets/product/milk/detail_info.jpg",
+        "alt": "연세우유 전용목장우유"
+      },
+      "badge": {
+        "karly": "",
+        "limit": ""
+      },
+      "stock": 4,
+      "category": "생수·음료·우유·커피",
+      "brand": "연세우유"
+    },
+    {
+      "id": "product-wettissue",
+      "name": "[Kurly's] 데일리 물티슈(100매 X 10팩)",
+      "description": "믿고 쓰는 우리 집 물티슈",
+      "price": 11900,
+      "saleRatio": 0,
+      "salePrice": 0,
+      "review": 3,
+      "image": {
+        "thumbnail": "../../assets/product/wettissue/thumbnail.jpg",
+        "view": "../../assets/product/wettissue/detail_view.jpg",
+        "banner": "../../assets/product/wettissue/detail_banner.jpg",
+        "info": "../../assets/product/wettissue/detail_info.jpg",
+        "alt": "칼리 데일리 물티슈"
+      },
+      "badge": {
+        "karly": "",
+        "limit": "hidden"
+      },
+      "stock": 100,
+      "category": "생활용품·리빙·캠핑",
+      "brand": "Kurly's"
+    },
+    {
+      "id": "product-blueberries",
+      "name": "냉동 블루벨리 1.5kg (페루산)",
+      "description": "아쉬움 없이 넉넉하게 즐기는 냉동 블루베리",
+      "price": 15900,
+      "saleRatio": 0,
+      "salePrice": 0,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/blueberries/thumbnail.jpg",
+        "view": "../../assets/product/blueberries/detail_view.jpg",
+        "banner": "../../assets/product/blueberries/detail_banner.jpg",
+        "info": "../../assets/product/blueberries/detail_info.jpg",
+        "alt": "냉동 블루베리 1.5kg"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": "hidden"
+      },
+      "stock": 1,
+      "category": "과일·견과·쌀",
+      "brand": ""
+    },
+    {
+      "id": "product-galbitang",
+      "name": "[조선호텔] 갈비탕 700g",
+      "description": "그윽한 인삼향을 품은 한 그릇",
+      "price": 13900,
+      "saleRatio": 0.18,
+      "salePrice": 11398,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/josungalbitang/thumbnail.jpg",
+        "view": "../../assets/product/josungalbitang/detail_view.jpg",
+        "banner": "../../assets/product/josungalbitang/detail_banner.jpg",
+        "info": "../../assets/product/josungalbitang/detail_info.jpg",
+        "alt": "조선호텔 갈비탕"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": "hidden"
+      },
+      "stock": 1,
+      "category": "국·반찬·메인요리",
+      "brand": "조선호텔"
+    },
+    {
+      "id": "product-godiva",
+      "name": "[고디바] 골드 디스커버리 컬렉션 9P",
+      "description": "다채롭게 변한 시그니처 컬렉션",
+      "price": 40000,
+      "saleRatio": 0,
+      "salePrice": 0,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/godiva/thumbnail.jpg",
+        "view": "../../assets/product/godiva/detail_view.jpg",
+        "banner": "../../assets/product/godiva/detail_banner.jpg",
+        "info": "../../assets/product/godiva/detail_info.jpg",
+        "alt": "고디바 초콜렛 골드 디스커버리 컬렉션"
+      },
+      "badge": {
+        "karly": "",
+        "limit": "hidden"
+      },
+      "stock": 1,
+      "category": "간식·과자·떡",
+      "brand": "고디바"
+    },
+    {
+      "id": "product-granola",
+      "name": "[네이쳐패스] 유기농 써머베리 그래놀라 312g",
+      "description": "유기농 베리의 상큼함을 가득 담은",
+      "price": 10980,
+      "saleRatio": 0.1,
+      "salePrice": 0,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/granola/thumbnail.jpg",
+        "view": "../../assets/product/granola/detail_view.jpg",
+        "banner": "../../assets/product/granola/detail_banner.jpg",
+        "info": "../../assets/product/granola/detail_info.jpg",
+        "alt": "유기농 그래놀라"
+      },
+      "badge": {
+        "karly": "hidden",
+        "limit": "hidden"
+      },
+      "stock": 1,
+      "category": "샐러드·간편식",
+      "brand": "네이쳐패스"
+    },
+    {
+      "id": "product-picualia",
+      "name": "[선물세트][피쿠알리아] 프리미엄 피쿠알 엑스트라버진 500ml (2022-2023 햇올리브)",
+      "description": "2022-2023 햇올리브",
+      "price": 41890,
+      "saleRatio": 0,
+      "salePrice": 0,
+      "review": 1,
+      "image": {
+        "thumbnail": "../../assets/product/picualia/thumbnail.jpg",
+        "view": "../../assets/product/picualia/detail_view.jpg",
+        "banner": "../../assets/product/picualia/detail_banner.jpg",
+        "info": "../../assets/prod프리미엄 피쿠알 엑스트라버진 500mlinfo.jpg",
+        "alt": "프리미엄 피쿠알 엑스트라버진 500ml"
+      },
+      "badge": {
+        "karly": "",
+        "limit": ""
+      },
+      "stock": 1,
+      "category": "면·양념·오일",
+      "brand": "피쿠알리아"
     }
   ]
 }
