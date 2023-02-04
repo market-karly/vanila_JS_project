@@ -4,11 +4,10 @@
 }
 
 .aside {
-  /* background-color: red; */
   height: 120vh;
   position: absolute;
-  top: 35rem;
-  right: 3rem;
+  top: 23rem;
+  right: -300px;
   bottom: -11.25rem;
   z-index: 100;
   margin-top: 11.25rem;

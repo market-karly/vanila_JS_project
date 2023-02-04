@@ -12,12 +12,21 @@ const priceIcon = getNode(".nav-menu_price-svg");
 
 const onDropDownHandler1 = () => {
   toggleClass(dropdown1, "closed1");
+  document
+    .getElementsByName("카테고리 버튼")[0]
+    .setAttribute("alt", "카테고리 열림 상태");
 };
 const onDropDownHandler2 = () => {
   toggleClass(dropdown2, "closed2");
+  document
+    .getElementsByName("브랜드 버튼")[0]
+    .setAttribute("alt", "브랜드 메뉴 열림 상태");
 };
 const onDropDownHandler3 = () => {
   toggleClass(dropdown3, "closed3");
+  document
+    .getElementsByName("가격 버튼")[0]
+    .setAttribute("alt", "가격 메뉴 열림 상태");
 };
 const onSwitchIconHandler1 = () => {
   toggleClass(categoryIcon, "swich-icon--active1");
@@ -28,6 +37,7 @@ const onSwitchIconHandler2 = () => {
 const onSwitchIconHandler3 = () => {
   toggleClass(priceIcon, "swich-icon--active3");
 };
+
 dropdownBtn1.addEventListener("click", onDropDownHandler1);
 dropdownBtn2.addEventListener("click", onDropDownHandler2);
 dropdownBtn3.addEventListener("click", onDropDownHandler3);
