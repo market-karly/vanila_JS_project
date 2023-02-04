@@ -50,6 +50,10 @@ button {
   margin-left: 5px;
   font-weight: 500;
   color: var(--gray-100);
+  border: 0;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .nav-menu_category {
@@ -121,36 +125,53 @@ button {
   transition: all 400ms ease-in-out;
 }
 
+.nav-menu_ul-list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
 .nav-menu_ul-list:first-of-type {
   margin-top: 0.625rem;
 }
 
-label {
-  cursor: pointer;
-}
-
-input[type="checkbox"] + label {
-  display: inline-block;
-  margin: 0 5px;
+.nav-menu_ul-list input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  background: url("../../assets/icons/Icon/check-box-round.svg") no-repeat 0 0px /
-    contain;
-  vertical-align: middle;
+  background: url("../../assets/icons/Icon/check-box-round.svg") no-repeat 0 0px;
+  background-size: 18px 18px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  z-index: 10;
+  appearance: none;
 }
 
-input[type="checkbox"]:checked + label {
+.nav-menu_ul-list input[type="checkbox"] + label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  z-index: 5;
+}
+
+/* .nav-menu_ul-list input[type="checkbox"] + label::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  z-index: 5;
+  content: "";
+  position: absolute;
+} */
+
+.nav-menu_ul-list input[type="checkbox"]:checked + label {
   background: url("../../assets/icons/Icon/checked-box-round.svg") no-repeat 0
-    1px / contain;
-  vertical-align: middle;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-.nav-menu_ul-list label {
-  vertical-align: baseline;
+    0px;
+  background-size: 19px 19px;
+  background-position: 3px;
+  z-index: 18;
 }
 
 .ul-list_count {
@@ -185,12 +206,6 @@ input[type="checkbox"] {
   opacity: 1;
   max-height: 100vh;
   overflow: hidden;
-}
-
-.nav-menu_ul-list {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
 }
 
 .nav-menu_category-svg.swich-icon--active1,
