@@ -17,7 +17,6 @@
     />
     <link rel="stylesheet" type="text/css" href="./css/product.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
     <script src="./js/product.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
@@ -339,36 +338,7 @@
         <div class="product-list-nav">
           <div class="product-list-nav-filter">
             <span class="nav-fillter_text">필터</span>
-            <button type="button" class="nav-filter_button">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.78 3.96303C12.504 2.16973 10.4086 1 8.04 1C4.15192 1 1 4.15192 1 8.04C1 11.9281 4.15192 15.08 8.04 15.08C11.9281 15.08 15.08 11.9281 15.08 8.04"
-                  stroke="#ddd"
-                  stroke-width="1.6"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M14.4933 1L14.4933 4.52H10.9733"
-                  stroke="#ddd"
-                  stroke-width="1.6"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <input
-                type="button"
-                value="초기화"
-                class="nav-filter_text-init"
-                onclick="clearFilter(this)"
-              />
-            </button>
+            <button type="button" class="nav-filter_button">초기화</button>
           </div>
           <div class="product-list-nav-menu">
             <div class="nav-menu_category">
@@ -376,8 +346,9 @@
                 <span>카테고리</span>
                 <img
                   src="./assets/icons/Icon/arrow-no-background.png"
+                  name="카테고리 버튼"
                   class="nav-menu_category-svg"
-                  alt="화살표 아래방향에 위치"
+                  alt="카테고리 닫힘 상태"
                 />
               </button>
               <ul class="nav-menu_ul">
@@ -456,7 +427,7 @@
                     카테고리 더보기
                     <img
                       src="./assets/icons/Icon/arrow-no-background.png"
-                      alt="화살표 아래방향"
+                      alt="카테고리 더보기 닫힘 상태"
                     />
                   </a>
                 </li>
@@ -468,7 +439,8 @@
                 <span>브랜드</span>
                 <img
                   src="./assets/icons/Icon/arrow-no-background.png"
-                  alt="화살표 아래방향에 위치"
+                  name="브랜드 버튼"
+                  alt="브랜드 메뉴 닫힘 상태"
                   class="nav-menu_brand-svg"
                 />
               </button>
@@ -548,7 +520,7 @@
                     브랜드 더보기
                     <img
                       src="./assets/icons/Icon/arrow-no-background.png"
-                      alt="화살표 아래방향"
+                      alt="브랜드 더보기 닫힘 상태"
                     />
                   </a>
                 </li>
@@ -560,8 +532,9 @@
                 <span>가격</span>
                 <img
                   src="./assets/icons/Icon/arrow-no-background.png"
+                  name="가격 버튼"
                   class="nav-menu_price-svg"
-                  alt="화살표 아래방향에 위치"
+                  alt="가격메뉴 닫힘 상태"
                 />
               </button>
               <ul class="nav-menu_ul3">
