@@ -137,7 +137,6 @@ button {
   position: absolute;
   left: 0;
   bottom: -3px;
-  z-index: 10;
   appearance: none;
 }
 
@@ -148,15 +147,6 @@ button {
   padding-left: 30px;
   z-index: 5;
 }
-
-/* .nav-menu_ul-list input[type="checkbox"] + label::before {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  z-index: 5;
-  content: "";
-  position: absolute;
-} */
 
 .nav-menu_ul-list input[type="checkbox"]:checked + label {
   background: url("../../assets/icons/Icon/checked-box-round.svg") no-repeat 0

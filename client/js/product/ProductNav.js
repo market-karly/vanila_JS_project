@@ -1,4 +1,11 @@
-import { getNode, toggleClass } from "../../lib/index.js";
+import {
+  parse,
+  getNode,
+  getNodes,
+  toggleClass,
+  resetElements,
+  renderProduct,
+} from "../../lib/index.js";
 
 const dropdown1 = getNode(".nav-menu_ul");
 const dropdown2 = getNode(".nav-menu_ul2");
@@ -9,6 +16,8 @@ const dropdownBtn3 = getNode(".nav-menu-btn3");
 const categoryIcon = getNode(".nav-menu_category-svg");
 const brandIcon = getNode(".nav-menu_brand-svg");
 const priceIcon = getNode(".nav-menu_price-svg");
+const resetBtn = getNode(".nav-filter_button");
+const productContainer = getNode(".product-list");
 
 const onDropDownHandler1 = () => {
   toggleClass(dropdown1, "closed1");
@@ -38,6 +47,40 @@ const onSwitchIconHandler3 = () => {
   toggleClass(priceIcon, "swich-icon--active3");
 };
 
+const resetFilterHandler = () => {
+  let obj = document.getElementsByName("checkbox");
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].checked) {
+      obj[i].checked = false;
+    }
+  }
+};
+
+async function showingProductList() {
+  try {
+    let response = await parse.get("http://localhost:3000/products");
+    let productData = response.data;
+    let obj2 = document.getElementsByName("checkbox");
+
+    obj2.forEach((el) => {
+      el.addEventListener("click", () => {
+        resetElements(".product-list li");
+        productData.forEach((product) => {
+          if (el.checked && product.category === "과일·견과·쌀") {
+            console.log(el);
+            renderProduct(productContainer, product);
+          }
+        });
+      });
+    });
+  } catch (err) {
+    console.log("error");
+  }
+}
+
+showingProductList();
+
+resetBtn.addEventListener("click", resetFilterHandler);
 dropdownBtn1.addEventListener("click", onDropDownHandler1);
 dropdownBtn2.addEventListener("click", onDropDownHandler2);
 dropdownBtn3.addEventListener("click", onDropDownHandler3);
