@@ -173,10 +173,12 @@
   position: relative;
 }
 
+.register-term-item__input-all,
 .register-term-item__input {
   position: relative;
 }
 
+.register-term-item__input-all::after,
 .register-term-item__input::after {
   display: inline-block;
   content: "";
@@ -189,6 +191,7 @@
   height: 24px;
 }
 
+.register-term-item__input-all:checked::after,
 .register-term-item__input:checked::after {
   background: #fff url(../assets/icons/Icon/isChecked=true.svg) no-repeat;
 }
@@ -218,6 +221,7 @@
 }
 
 .register-term-item__detail-all {
+  padding-top: 0;
   padding-bottom: 0;
 }
 

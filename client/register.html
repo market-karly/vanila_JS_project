@@ -159,8 +159,8 @@
   <main class="register">
     <h2 class="register--title">회원가입</h2>
     <p class="register--info-necessary"><span class="register--necessary">&#42;</span>필수입력사항</p>
-    <form class="register-form" action="#" method="post" id="register">
-      <fieldset>
+    <form action="#" method="post" id="register">
+      <fieldset class="register-form">
         <legend class="a11y-hidden">회원 정보 입력</legend>
         <table>
           <tbody class="register-table">
@@ -175,7 +175,7 @@
                   maxlength="16" required />
                 <p class="register-item__error"></p>
               </td>
-              <td>
+              <td class="register-item__check-id">
                 <button class="register-item__button-validation" type="button">
                   중복확인
                 </button>
@@ -211,7 +211,7 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" data-type="name" type="text" id="name" placeholder="이름을 입력해주세요"
+                <input class="register-item__input" data-type="username" type="text" id="name" placeholder="이름을 입력해주세요"
                   required />
                 <p class="register-item__error"></p>
               </td>
@@ -223,11 +223,11 @@
                 </label>
               </td>
               <td>
-                <input class="register-item__input" data-type="email" type="email" id="email"
+                <input class="register-item__input" data-type="userEmail" type="email" id="email"
                   placeholder="예) marketkarly@karly.com" required />
                 <p class="register-item__error"></p>
               </td>
-              <td>
+              <td class="register-item__check-id">
                 <button class="register-item__button-validation" type="button">
                   중복확인
                 </button>
@@ -307,7 +307,7 @@
           </tbody>
         </table>
       </fieldset>
-      <fieldset>
+      <fieldset class="register-term-form">
         <legend class="a11y-hidden">이용약관 동의 폼</legend>
         <table>
           <tbody class="register-term-table">
@@ -321,7 +321,7 @@
             <tr class="register-term-item">
               <td>
                 <div class="register-term-item__detail-all">
-                  <input class="register-term-item__input" type="checkbox" id="agree-all" />
+                  <input class="register-term-item__input-all" type="checkbox" id="agree-all" />
                   <label class="register-term-item__label-all" for="agree-all">전체 동의합니다.</label>
                 </div>
                 <p class="register-term-item__info-all">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
