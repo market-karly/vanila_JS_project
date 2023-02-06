@@ -19,13 +19,23 @@ const alertBackground = getNode(".alert--background");
 const alertWarning = getNode(".alert--warning");
 const alertConfirm = getNode(".alert--button");
 
-const alertAnnouncement = (ment) => {
+const alertAnnouncement = (message) => {
   clearContents(alertWarning);
   alertWindow.style.opacity = "1";
   alertWindow.style.pointerEvents = "auto";
   alertBackground.style.opacity = "1";
   alertBackground.style.pointerEvents = "auto";
-  insertLast(alertWarning, ment);
+  insertLast(alertWarning, message);
+};
+const onCloseAlertHandler = () => {
+  alertWindow.style.opacity = "0";
+  alertWindow.style.pointerEvents = "none";
+  alertBackground.style.opacity = "0";
+  alertBackground.style.pointerEvents = "none";
+};
+
+const onGoHomeHandler = () => {
+  window.location.href = "http://localhost:5500";
 };
 
 const onLoginHandler = (e) => {
@@ -49,16 +59,6 @@ const onLoginHandler = (e) => {
     }
   }
 };
+
 loginBtn.addEventListener("click", onLoginHandler);
-
-const onCloseAlertHandler = () => {
-  alertWindow.style.opacity = "0";
-  alertWindow.style.pointerEvents = "none";
-  alertBackground.style.opacity = "0";
-  alertBackground.style.pointerEvents = "none";
-};
 alertConfirm.addEventListener("click", onCloseAlertHandler);
-
-const onGoHomeHandler = () => {
-  window.location.href = "http://127.0.0.1:5500/client/index.html";
-};
