@@ -1,9 +1,4 @@
-import {
-  getNode,
-  insertLast,
-  clearContents,
-  communication,
-} from "../../lib/index.js";
+import { getNode, insertLast, clearContents, parse } from "../../lib/index.js";
 
 const loginBtn = getNode(".login--form-button");
 const alertWindow = getNode(".alert");
@@ -32,10 +27,10 @@ const onGoHomeHandler = () => {
 
 const checkingUser = async (userId, userPw) => {
   try {
-    let response = await communication.get("http://localhost:3000/users");
+    let response = await parse.get("http://localhost:3000/users");
     let userData = response.data;
     let currentUser = userData.find((user) => user.id === userId);
-    if (currentUser.password === userPw) {
+    if (currentUser?.password === userPw) {
       window.localStorage.clear();
       localStorage.setItem(userId, JSON.stringify(currentUser));
       console.log("로그인 완료!");
