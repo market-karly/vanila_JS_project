@@ -12,75 +12,110 @@ const userData = {
   phone: ""
 };
 
+function validateUserId(e, template) {
+  const idRegExp = /^(?=.*[a-zA-Z])[a-zA-Z\d]{6,}$/;
+  if (!isCorrect(idRegExp, e.target.value)) {
+    template = "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합";
+  } else {
+    template = "";
+    userData.id = e.target.value;
+  }
+  return template;
+}
+
+function validateUserPW(e, template) {
+  let input = e.target;
+  const pwEngNumRegExp = /^(?=.*[a-zA-Z])(?=.*[\d])[\S]*$/;
+  const pwEngMarkRegExp = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])[\S]*$/;
+  const pwMarkNumRegExp = /^(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])(?=.*[\d])[\S]*$/;
+  const pwTotalRegExp = /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])[\S]*$/;
+  if (!input.value.length) {
+    template = "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합";
+  } else if (input.value.length < 10) {
+    template = "최소 10자 이상 입력";
+  } else if (!isCorrect(pwEngNumRegExp, input.value) &&
+    !isCorrect(pwEngMarkRegExp, input.value) &&
+    !isCorrect(pwMarkNumRegExp, input.value) &&
+    !isCorrect(pwTotalRegExp, input.value)) {
+    template = "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합";
+  } else {
+    template = "";
+    userData.pw = input.value;
+  }
+  return template;
+}
+
+function checkUserPW(e, template) {
+  if (e.target.value !== userData.pw) {
+    template = "동일한 비밀번호를 입력";
+  }
+  return template;
+}
+
+function validateUserName(e, template) {
+  if (e.target.value.length === 0) {
+    template = "이름을 입력해주세요.";
+  } else {
+    template = "";
+    userData.name = e.target.value;
+  }
+  return template;
+}
+
+function validateUserEmail(e, template) {
+  const emailRegExp = /^[^@]+@[^@.]+\.+.+$/;
+  if (!e.target.value) {
+    template = "이메일을 입력해주세요.";
+
+  } else if (!isCorrect(emailRegExp, e.target.value)) {
+    template = "이메일 형식으로 입력해 주세요.";
+  } else {
+    template = "";
+    userData.email = e.target.value;
+  }
+  return template;
+}
+
+function validateUserPhone(e, template) {
+  if (!isNumber(e.target.value)) {
+    return;
+  } else if (e.target.value.length === 0) {
+    template = "휴대폰 번호를 입력해 주세요.";
+  } else {
+    template = "";
+    userData.phoneNum = e.target.value;
+  }
+  return template;
+}
+
 const functionByType = {
+  template: "",
   userId: function (e) {
-    const idRegExp = /^(?=.*[a-zA-Z])[a-zA-Z\d]{6,}$/;
-    e.target.nextElementSibling.innerHTML = '';
-    if (!isCorrect(idRegExp, e.target.value)) {
-      insertLast(e.target.nextElementSibling, "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합");
-    } else {
-      userData.id = e.target.value;
-    }
+    this.template = validateUserId(e, this.template);
   },
   userPW: function (e) {
-    let input = e.target;
-    const pwEngNumRegExp = /^(?=.*[a-zA-Z])(?=.*[\d])[\S]*$/;
-    const pwEngMarkRegExp = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])[\S]*$/;
-    const pwMarkNumRegExp = /^(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])(?=.*[\d])[\S]*$/;
-    const pwTotalRegExp = /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])[\S]*$/;
-    input.nextElementSibling.innerHTML = '';
-    if (!input.value.length) {
-      insertLast(input.nextElementSibling, "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합");
-    } else if (input.value.length < 10) {
-      insertLast(input.nextElementSibling, "최소 10자 이상 입력");
-    } else if (!isCorrect(pwEngNumRegExp, input.value) &&
-      !isCorrect(pwEngMarkRegExp, input.value) &&
-      !isCorrect(pwMarkNumRegExp, input.value) &&
-      !isCorrect(pwTotalRegExp, input.value)) {
-      insertLast(input.nextElementSibling, "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합");
-    } else {
-      userData.pw = input.value;
-    }
+    this.template = validateUserPW(e, this.template);
   },
   userPWcheck: function (e) {
-    e.target.nextElementSibling.innerHTML = '';
-    if (e.target.value !== userData.pw) {
-      insertLast(e.target.nextElementSibling, "동일한 비밀번호를 입력");
-    }
+    this.template = checkUserPW(e, this.template);
   },
   username: function (e) {
-    e.target.nextElementSibling.innerHTML = '';
-    if (e.target.value.length === 0) {
-      insertLast(e.target.nextElementSibling, "이름을 입력해주세요.");
-    } else userData.name = e.target.value;
+    this.template = validateUserName(e, this.template);
   },
   userEmail: function (e) {
-    e.target.nextElementSibling.innerHTML = '';
-    const emailRegExp = /^[^@]+@[^@.]+\.+.+$/;
-    if (!e.target.value) {
-      insertLast(e.target.nextElementSibling, "이메일을 입력해주세요.");
-
-    } else if (!isCorrect(emailRegExp, e.target.value)) {
-      insertLast(e.target.nextElementSibling, "이메일 형식으로 입력해 주세요.");
-    } else userData.email = e.target.value;
+    this.template = validateUserEmail(e, this.template);
   },
   phone: function (e) {
-    e.target.nextElementSibling.innerHTML = '';
-    if (!isNumber(e.target.value)) {
-      return;
-    } else if (e.target.value.length === 0) {
-      insertLast(e.target.nextElementSibling, "휴대폰 번호를 입력해 주세요.");
-    } else userData.phoneNum = e.target.value;
+    this.template = validateUserPhone(e, this.template);
   }
 };
 
-
-
 function onInputHandler(e) {
   const type = e.target.dataset.type;
-
   if (type) {
+    e.target.nextElementSibling.innerHTML = '';
     functionByType[type](e);
+    insertLast(e.target.nextElementSibling, functionByType.template);
   }
 };
 
@@ -110,7 +145,7 @@ function onClickHandler(e) {
   // let target = e.target;
   if (e.target.classList.contains('register__button-submit')) {
     e.preventDefault();
-    saveStorage('user1', JSON.stringify(userData));
+    saveStorage(userData.id, userData);
     loadStorage("user1").then((obj) => console.log(obj));
     location = "./index.html";
   }
