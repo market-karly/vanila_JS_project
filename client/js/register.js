@@ -1,22 +1,25 @@
-import { getNode, getNodes, isNumber, insertLast } from "../lib/index.js";
+import { getNode, getNodes, isNumber, insertLast, saveStorage, loadStorage } from "../lib/index.js";
 
-const registerForm = getNode(".register-form");
+const registerForm = getNode(".register");
 const registerTermFrom = getNode(".register-term-form");
 
 const isCorrect = (regExp, value) => regExp.test(value);
 
-const functionByType = {
+const userData = {
   id: "",
   pw: "",
   name: "",
-  email: "",
+  phone: ""
+};
+
+const functionByType = {
   userId: function (e) {
     const idRegExp = /^(?=.*[a-zA-Z])[a-zA-Z\d]{6,}$/;
     e.target.nextElementSibling.innerHTML = '';
     if (!isCorrect(idRegExp, e.target.value)) {
       insertLast(e.target.nextElementSibling, "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합");
     } else {
-      this.id = e.target.value;
+      userData.id = e.target.value;
     }
   },
   userPW: function (e) {
@@ -36,12 +39,12 @@ const functionByType = {
       !isCorrect(pwTotalRegExp, input.value)) {
       insertLast(input.nextElementSibling, "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합");
     } else {
-      this.pw = input.value;
+      userData.pw = input.value;
     }
   },
   userPWcheck: function (e) {
     e.target.nextElementSibling.innerHTML = '';
-    if (e.target.value !== this.pw) {
+    if (e.target.value !== userData.pw) {
       insertLast(e.target.nextElementSibling, "동일한 비밀번호를 입력");
     }
   },
@@ -49,7 +52,7 @@ const functionByType = {
     e.target.nextElementSibling.innerHTML = '';
     if (e.target.value.length === 0) {
       insertLast(e.target.nextElementSibling, "이름을 입력해주세요.");
-    } else this.name = e.target.value;
+    } else userData.name = e.target.value;
   },
   userEmail: function (e) {
     e.target.nextElementSibling.innerHTML = '';
@@ -59,18 +62,19 @@ const functionByType = {
 
     } else if (!isCorrect(emailRegExp, e.target.value)) {
       insertLast(e.target.nextElementSibling, "이메일 형식으로 입력해 주세요.");
-    } else this.email = e.target.value;
+    } else userData.email = e.target.value;
   },
   phone: function (e) {
     e.target.nextElementSibling.innerHTML = '';
-    console.log(isNumber(e.target.value));
     if (!isNumber(e.target.value)) {
       return;
     } else if (e.target.value.length === 0) {
       insertLast(e.target.nextElementSibling, "휴대폰 번호를 입력해 주세요.");
-    }
+    } else userData.phoneNum = e.target.value;
   }
 };
+
+
 
 function onInputHandler(e) {
   const type = e.target.dataset.type;
@@ -78,7 +82,7 @@ function onInputHandler(e) {
   if (type) {
     functionByType[type](e);
   }
-}
+};
 
 const registerTermInputAll = getNode(".register-term-item__input-all");
 const registerTermInputs = getNodes('.register-term-item__input');
@@ -102,9 +106,15 @@ function onChangeHandler(e) {
   });
 }
 
-// function onClickHandler(e) {
-// }
-
+function onClickHandler(e) {
+  // let target = e.target;
+  if (e.target.classList.contains('register__button-submit')) {
+    e.preventDefault();
+    saveStorage('user1', JSON.stringify(userData));
+    loadStorage("user1").then((obj) => console.log(obj));
+    location = "./index.html";
+  }
+}
 registerForm.addEventListener('input', onInputHandler);
-// registerForm.addEventListener('click', onClickHandler);
+registerForm.addEventListener('click', onClickHandler);
 registerTermFrom.addEventListener('change', onChangeHandler);
