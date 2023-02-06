@@ -1,17 +1,9 @@
-import { getNode, insertLast, clearContents } from "../../lib/index.js";
-
-// localStorage 테스트
-const user1 = { password: "wer123", name: "백승연" };
-const user2 = { password: "ert234", name: "김성은" };
-const user3 = { password: "rty345", name: "윤새한" };
-const user4 = { password: "qwe456", name: "전원근" };
-const user5 = { password: "asd567", name: "전하준" };
-
-localStorage.setItem("bsy", JSON.stringify(user1));
-localStorage.setItem("kse", JSON.stringify(user2));
-localStorage.setItem("ysh", JSON.stringify(user3));
-localStorage.setItem("jwg", JSON.stringify(user4));
-localStorage.setItem("jhj", JSON.stringify(user5));
+import {
+  getNode,
+  insertLast,
+  clearContents,
+  communication,
+} from "../../lib/index.js";
 
 const loginBtn = getNode(".login--form-button");
 const alertWindow = getNode(".alert");
@@ -38,25 +30,33 @@ const onGoHomeHandler = () => {
   window.location.href = "http://localhost:5500";
 };
 
+const checkingUser = async (userId, userPw) => {
+  try {
+    let response = await communication.get("http://localhost:3000/users");
+    let userData = response.data;
+    let currentUser = userData.find((user) => user.id === userId);
+    if (currentUser.password === userPw) {
+      window.localStorage.clear();
+      localStorage.setItem(userId, JSON.stringify(currentUser));
+      console.log("로그인 완료!");
+      onGoHomeHandler();
+    } else {
+      alertAnnouncement("아이디, 비밀번호를 확인해주세요.");
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const onLoginHandler = (e) => {
   e.preventDefault();
   let userIdValue = getNode("#userId").value;
   let userPwValue = getNode("#userPw").value;
 
-  if (localStorage.getItem(userIdValue)) {
-    if (
-      userPwValue === JSON.parse(localStorage.getItem(userIdValue)).password
-    ) {
-      onGoHomeHandler();
-    } else {
-      alertAnnouncement("아이디, 비밀번호를 확인해주세요.");
-    }
+  if (userIdValue && userPwValue) {
+    checkingUser(userIdValue, userPwValue);
   } else {
-    if (userIdValue && userPwValue) {
-      alertAnnouncement("아이디, 비밀번호를 확인해주세요.");
-    } else {
-      alertAnnouncement("아이디 또는 비밀번호를 입력해 주세요.");
-    }
+    alertAnnouncement("아이디 또는 비밀번호를 입력해 주세요.");
   }
 };
 
