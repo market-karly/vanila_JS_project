@@ -5,8 +5,7 @@
 /* 상위 배너 */
 .banner {
   background-color: var(--primary);
-  width: 100%;
-  min-width: var(--container-width);
+  width: 100vw;
 }
 
 .banner--inner p,
@@ -43,11 +42,11 @@
 .header {
   box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.1);
   position: relative;
-  width: 100%;
-  min-width: var(--container-width);
+  width: 100vw;
 }
 .header--inner {
   width: var(--container-width);
+  /* width: 1920px; */
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -167,7 +166,9 @@
   display: inline-block;
 }
 
-.header--nav-menu-item a,.header--nav-menu-item button {
+
+.header--nav-menu-item a,
+.header--nav-menu-item button {
   border: none;
   background-color: transparent;
   color: var(--black);

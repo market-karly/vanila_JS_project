@@ -27,12 +27,15 @@ body {
 }
 
 /* layout */
-/* .header,
-.main,
+.header,
 .footer {
-  width: 1920px;
+  width: 100vw;
+}
+
+.main {
+  width: 1050px;
   margin: 0 auto;
-} */
+}
 
 input::-ms-clear,
 input::-ms-reveal {

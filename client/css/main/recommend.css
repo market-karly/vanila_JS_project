@@ -40,6 +40,8 @@
   position: relative;
   left: -7px;
   top: -2px;
+  height: 45px;
+  width: 45px;
 }
 
 .product-brief__info {
