@@ -16,7 +16,7 @@ main {
   flex-flow: row nowrap;
 }
 
-.product-list {
+.product-brief-list {
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 24px;

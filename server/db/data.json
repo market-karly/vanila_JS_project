@@ -9,10 +9,10 @@
       "salePrice": 5244,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/ubuho/thumbnail.jpg",
-        "view": "../../assets/product/ubuho/detail_view.jpg",
-        "banner": "../../assets/product/ubuho/detail_banner.jpg",
-        "info": "../../assets/product/ubuho/detail_info.jpg",
+        "thumbnail": "../../assets/product/ubuho/thumbnail.webp",
+        "view": "../../assets/product/ubuho/detail_view.webp",
+        "banner": "../../assets/product/ubuho/detail_banner.webp",
+        "info": "../../assets/product/ubuho/detail_info.webp",
         "alt": "유부호 만두"
       },
       "badge": {
@@ -32,10 +32,10 @@
       "salePrice": 0,
       "review": 3,
       "image": {
-        "thumbnail": "../../assets/product/tangtang/thumbnail.jpg",
-        "view": "../../assets/product/tangtang/detail_view.jpg",
-        "banner": "../../assets/product/tangtang/detail_banner.jpg",
-        "info": "../../assets/product/tangtang/detail_info.jpg",
+        "thumbnail": "../../assets/product/tangtang/thumbnail.webp",
+        "view": "../../assets/product/tangtang/detail_view.webp",
+        "banner": "../../assets/product/tangtang/detail_banner.webp",
+        "info": "../../assets/product/tangtang/detail_info.webp",
         "alt": "풀무원 탱탱쫄면"
       },
       "badge": {
@@ -55,10 +55,10 @@
       "salePrice": 6800,
       "review": 2,
       "image": {
-        "thumbnail": "../../assets/product/jukkumi/thumbnail.jpg",
-        "view": "../../assets/product/jukkumi/detail_view.jpg",
-        "banner": "../../assets/product/jukkumi/detail_banner.jpg",
-        "info": "../../assets/product/jukkumi/detail_info.jpg",
+        "thumbnail": "../../assets/product/jukkumi/thumbnail.webp",
+        "view": "../../assets/product/jukkumi/detail_view.webp",
+        "banner": "../../assets/product/jukkumi/detail_banner.webp",
+        "info": "../../assets/product/jukkumi/detail_info.webp",
         "alt": "홍대 주꾸미"
       },
       "badge": {
@@ -78,10 +78,10 @@
       "salePrice": 0,
       "review": 2,
       "image": {
-        "thumbnail": "../../assets/product/kangnam/thumbnail.jpg",
-        "view": "../../assets/product/kangnam/detail_view.jpg",
-        "banner": "../../assets/product/kangnam/detail_banner.jpg",
-        "info": "../../assets/product/kangnam/detail_info.jpg",
+        "thumbnail": "../../assets/product/kangnam/thumbnail.webp",
+        "view": "../../assets/product/kangnam/detail_view.webp",
+        "banner": "../../assets/product/kangnam/detail_banner.webp",
+        "info": "../../assets/product/kangnam/detail_info.webp",
         "alt": "강남면옥 소갈비찜"
       },
       "badge": {
@@ -101,10 +101,10 @@
       "salePrice": 3375,
       "review": 4,
       "image": {
-        "thumbnail": "../../assets/product/bacon/thumbnail.jpg",
-        "view": "../../assets/product/bacon/detail_view.jpg",
-        "banner": "../../assets/product/bacon/detail_banner.jpg",
-        "info": "../../assets/product/bacon/detail_info.jpg",
+        "thumbnail": "../../assets/product/bacon/thumbnail.webp",
+        "view": "../../assets/product/bacon/detail_view.webp",
+        "banner": "../../assets/product/bacon/detail_banner.webp",
+        "info": "../../assets/product/bacon/detail_info.webp",
         "alt": "칼리 한돈 삼겹 베이컨"
       },
       "badge": {
@@ -124,10 +124,10 @@
       "salePrice": 26900,
       "review": 2,
       "image": {
-        "thumbnail": "../../assets/product/cushion/thumbnail.jpg",
-        "view": "../../assets/product/cushion/detail_view.jpg",
-        "banner": "../../assets/product/cushion/detail_banner.jpg",
-        "info": "../../assets/product/cushion/detail_info.jpg",
+        "thumbnail": "../../assets/product/cushion/thumbnail.webp",
+        "view": "../../assets/product/cushion/detail_view.webp",
+        "banner": "../../assets/product/cushion/detail_banner.webp",
+        "info": "../../assets/product/cushion/detail_info.webp",
         "alt": "온더바디 죠르디 선쿠션"
       },
       "badge": {
@@ -147,10 +147,10 @@
       "salePrice": 10500,
       "review": 5,
       "image": {
-        "thumbnail": "../../assets/product/frosh/thumbnail.jpg",
-        "view": "../../assets/product/frosh/detail_view.jpg",
-        "banner": "../../assets/product/frosh/detail_banner.jpg",
-        "info": "../../assets/product/frosh/detail_info.jpg",
+        "thumbnail": "../../assets/product/frosh/thumbnail.webp",
+        "view": "../../assets/product/frosh/detail_view.webp",
+        "banner": "../../assets/product/frosh/detail_banner.webp",
+        "info": "../../assets/product/frosh/detail_info.webp",
         "alt": "프로쉬 베이비 세탁세제"
       },
       "badge": {
@@ -170,10 +170,10 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/queen/thumbnail.jpg",
-        "view": "../../assets/product/queen/detail_view.jpg",
-        "banner": "../../assets/product/queen/detail_banner.jpg",
-        "info": "../../assets/product/queen/detail_info.jpg",
+        "thumbnail": "../../assets/product/queen/thumbnail.webp",
+        "view": "../../assets/product/queen/detail_view.webp",
+        "banner": "../../assets/product/queen/detail_banner.webp",
+        "info": "../../assets/product/queen/detail_info.webp",
         "alt": "유기농 밀키퀸 현미"
       },
       "badge": {
@@ -193,10 +193,10 @@
       "salePrice": 14220,
       "review": 2,
       "image": {
-        "thumbnail": "../../assets/product/porkrib/thumbnail.jpg",
-        "view": "../../assets/product/porkrib/detail_view.jpg",
-        "banner": "../../assets/product/porkrib/detail_banner.jpg",
-        "info": "../../assets/product/porkrib/detail_info.jpg",
+        "thumbnail": "../../assets/product/porkrib/thumbnail.webp",
+        "view": "../../assets/product/porkrib/detail_view.webp",
+        "banner": "../../assets/product/porkrib/detail_banner.webp",
+        "info": "../../assets/product/porkrib/detail_info.webp",
         "alt": "빕스 바베큐 폭립 오리지날"
       },
       "badge": {
@@ -216,10 +216,10 @@
       "salePrice": 6100,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/shrimp/thumbnail.jpg",
-        "view": "../../assets/product/shrimp/detail_view.jpg",
-        "banner": "../../assets/product/shrimp/detail_banner.jpg",
-        "info": "../../assets/product/shrimp/detail_info.jpg",
+        "thumbnail": "../../assets/product/shrimp/thumbnail.webp",
+        "view": "../../assets/product/shrimp/detail_view.webp",
+        "banner": "../../assets/product/shrimp/detail_banner.webp",
+        "info": "../../assets/product/shrimp/detail_info.webp",
         "alt": "우주 손질 생새우살 냉동"
       },
       "badge": {
@@ -239,10 +239,10 @@
       "salePrice": 19800,
       "review": 3,
       "image": {
-        "thumbnail": "../../assets/product/lotion/thumbnail.jpg",
-        "view": "../../assets/product/lotion/detail_view.jpg",
-        "banner": "../../assets/product/lotion/detail_banner.jpg",
-        "info": "../../assets/product/lotion/detail_info.jpg",
+        "thumbnail": "../../assets/product/lotion/thumbnail.webp",
+        "view": "../../assets/product/lotion/detail_view.webp",
+        "banner": "../../assets/product/lotion/detail_banner.webp",
+        "info": "../../assets/product/lotion/detail_info.webp",
         "alt": "일리윤 아토 로션"
       },
       "badge": {
@@ -262,10 +262,10 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/milk/thumbnail.jpg",
-        "view": "../../assets/product/milk/detail_view.jpg",
-        "banner": "../../assets/product/milk/detail_banner.jpg",
-        "info": "../../assets/product/milk/detail_info.jpg",
+        "thumbnail": "../../assets/product/milk/thumbnail.webp",
+        "view": "../../assets/product/milk/detail_view.webp",
+        "banner": "../../assets/product/milk/detail_banner.webp",
+        "info": "../../assets/product/milk/detail_info.webp",
         "alt": "연세우유 전용목장우유"
       },
       "badge": {
@@ -285,10 +285,10 @@
       "salePrice": 0,
       "review": 3,
       "image": {
-        "thumbnail": "../../assets/product/wettissue/thumbnail.jpg",
-        "view": "../../assets/product/wettissue/detail_view.jpg",
-        "banner": "../../assets/product/wettissue/detail_banner.jpg",
-        "info": "../../assets/product/wettissue/detail_info.jpg",
+        "thumbnail": "../../assets/product/wettissue/thumbnail.webp",
+        "view": "../../assets/product/wettissue/detail_view.webp",
+        "banner": "../../assets/product/wettissue/detail_banner.webp",
+        "info": "../../assets/product/wettissue/detail_info.webp",
         "alt": "칼리 데일리 물티슈"
       },
       "badge": {
@@ -308,10 +308,10 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/blueberries/thumbnail.jpg",
-        "view": "../../assets/product/blueberries/detail_view.jpg",
-        "banner": "../../assets/product/blueberries/detail_banner.jpg",
-        "info": "../../assets/product/blueberries/detail_info.jpg",
+        "thumbnail": "../../assets/product/blueberries/thumbnail.webp",
+        "view": "../../assets/product/blueberries/detail_view.webp",
+        "banner": "../../assets/product/blueberries/detail_banner.webp",
+        "info": "../../assets/product/blueberries/detail_info.webp",
         "alt": "냉동 블루베리 1.5kg"
       },
       "badge": {
@@ -331,10 +331,10 @@
       "salePrice": 11398,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/josungalbitang/thumbnail.jpg",
-        "view": "../../assets/product/josungalbitang/detail_view.jpg",
-        "banner": "../../assets/product/josungalbitang/detail_banner.jpg",
-        "info": "../../assets/product/josungalbitang/detail_info.jpg",
+        "thumbnail": "../../assets/product/galbitang/thumbnail.webp",
+        "view": "../../assets/product/galbitang/detail_view.webp",
+        "banner": "../../assets/product/galbitang/detail_banner.webp",
+        "info": "../../assets/product/galbitang/detail_info.webp",
         "alt": "조선호텔 갈비탕"
       },
       "badge": {
@@ -354,10 +354,10 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/godiva/thumbnail.jpg",
-        "view": "../../assets/product/godiva/detail_view.jpg",
-        "banner": "../../assets/product/godiva/detail_banner.jpg",
-        "info": "../../assets/product/godiva/detail_info.jpg",
+        "thumbnail": "../../assets/product/godiva/thumbnail.webp",
+        "view": "../../assets/product/godiva/detail_view.webp",
+        "banner": "../../assets/product/godiva/detail_banner.webp",
+        "info": "../../assets/product/godiva/detail_info.webp",
         "alt": "고디바 초콜렛 골드 디스커버리 컬렉션"
       },
       "badge": {
@@ -377,10 +377,10 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/granola/thumbnail.jpg",
-        "view": "../../assets/product/granola/detail_view.jpg",
-        "banner": "../../assets/product/granola/detail_banner.jpg",
-        "info": "../../assets/product/granola/detail_info.jpg",
+        "thumbnail": "../../assets/product/granola/thumbnail.webp",
+        "view": "../../assets/product/granola/detail_view.webp",
+        "banner": "../../assets/product/granola/detail_banner.webp",
+        "info": "../../assets/product/granola/detail_info.webp",
         "alt": "유기농 그래놀라"
       },
       "badge": {
@@ -392,7 +392,7 @@
       "brand": "네이쳐패스"
     },
     {
-      "id": "product-picualia",
+      "id": "product-oil",
       "name": "[선물세트][피쿠알리아] 프리미엄 피쿠알 엑스트라버진 500ml (2022-2023 햇올리브)",
       "description": "2022-2023 햇올리브",
       "price": 41890,
@@ -400,10 +400,10 @@
       "salePrice": 0,
       "review": 1,
       "image": {
-        "thumbnail": "../../assets/product/picualia/thumbnail.jpg",
-        "view": "../../assets/product/picualia/detail_view.jpg",
-        "banner": "../../assets/product/picualia/detail_banner.jpg",
-        "info": "../../assets/prod프리미엄 피쿠알 엑스트라버진 500mlinfo.jpg",
+        "thumbnail": "../../assets/product/oil/thumbnail.webp",
+        "view": "../../assets/product/oil/detail_view.webp",
+        "banner": "../../assets/product/oil/detail_banner.webp",
+        "info": "../../assets/product/oil/detail_info.webp",
         "alt": "프리미엄 피쿠알 엑스트라버진 500ml"
       },
       "badge": {

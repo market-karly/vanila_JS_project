@@ -29,13 +29,12 @@ body {
 /* layout */
 .header,
 .footer {
-  width: 1920px;
+  width: 100vw;
 }
 
 .main {
   width: 1050px;
-  margin-left: 435px;
-  margin-right: 435px;
+  margin: 0 auto;
 }
 
 input::-ms-clear,
