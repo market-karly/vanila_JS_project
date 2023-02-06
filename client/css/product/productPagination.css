@@ -20,10 +20,10 @@
   border-right: 1px solid var(--gray-100);
 }
 
-.list-pagination__but:hover{
+/* .list-pagination__but:hover{
   background-color: var(--gray-50);
   cursor: pointer;
-}
+} */
 
 .list-pagination__img {
   padding: 13px 12px;
@@ -31,11 +31,11 @@
 
 
 .list-pagination__num {
-  padding: 9px 18px;
+  padding: 14px 18px;
   font-size: var(--text-sm);
   font-weight: 400;
 }
 
-.list-pagination__num.is-active{
+.list-pagination__num.is-activeBtn{
   background-color: var(--gray-50);
 }
