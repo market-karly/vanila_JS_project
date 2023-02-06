@@ -2,7 +2,7 @@ import {
   getNode,
   toggleClass,
   clearContents,
-  comma,
+  getPriceUpdate,
   renderRecommendProduct,
   renderRecommendSaleProduct,
 } from "./../lib/index.js";
@@ -91,9 +91,9 @@ modalCloseOneDayBtn.addEventListener("click", onCloseOneDayHandler);
 const recommendContainer = getNode(".recommend-product");
 const recommendSaleContainer = getNode(".recommend-sale");
 
-async function rendingProductList() {
+async function rendingRecProductList() {
   try {
-    const resultData = comma;
+    const resultData = getPriceUpdate();
     /* 기본, 세일 구분 */
     resultData.forEach((data) => {
       if (data.saleRatio === 0) {
@@ -108,4 +108,4 @@ async function rendingProductList() {
   }
 }
 
-rendingProductList();
+rendingRecProductList();

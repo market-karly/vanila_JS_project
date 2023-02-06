@@ -1,4 +1,9 @@
-import { getNode, comma, renderRecommendProduct , renderRecommendSaleProduct} from "./../lib/index.js";
+import {
+  getNode,
+  getPriceUpdate,
+  renderRecommendProduct,
+  renderRecommendSaleProduct,
+} from "../../lib/index.js";
 /* eslint no-undef:'warn' */
 /* eslint no-unused-vars:'off' */
 const swiper1 = new Swiper(".swiper-recommend--product", {
@@ -24,13 +29,12 @@ const swiper2 = new Swiper(".swiper-recommend--price", {
   },
 });
 
-
 const recommendContainer = getNode(".recommend-product");
 const recommendSaleContainer = getNode(".recommend-sale");
 
-async function rendingProductList() {
+async function rendingRecProductList() {
   try {
-    const resultData = comma;
+    const resultData = getPriceUpdate();
     /* 기본, 세일 구분 */
     resultData.forEach((data) => {
       if (data.saleRatio === 0) {
@@ -39,11 +43,10 @@ async function rendingProductList() {
         renderRecommendSaleProduct(recommendContainer, data);
         renderRecommendSaleProduct(recommendSaleContainer, data);
       }
-      
     });
   } catch (err) {
     console.log("error");
   }
 }
 
-rendingProductList();
+rendingRecProductList();

@@ -30,7 +30,7 @@ module.exports = {
     "max-depth": [
       "error",
       {
-        max: 1,
+        max: 2,
       },
     ],
   },
