@@ -13,12 +13,17 @@ import {
 const productContainer = getNode(".product-brief-list");
 
 async function rendingProductList(item) {
-  const resultData = item;
+  try{
+    const resultData = item;
   if (resultData.saleRatio === 0) {
     renderProduct(productContainer, resultData);
   } else {
     renderSaleProduct(productContainer, resultData);
   }
+  }catch{
+    console.log('error');
+  }
+  
 }
 
 /* 페이지 */
@@ -40,8 +45,7 @@ const numbers = getNode(".list-pagination__right");
 for (let i = 1; i <= pageCount; i++) {
   insertBefore(
     numbers,
-    `<li class="list-pagination__but"><a href="#" class=
-      "list-pagination__num">${i}</a></li>`
+    `<li class="list-pagination__but list-pagination__num">${i}</li>`
   );
 }
 
@@ -58,7 +62,6 @@ function displayData(index) {
   let productsCss = getNodes(".product-brief-wrap");
 
   for (let pc of productsCss) {
-    console.log(pc);
     css(pc, "display", "none");
   }
 
@@ -67,13 +70,9 @@ function displayData(index) {
   let end = start + perPage;
 
   const productsCssArray = Array.from(productsCss);
-  console.log(productsCssArray);
 
   let newProducts = productsCssArray.slice(start, end);
-  console.log(newProducts);
-
   for (let np of newProducts) {
-    console.log(np);
     css(np, "display", "block");
   }
 }
@@ -93,3 +92,4 @@ numberBtn.forEach((item, index) => {
   });
 });
 displayData(0);
+
