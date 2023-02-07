@@ -153,7 +153,6 @@ function onInputHandler(e) {
 function onChangeHandler(e) {
   let status = true;
   if (e.target === registerTermInputAll) {
-    console.log(userData);
     status = e.target.checked;
     registerTermInputs.forEach(item => {
       item.checked = status;
@@ -215,6 +214,13 @@ function setTemplate(dataType, template, registeredUserData, value) {
   return template;
 }
 
+function createErrorBox(template) {
+  registerErrorMessage.innerHTML = '';
+  insertLast(registerErrorMessage, template);
+  registerErrorBox.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
 async function onClickHandler(e) {
   let target = e.target;
   let template = "";
@@ -223,9 +229,10 @@ async function onClickHandler(e) {
     e.preventDefault();
     const { id, pw, name, email, phone } = userData;
     let user = createUserData(id, pw, name, email, phone);
-    parse.post('http://localhost:3000/users', user).then((status) => {
-      if (status >= 400) {
-        alert('회원가입에 실패하였습니다.');
+    parse.post('http://localhost:3000/users', user).then((response) => {
+      if (response.status >= 400) {
+        template = '통신에 실패하였습니다.';
+        createErrorBox(template);
       } else {
         location = "./login.html";
       }
@@ -246,21 +253,14 @@ async function onClickHandler(e) {
     if (template.includes('사용가능한')) checkIdDuplicate = true;
     else checkIdDuplicate = false;
     ableSubmitButton();
-    console.log(checkIdDuplicate);
   } else if (target.classList.contains('register-item__check-email')) {
     template = setTemplate("email", template, registeredUserData, target.previousElementSibling.firstElementChild.value);
     if (template.includes('사용가능한')) checkEmailDuplicate = true;
     else checkEmailDuplicate = false;
     ableSubmitButton();
-    console.log(checkEmailDuplicate);
   }
 
-  if (template) {
-    registerErrorMessage.innerHTML = '';
-    insertLast(registerErrorMessage, template);
-    registerErrorBox.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
+  if (template) createErrorBox(template);
 }
 registerForm.addEventListener('input', onInputHandler);
 registerForm.addEventListener('click', onClickHandler);
