@@ -39,12 +39,14 @@ const productsCount = resultData.length;
 // 필요한 페이지 개수
 const pageCount = Math.ceil(productsCount / perPage);
 // 페이지 담을 공간
-const numbers = getNode(".list-pagination__right");
+const nextBtn = getNode(".list-pagination__right");
+const prevBtn = getNode(".list-pagination__left");
+
 
 // 리스트 생성
 for (let i = 1; i <= pageCount; i++) {
   insertBefore(
-    numbers,
+    nextBtn,
     `<li class="list-pagination__but list-pagination__num">${i}</li>`
   );
 }
@@ -75,21 +77,47 @@ function displayData(index) {
   for (let np of newProducts) {
     css(np, "display", "block");
   }
+
+  // 버튼 active
+  for (let nb of numberBtn) {
+    nb.classList.remove("is-activeBtn");
+  }
+  numberBtn[index].classList.add("is-activeBtn");
 }
 
 //페이지네이션버튼
 numberBtn.forEach((item, index) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
-
-    for (let nb of numberBtn) {
-      nb.classList.remove("is-activeBtn");
-    }
-    e.target.classList.add("is-activeBtn");
-
-    // 데이터 출력함수
     displayData(index);
   });
 });
+
+//상품리스트 들어왔을 때 첫 화면
 displayData(0);
 
+
+
+
+const lastPage = pageCount-1;
+
+nextBtn.addEventListener("click", (e) =>{
+  e.preventDefault();
+  let currentPage = getNode('.is-activeBtn').innerText;
+  if(currentPage <= lastPage){
+    displayData(currentPage);
+  }else{
+    return;
+  }
+});
+
+prevBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let currentPage = getNode('.is-activeBtn').innerText;
+  let prevPage = Number(currentPage-2);
+  if(prevPage !== -1 ){
+    displayData(prevPage);
+  }else{
+    return;
+  }
+});
