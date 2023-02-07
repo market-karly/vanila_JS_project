@@ -3,11 +3,11 @@ import {
   renderSaleProduct,
   getNode,
   parse,
-} from "../lib/index.js";
+} from "../../lib/index.js";
 
 const productContainer = getNode(".product-list");
 
-async function rendingProductList() {
+export async function rendingProductList() {
   try {
     let response = await parse.get("http://localhost:3000/products");
     let productData = response.data;

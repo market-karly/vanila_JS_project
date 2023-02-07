@@ -20,7 +20,7 @@ const createRecommend = ({
         class="product-brief__img"
       />
       <button type="button" class="product-brief__icon">
-        <img src="./assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+        <img src="./assets/icons/Icon/Cart.svg" width="45" height="45" alt="장바구니 아이콘" />
       </button>
     </div>
     <div class="product-brief__info">
@@ -151,7 +151,7 @@ const createProduct = ({
         class="product-brief__img"
       />
       <button type="button" class="product-brief__icon">
-        <img src="./assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+        <img src="./assets/icons/Icon/Cart.svg" width="45" height="45" alt="장바구니 아이콘" />
       </button>
     </div>
     <div class="product-brief__info">
