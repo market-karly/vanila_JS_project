@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/product.css" />
     <script src="./js/product.js" type="module"></script>
+    <script src="./js/login/status.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
 
@@ -86,7 +87,7 @@
 
         <ul class="header--member">
           <li><a href="#" class="is-active">회원가입</a></li>
-          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html" class="is-login"></a></li>
           <li>
             <a href="#"
               >고객센터
@@ -612,10 +613,14 @@
                   alt="페이지 왼쪽 이동"
                 />
               </li>
-              <li class="list-pagination__but list-pagination__num">1</li>
-              <li class="list-pagination__but list-pagination__num">2</li>
-              <li class="list-pagination__but list-pagination__img">
-                <img src="./assets/product/page-right.webp" alt="" />
+
+              <li
+                class="list-pagination__but list-pagination__img list-pagination__right"
+              >
+                <img
+                  src="./assets/product/page-right.webp"
+                  alt="페이지 오른쪽 이동"
+                />
               </li>
             </ul>
           </div>
