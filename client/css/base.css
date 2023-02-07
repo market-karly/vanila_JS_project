@@ -11,7 +11,7 @@ html {
 
 /* 링크 스타일 */
 a {
-  color: inherit;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -20,10 +20,7 @@ body {
   width: 120rem;
   font-size: 1rem;
   color: var(--content);
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
 }
 
