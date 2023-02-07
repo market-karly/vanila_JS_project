@@ -1,11 +1,10 @@
 import {
   getNode,
   toggleClass,
-  resetElements,
-  renderProduct,
   getPriceUpdate,
+  resetElements,
 } from "../../lib/index.js";
-// import { rendingProductList } from "./productList.js";
+import { rendingProductList } from "./productList.js";
 
 const dropdown1 = getNode(".nav-menu_ul");
 const dropdown2 = getNode(".nav-menu_ul2");
@@ -17,7 +16,6 @@ const categoryIcon = getNode(".nav-menu_category-svg");
 const brandIcon = getNode(".nav-menu_brand-svg");
 const priceIcon = getNode(".nav-menu_price-svg");
 const resetBtn = getNode(".nav-filter_button");
-const productContainer = getNode(".product-brief-list");
 
 const onDropDownHandler1 = () => {
   toggleClass(dropdown1, "closed1");
@@ -46,44 +44,64 @@ const onSwitchIconHandler2 = () => {
 const onSwitchIconHandler3 = () => {
   toggleClass(priceIcon, "swich-icon--active3");
 };
-
-// const resetFilterHandler = () => {
-//   let obj = document.getElementsByName("checkbox");
-//   for (let i = 0; i < obj.length; i++) {
-//     if (obj[i].checked) {
-//       obj[i].checked = false;
-//     }
-//   }
-//   resetElements(".product-brief-list li");
-//   return rendingProductList();
-// };
+let productData = getPriceUpdate();
 
 async function showingProductList() {
+  let trueCategory = [];
+  let falseArray = [];
+  let falseCategory = [];
   try {
-    let productData = getPriceUpdate();
-    let obj2 = document.getElementsByName("checkbox");
-
-    obj2.forEach((el) => {
+    let obj = document.getElementsByName("checkbox");
+    obj.forEach((el) => {
       el.addEventListener("click", () => {
-        // resetElements(".product-brief-list li");
         productData.forEach((product) => {
-          if (el.checked === true && product.category === "과일·견과·쌀") {
-            console.log(el);
-            renderProduct(productContainer, product);
-          } else if (el.checked === false) {
-            // return rendingProductList();
+          if (el.checked === true && product.category === el.value) {
+            trueCategory.push(product);
+            console.log(trueCategory);
+          } else if (el.checked === false && product.category === el.value) {
+            falseArray.push(product);
+            falseCategory = trueCategory.filter(
+              (pr) => !falseArray.includes(pr)
+            );
           }
         });
+
+        if (falseCategory.length === 0) {
+          resetElements(".product-brief-list li");
+          for (let pr of trueCategory) {
+            rendingProductList(pr);
+          }
+          console.log("true", trueCategory);
+        } else if (falseCategory.length !== 0) {
+          resetElements(".product-brief-list li");
+          for (let pr of falseCategory) {
+            rendingProductList(pr);
+          }
+          console.log("false", falseCategory);
+          trueCategory = [];
+          trueCategory = falseCategory;
+          falseCategory = [];
+        }
       });
     });
   } catch (err) {
     console.log("error");
   }
 }
-
 showingProductList();
 
-// resetBtn.addEventListener("click", resetFilterHandler);
+const resetFilterHandler = () => {
+  let obj = document.getElementsByName("checkbox");
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].checked) {
+      obj[i].checked = false;
+    }
+  }
+  resetElements(".product-brief-list li");
+};
+showingProductList();
+
+resetBtn.addEventListener("click", resetFilterHandler);
 dropdownBtn1.addEventListener("click", onDropDownHandler1);
 dropdownBtn2.addEventListener("click", onDropDownHandler2);
 dropdownBtn3.addEventListener("click", onDropDownHandler3);
