@@ -32,7 +32,7 @@ const checkingUser = async (userId, userPw) => {
     let currentUser = userData.find((user) => user.id === userId);
     if (currentUser?.password === userPw) {
       window.localStorage.clear();
-      localStorage.setItem(userId, JSON.stringify(currentUser));
+      localStorage.setItem('user', JSON.stringify(currentUser));
       console.log("로그인 완료!");
       onGoHomeHandler();
     } else {
