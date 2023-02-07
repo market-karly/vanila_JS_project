@@ -1,11 +1,11 @@
 import {
-  parse,
   getNode,
   toggleClass,
   resetElements,
   renderProduct,
+  getPriceUpdate,
 } from "../../lib/index.js";
-import { rendingProductList } from "./productList.js";
+// import { rendingProductList } from "./productList.js";
 
 const dropdown1 = getNode(".nav-menu_ul");
 const dropdown2 = getNode(".nav-menu_ul2");
@@ -47,32 +47,31 @@ const onSwitchIconHandler3 = () => {
   toggleClass(priceIcon, "swich-icon--active3");
 };
 
-const resetFilterHandler = () => {
-  let obj = document.getElementsByName("checkbox");
-  for (let i = 0; i < obj.length; i++) {
-    if (obj[i].checked) {
-      obj[i].checked = false;
-    }
-  }
-  resetElements(".product-brief-list li");
-  return rendingProductList();
-};
+// const resetFilterHandler = () => {
+//   let obj = document.getElementsByName("checkbox");
+//   for (let i = 0; i < obj.length; i++) {
+//     if (obj[i].checked) {
+//       obj[i].checked = false;
+//     }
+//   }
+//   resetElements(".product-brief-list li");
+//   return rendingProductList();
+// };
 
 async function showingProductList() {
   try {
-    let response = await parse.get("http://localhost:3000/products");
-    let productData = response.data;
+    let productData = getPriceUpdate();
     let obj2 = document.getElementsByName("checkbox");
 
     obj2.forEach((el) => {
       el.addEventListener("click", () => {
-        resetElements(".product-brief-list li");
+        // resetElements(".product-brief-list li");
         productData.forEach((product) => {
           if (el.checked === true && product.category === "과일·견과·쌀") {
             console.log(el);
             renderProduct(productContainer, product);
           } else if (el.checked === false) {
-            return rendingProductList();
+            // return rendingProductList();
           }
         });
       });
@@ -84,7 +83,7 @@ async function showingProductList() {
 
 showingProductList();
 
-resetBtn.addEventListener("click", resetFilterHandler);
+// resetBtn.addEventListener("click", resetFilterHandler);
 dropdownBtn1.addEventListener("click", onDropDownHandler1);
 dropdownBtn2.addEventListener("click", onDropDownHandler2);
 dropdownBtn3.addEventListener("click", onDropDownHandler3);
