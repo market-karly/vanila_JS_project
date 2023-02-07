@@ -5,7 +5,7 @@ import {
   parse,
 } from "../../lib/index.js";
 
-const productContainer = getNode(".product-list");
+const productContainer = getNode(".product-brief-list");
 
 export async function rendingProductList() {
   try {

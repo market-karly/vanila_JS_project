@@ -17,7 +17,7 @@ const categoryIcon = getNode(".nav-menu_category-svg");
 const brandIcon = getNode(".nav-menu_brand-svg");
 const priceIcon = getNode(".nav-menu_price-svg");
 const resetBtn = getNode(".nav-filter_button");
-const productContainer = getNode(".product-list");
+const productContainer = getNode(".product-brief-list");
 
 const onDropDownHandler1 = () => {
   toggleClass(dropdown1, "closed1");
@@ -54,7 +54,7 @@ const resetFilterHandler = () => {
       obj[i].checked = false;
     }
   }
-  resetElements(".product-list li");
+  resetElements(".product-brief-list li");
   return rendingProductList();
 };
 
@@ -66,7 +66,7 @@ async function showingProductList() {
 
     obj2.forEach((el) => {
       el.addEventListener("click", () => {
-        resetElements(".product-list li");
+        resetElements(".product-brief-list li");
         productData.forEach((product) => {
           if (el.checked === true && product.category === "과일·견과·쌀") {
             console.log(el);
