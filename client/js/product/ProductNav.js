@@ -1,11 +1,11 @@
 import {
   parse,
   getNode,
-  getNodes,
   toggleClass,
   resetElements,
   renderProduct,
 } from "../../lib/index.js";
+import { rendingProductList } from "./productList.js";
 
 const dropdown1 = getNode(".nav-menu_ul");
 const dropdown2 = getNode(".nav-menu_ul2");
@@ -54,6 +54,8 @@ const resetFilterHandler = () => {
       obj[i].checked = false;
     }
   }
+  resetElements(".product-list li");
+  return rendingProductList();
 };
 
 async function showingProductList() {
@@ -66,9 +68,11 @@ async function showingProductList() {
       el.addEventListener("click", () => {
         resetElements(".product-list li");
         productData.forEach((product) => {
-          if (el.checked && product.category === "과일·견과·쌀") {
+          if (el.checked === true && product.category === "과일·견과·쌀") {
             console.log(el);
             renderProduct(productContainer, product);
+          } else if (el.checked === false) {
+            return rendingProductList();
           }
         });
       });
