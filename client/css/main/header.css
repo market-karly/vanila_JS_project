@@ -5,7 +5,7 @@
 /* 상위 배너 */
 .banner {
   background-color: var(--primary);
-  width: 100vw;
+  width: 100%;
 }
 
 .banner--inner p,
@@ -42,8 +42,7 @@
 .header {
   box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.1);
   position: relative;
-  width: 100vw;
-  min-width: var(--container-width);
+  width: 100%;
 }
 .header--inner {
   width: var(--container-width);
@@ -124,6 +123,7 @@
   flex-shrink: 0;
   padding: var(--spacing-base);
 }
+
 .header--main-icons a {
   margin-left: var(--spacing-md);
 }

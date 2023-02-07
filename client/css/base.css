@@ -17,6 +17,7 @@ a {
 
 /* 본문 스타일 */
 body {
+  width: 120rem;
   font-size: 1rem;
   color: var(--content);
   font-family: "Pretendard Variable", Pretendard, -apple-system,
@@ -29,11 +30,11 @@ body {
 /* layout */
 .header,
 .footer {
-  width: 100vw;
+  width: 100%;
 }
 
 .main {
-  width: 1050px;
+  width: 65.625rem;
   margin: 0 auto;
 }
 
