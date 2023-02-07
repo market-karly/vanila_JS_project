@@ -25,7 +25,7 @@ button {
   position: sticky;
   top: 0px;
   display: flex;
-  z-index: 10;
+  z-index: 100;
   background-color: var(--white);
   justify-content: space-between;
   align-items: center;
@@ -152,7 +152,7 @@ button {
   background: url("../../assets/icons/Icon/checked-box-round.svg") no-repeat 0
     0px;
   background-size: 19px 19px;
-  background-position: 3px;
+  background-position: 3px bottom;
   z-index: 18;
 }
 
