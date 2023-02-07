@@ -1,7 +1,9 @@
-import { getNode, getNodes, isNumber, insertLast, saveStorage, loadStorage } from "../lib/index.js";
+import { getNode, getNodes, isNumber, insertLast, parse } from "../lib/index.js";
 
 const registerForm = getNode(".register");
 const registerTermFrom = getNode(".register-term-form");
+const registerTermInputAll = getNode(".register-term-item__input-all");
+const registerTermInputs = getNodes('.register-term-item__input');
 
 const isCorrect = (regExp, value) => regExp.test(value);
 
@@ -12,101 +14,102 @@ const userData = {
   phone: ""
 };
 
-function validateUserId(e, template) {
+function validateUserId(value, template) {
   const idRegExp = /^(?=.*[a-zA-Z])[a-zA-Z\d]{6,}$/;
-  if (!isCorrect(idRegExp, e.target.value)) {
+  if (!isCorrect(idRegExp, value)) {
     template = "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합";
   } else {
     template = "";
-    userData.id = e.target.value;
+    userData.id = value;
   }
   return template;
 }
 
-function validateUserPW(e, template) {
-  let input = e.target;
+function validateUserPW(value, template) {
   const pwEngNumRegExp = /^(?=.*[a-zA-Z])(?=.*[\d])[\S]*$/;
   const pwEngMarkRegExp = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])[\S]*$/;
   const pwMarkNumRegExp = /^(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])(?=.*[\d])[\S]*$/;
   const pwTotalRegExp = /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[!@#$%^&*(),.<>/?;:'"[\]\-_])[\S]*$/;
-  if (!input.value.length) {
+  if (!value.length) {
     template = "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합";
-  } else if (input.value.length < 10) {
+  } else if (value.length < 10) {
     template = "최소 10자 이상 입력";
-  } else if (!isCorrect(pwEngNumRegExp, input.value) &&
-    !isCorrect(pwEngMarkRegExp, input.value) &&
-    !isCorrect(pwMarkNumRegExp, input.value) &&
-    !isCorrect(pwTotalRegExp, input.value)) {
+  } else if (!isCorrect(pwEngNumRegExp, value) &&
+    !isCorrect(pwEngMarkRegExp, value) &&
+    !isCorrect(pwMarkNumRegExp, value) &&
+    !isCorrect(pwTotalRegExp, value)) {
     template = "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합";
   } else {
     template = "";
-    userData.pw = input.value;
+    userData.pw = value;
   }
   return template;
 }
 
-function checkUserPW(e, template) {
-  if (e.target.value !== userData.pw) {
+function checkUserPW(value, template) {
+  if (value !== userData.pw) {
     template = "동일한 비밀번호를 입력";
+  } else {
+    template = "";
   }
   return template;
 }
 
-function validateUserName(e, template) {
-  if (e.target.value.length === 0) {
+function validateUserName(value, template) {
+  if (value.length === 0) {
     template = "이름을 입력해주세요.";
   } else {
     template = "";
-    userData.name = e.target.value;
+    userData.name = value;
   }
   return template;
 }
 
-function validateUserEmail(e, template) {
+function validateUserEmail(value, template) {
   const emailRegExp = /^[^@]+@[^@.]+\.+.+$/;
-  if (!e.target.value) {
+  if (!value) {
     template = "이메일을 입력해주세요.";
 
-  } else if (!isCorrect(emailRegExp, e.target.value)) {
+  } else if (!isCorrect(emailRegExp, value)) {
     template = "이메일 형식으로 입력해 주세요.";
   } else {
     template = "";
-    userData.email = e.target.value;
+    userData.email = value;
   }
   return template;
 }
 
-function validateUserPhone(e, template) {
-  if (!isNumber(e.target.value)) {
-    return;
-  } else if (e.target.value.length === 0) {
+function validateUserPhone(value, template) {
+  if (!isNumber(Number(value))) {
+    value = value.replace(/\D/g, '');
+  } else if (value.length === 0) {
     template = "휴대폰 번호를 입력해 주세요.";
   } else {
     template = "";
-    userData.phoneNum = e.target.value;
+    userData.phone = value;
   }
   return template;
 }
 
 const functionByType = {
   template: "",
-  userId: function (e) {
-    this.template = validateUserId(e, this.template);
+  userId: function (value) {
+    this.template = validateUserId(value, this.template);
   },
-  userPW: function (e) {
-    this.template = validateUserPW(e, this.template);
+  userPW: function (value) {
+    this.template = validateUserPW(value, this.template);
   },
-  userPWcheck: function (e) {
-    this.template = checkUserPW(e, this.template);
+  userPWcheck: function (value) {
+    this.template = checkUserPW(value, this.template);
   },
-  username: function (e) {
-    this.template = validateUserName(e, this.template);
+  username: function (value) {
+    this.template = validateUserName(value, this.template);
   },
-  userEmail: function (e) {
-    this.template = validateUserEmail(e, this.template);
+  userEmail: function (value) {
+    this.template = validateUserEmail(value, this.template);
   },
-  phone: function (e) {
-    this.template = validateUserPhone(e, this.template);
+  phone: function (value) {
+    this.template = validateUserPhone(value, this.template);
   }
 };
 
@@ -114,13 +117,10 @@ function onInputHandler(e) {
   const type = e.target.dataset.type;
   if (type) {
     e.target.nextElementSibling.innerHTML = '';
-    functionByType[type](e);
+    functionByType[type](e.target.value);
     insertLast(e.target.nextElementSibling, functionByType.template);
   }
 };
-
-const registerTermInputAll = getNode(".register-term-item__input-all");
-const registerTermInputs = getNodes('.register-term-item__input');
 
 function onChangeHandler(e) {
   let status = true;
@@ -141,12 +141,42 @@ function onChangeHandler(e) {
   });
 }
 
+function getRandomNumber(digit) {
+  return Math.round(Math.random() * digit);
+}
+
+function generateUid(prefix = "lab11", digit = 10) {
+  const characters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  let template = `${prefix}-`;
+  for (let i = 0; i < digit; i++) {
+    template += characters[getRandomNumber(characters.length - 1)];
+  }
+  return template;
+}
+
+function createUserData(id = '', pw = '', name = '', email = '', phone = '') {
+  let user = {};
+  user.id = id;
+  user.pw = pw;
+  user.name = name;
+  user.email = email;
+  user.phone = phone;
+  user.uid = generateUid();
+
+  return user;
+}
+
 function onClickHandler(e) {
-  // let target = e.target;
-  if (e.target.classList.contains('register__button-submit')) {
+  let target = e.target;
+  if (target.classList.contains('register__button-submit')) {
     e.preventDefault();
-    saveStorage(userData.id, userData);
-    loadStorage("user1").then((obj) => console.log(obj));
+    const { id, pw, name, email, phone } = userData;
+    let user = createUserData(id, pw, name, email, phone);
+    parse.post('http://localhost:3000/users', user).then((status) => {
+      if (status > 400) {
+        console.log('error');
+      }
+    });
     location = "./index.html";
   }
 }
