@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
-    <meta name="description" content="market Karly clone site" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="./js/main.js" type="module"></script>
-    <title>마켓칼리</title>
+    <title>마켓칼리-상세페이지</title>
   </head>
-
   <body>
     <div class="banner">
       <div class="banner--inner">
         <p>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</p>
         <button type="button" class="banner--close-btn">
-          <img
-            src="./assets/icons/Icon/banner-close.svg"
-            width="42"
-            height="42"
-            alt="닫기 버튼"
-          />
+          <img src="./assets/icons/Icon/banner-close.svg" alt="닫기 버튼" />
         </button>
       </div>
     </div>
-
-    <div class="popup-box">
-      <a href="#"
-        ><img
-          src="./assets/main/popup/popup-image.webp"
-          width="440"
-          height="586"
-          class="popup-image"
-          alt="이벤트 이미지"
-      /></a>
-      <button class="close-during-oneday is-open">오늘 하루 안 보기</button>
-      <button class="close is-open">닫기</button>
-    </div>
-
     <header class="header">
       <div class="header--inner">
         <div class="header--main">
@@ -55,8 +38,6 @@
               <img
                 src="./assets/icons/Icon/header-logo.svg"
                 alt="마켓칼리 로고"
-                width="82"
-                height="42"
                 class="header--main-logo"
               />
             </a>
@@ -89,8 +70,6 @@
                   <button type="submit" class="form-group-button">
                     <img
                       src="./assets/icons/Icon/header-search.svg"
-                      width="19"
-                      height="19"
                       alt="검색하기"
                     />
                   </button>
@@ -102,8 +81,6 @@
             <a href="#"
               ><img
                 src="./assets/icons/Icon/header-location.svg"
-                width="36"
-                height="36"
                 alt="지역 로고"
             /></a>
 
@@ -125,8 +102,6 @@
               >고객센터
               <img
                 src="./assets/icons/Icon/header-down.svg"
-                width="8"
-                height="7"
                 alt="드롭다운 아이콘"
             /></a>
           </li>
@@ -144,8 +119,6 @@
                 >
                   <img
                     src="./assets/icons/Icon/header-hamburger.svg"
-                    width="16"
-                    height="14"
                     alt="메뉴 아이콘"
                     class="header--nav-hamburger"
                   />
@@ -357,152 +330,104 @@
         </nav>
       </div>
     </header>
-    <main class="main">
-      <section class="main-banner">
-        <h2 class="a11y-hidden">메인 배너</h2>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner01.webp"
-                  width="1900"
-                  height="370"
-                  alt="컬리 과일 가게. 앵콜 특가 멜론 9900원. 10월 20일부터 10월 27일까지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner02.webp"
-                  width="1900"
-                  height="370"
-                  alt="한눈에 보는 이달의 카드 혜택. 최대 10% 카드 쿠폰 받기 10월 1일부터 10월 31일까지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner03.webp"
-                  width="1900"
-                  height="370"
-                  alt="컬리 퍼플 위크. 적립률UP + 3종 쿠폰팩, 더 풍성해진 혜택! 10월 24일부터 10월 28일까지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#"
-                ><img
-                  src="./assets/main/banner/banner05.webp"
-                  width="1900"
-                  height="370"
-                  alt="이 주의 특가 한 눈에 보기. 우측 상단 특가, 혜택에서 확인하세요!"
-              /></a>
-            </div>
-          </div>
-          <div
-            class="swiper-button-prev swiper-button main-banner--button-prev"
-          ></div>
-          <div
-            class="swiper-button-next swiper-button main-banner--button-next"
-          ></div>
-          <div class="swiper-pagination"></div>
+    <section class="detail">
+      <div class="detail--inner">
+        <div class="detail--image">
+          <img src="./assets/product/tangtang/detail_view.webp" alt="상세 사진" />
         </div>
-      </section>
-
-      <section class="recommend">
-        <h2 class="a11y-hidden">추천상품</h2>
-        <p class="recommend__title">이 상품 어때요?</p>
-        <div class="slider-wrapper">
-          <div class="swiper-recommend--product product-swiper">
-            <div class="swiper-wrapper recommend-product"></div>
+        <div class="detail--wrapper">
+          <h2 class="a11y-hidden">상품 상세정보</h2>
+          <div class="detail--product">
+            <p class="detail--delivery">샛별배송</p>
+            <p class="detail--product-name">[풀무원] 탱탱쫄면 (4개입)</p>
+            <p class="detail--product-description">
+              튀기지 않아 부드럽고 매콤한
+            </p>
+            <p class="detail--product-price"><b>4,980</b>원</p>
+            <p class="detail--event">로그인 후, 적립 혜택이 제공됩니다.</p>
           </div>
-          <div
-            class="swiper-recommend--product--button-prev swiper-recommend-button-prev"
-          ></div>
-          <div
-            class="swiper-recommend--product--button-next swiper-recommend-button-next"
-          ></div>
-        </div>
-      </section>
-
-      <div class="line-banner">
-        <img
-          src="./assets/mainPage/lineBanner/line-banner.webp"
-          width="1050"
-          height="139"
-          alt="적립률 높아지고 3종 쿠폰팩이 제공되는 10월 퍼플위크 배너"
-        />
-      </div>
-
-      <section class="recommend">
-        <h2 class="a11y-hidden">추천할인</h2>
-        <p class="recommend__title">놓치면 후회할 가격</p>
-        <div class="slider-wrapper">
-          <div class="swiper-recommend--price product-swiper">
-            <div class="swiper-wrapper recommend-sale"></div>
+          <table class="detail--table">
+            <tr>
+              <td class="detail--table-title">배송</td>
+              <td class="detail--table-explain">
+                <span>샛별배송</span>
+                <span class="detail--table-explain-plus"
+                  >23시 전 주문시 내일 아침 7시 전 도착</span
+                >
+                <span class="detail--table-explain-plus"
+                  >(대구 부산 울산 샛별배송 운영시간 별도 확인)</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">판매자</td>
+              <td class="detail--table-explain">칼리</td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">포장타입</td>
+              <td class="detail--table-explain">
+                <span>상온 (종이포장)</span>
+                <span class="detail--table-explain-plus"
+                  >택배배송은 에코 포장이 스티로폼으로 대체됩니다.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">판매단위</td>
+              <td class="detail--table-explain">1봉</td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">중량/용량</td>
+              <td class="detail--table-explain">123g*4봉</td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">원산지</td>
+              <td class="detail--table-explain">상세페이지 별도표기</td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">알레르기 정보</td>
+              <td class="detail--table-explain">
+                <span class="detail--table-explain-allergy"
+                  >-대두, 밀, 쇠고기 함유</span
+                >
+                <span class="detail--table-explain-allergy"
+                  >-계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아,
+                  토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복,
+                  홍합 포함)를 사용한 제품과 같은 제조시설에서 제조</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="detail--table-title">상품선택</td>
+              <td class="detail--table-explain detail--table-purchase">
+                <span class="detail--purchase-title"
+                  >[풀무원] 탱탱쫄면 (4개입)</span
+                >
+                <div class="detail--purchase-button">
+                  <button class="detail--purchase-minus">-</button>
+                  <span class="detail--purchase-count">1</span>
+                  <button class="detail--purchase-plus">+</button>
+                </div>
+                <span class="detail--purchase-total">4,980원</span>
+              </td>
+            </tr>
+          </table>
+          <div class="detail--total">
+            <p>총 상품금액: <b>4,980</b>원</p>
+            <p>로그인 후, 적립 혜택 제공</p>
           </div>
-          <div
-            class="swiper-recommend--price--button-prev swiper-recommend-button-prev"
-          ></div>
-          <div
-            class="swiper-recommend--price--button-next swiper-recommend-button-next"
-          ></div>
-        </div>
-      </section>
-      <div class="aside">
-        <div class="aside-bar">
-          <div class="aside-box">
-            <button
-              aria-disabled="true"
-              type="button"
-              title="prev"
-              class="aside-btn"
-            >
-              <svg
-                width="10"
-                height="10"
-                fill="#999999"
-                stroke="#ddd"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-                  stroke="#ddd"
-                  stroke-width="1.3"
-                />
-              </svg>
+          <div class="detail--buttons">
+            <button class="detail--buttons-heart detail--buttons-icons" type="button">
+              <img src="./assets/icons/Icon/Heart.svg" alt="찜 버튼" />
             </button>
-            <p>최근&nbsp;본&nbsp;상품</p>
-            <div class="aside-img">
-              <ul class="aside-item"></ul>
-            </div>
-            <button
-              aria-disabled="true"
-              type="button"
-              title="next"
-              class="aside-btn"
-            >
-              <svg
-                width="10"
-                height="10"
-                fill="#999999"
-                stroke="#ddd"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                  stroke="#ddd"
-                  stroke-width="1.3"
-                />
-              </svg>
+            <button class="detail--buttons-bell detail--buttons-icons" type="button">
+              <img src="./assets/icons/Icon/Bell.svg" alt="알림 버튼" />
             </button>
+            <button class="detail--buttons-cart" type="submit">장바구니 담기</button>
           </div>
         </div>
       </div>
-    </main>
-
+    </section>
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-item--first">
@@ -621,7 +546,7 @@
                   class="footer-sns--instagram"
                 >
                   <img
-                    src="./assets/icons/Icon/icon-instagram.png"
+                    src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
                     alt="컬리 인스타그램 바로가기"
                   />
                 </a>
@@ -634,7 +559,7 @@
                   class="footer-sns--facebook"
                 >
                   <img
-                    src="./assets/icons/Icon/icon-fb.png"
+                    src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
                     alt="컬리 페이스북 바로가기"
                   />
                 </a>
@@ -646,7 +571,7 @@
                   rel="noreferrer"
                   class="footer-sns--blog"
                   ><img
-                    src="./assets/icons/Icon/icon-blog.png"
+                    src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
                     alt="컬리 네이버블로그 바로가기"
                   />
                 </a>
@@ -658,7 +583,7 @@
                   rel="noreferrer"
                   class="footer-sns--naverpost"
                   ><img
-                    src="./assets/icons/Icon/icon-naverpost.png"
+                    src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
                     alt="컬리 네이버포스트 바로가기"
                 /></a>
               </li>
@@ -669,7 +594,7 @@
                   rel="noreferrer"
                   class="footer-sns--youtube"
                   ><img
-                    src="./assets/icons/Icon/icon-youtube.png"
+                    src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
                     alt="컬리 유튜브 바로가기"
                 /></a>
               </li>
@@ -679,11 +604,11 @@
         <div class="footer-item--second">
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-isms.svg"
+              src="https://res.kurly.com/pc/ico/2208/logo_isms.svg"
               alt="isms 로고"
               class="footer-item-second-img"
-              width="45"
-              height="45"
+              width="45px"
+              height="45px"
             />
             <span class="footer-item-second-text">
               [인증범위] 컬리 쇼핑몰 서비스 개발·운영<br />(심사받지 않은 물리적
@@ -692,11 +617,11 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-privacy.svg"
+              src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg"
               alt="eprivacy plus 로고"
               class="footer-item-second-img"
-              width="45"
-              height="45"
+              width="45px"
+              height="45px"
             />
             <span class="footer-item-second-text">
               개인정보보호 우수 웹사이트 ·<br />개인정보처리시스템 인증
@@ -705,11 +630,11 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-tosspayments.svg"
+              src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg"
               alt="payments 로고"
               class="footer-item-second-img"
-              width="105"
-              height="30"
+              width="105px"
+              height="30px"
             />
             <span class="footer-item-second-text">
               토스페이먼츠 구매안전(에스크로)<br />서비스를 이용하실 수
@@ -718,11 +643,11 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-wooriBank.svg"
+              src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg"
               alt="우리은행 로고"
               class="footer-item-second-img"
-              width="45"
-              height="45"
+              width="45px"
+              height="45px"
             />
             <span class="footer-item-second-text">
               고객님이 현금으로 결제한 금액에 대해 우리은행과<br />채무지급보증

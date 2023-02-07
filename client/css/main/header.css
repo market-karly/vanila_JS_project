@@ -76,7 +76,7 @@
 
 .header--main-link-list::after {
   content: "";
-  display: inline-block;
+  display: inline-b lock;
   width: 0.0938rem;
   height: 1rem;
   background-color: var(--gray-200);

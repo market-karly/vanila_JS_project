@@ -6,7 +6,7 @@ import {
   comma,
 } from "../lib/index.js";
 
-const productContainer = getNode(".product-list");
+const productContainer = getNode(".product-brief-list");
 
 async function rendingProductList() {
   try {
