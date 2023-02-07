@@ -117,7 +117,6 @@ const functionByType = {
 
 function ableSubmitButton() {
   const { id, pw, name, email, phone } = userData;
-  console.log(id, pw, name, email, phone);
   if (id && pw && name && email && phone) {
     registerSubmitButton.disabled = false;
     registerSubmitButton.style.backgroundColor = "#5f0080";
@@ -181,6 +180,22 @@ function createUserData(id = '', pw = '', name = '', email = '', phone = '') {
   return user;
 }
 
+function isDataDuplicate(datatype, registeredUserData) {
+  if (datatype === "아이디") {
+    return registeredUserData.filter((user) => user.id === userData.id).length;
+  } else if (datatype === "이메일") {
+    return registeredUserData.filter((user) => user.email === userData.email).length;
+  }
+}
+
+function setTemplate(dataType, template, registeredUserData) {
+  if (dataType === "아이디") template = validateUserId(userData.id, template);
+  else if (dataType === "이메일") template = validateUserEmail(userData.email, template);
+  if (isDataDuplicate(dataType, registeredUserData)) template = `중복된 ${dataType} 입니다.`;
+  if (!template) template = `사용가능한 ${dataType} 입니다.`;
+  return template;
+}
+
 async function onClickHandler(e) {
   let target = e.target;
   let template = "";
@@ -194,7 +209,7 @@ async function onClickHandler(e) {
         alert('회원가입에 실패하였습니다.');
       }
     });
-    location = "./index.html";
+    location = "./login.html";
   } else if (target.classList.contains('register-item__button-validation')) {
     target = target.parentElement;
     let response = await parse.get("http://localhost:3000/users");
@@ -207,15 +222,9 @@ async function onClickHandler(e) {
   }
 
   if (target.classList.contains('register-item__check-id')) {
-    template = validateUserId(userData.id, template);
-    let userId = registeredUserData.filter((user) => user.id === userData.id);
-    if (userId.length) template = "중복된 아이디 입니다.";
-    if (!template) template = "사용가능한 아이디 입니다.";
+    template = setTemplate("아이디", template, registeredUserData);
   } else if (target.classList.contains('register-item__check-email')) {
-    template = validateUserEmail(userData.email, template);
-    let userEmail = registeredUserData.filter((user) => user.email === userData.email);
-    if (userEmail.length) template = "중복된 이메일 입니다.";
-    if (!template) template = "사용가능한 이메일 입니다.";
+    template = setTemplate("이메일", template, registeredUserData);
   }
 
   if (template) {
