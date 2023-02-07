@@ -1,6 +1,7 @@
 import { insertLast } from "./index.js";
 
 const createRecommend = ({
+  id = "",
   name = "",
   price = "",
   saleRatio = "",
@@ -12,7 +13,7 @@ const createRecommend = ({
 } = {}) => {
   return /* html */ `
   <div class="swiper-slide product-brief">
-  <a href="#">
+  <a href="./detail.html?id=${id}">
     <div class="product-brief__visual">
       <img
         src="${image.thumbnail}"
@@ -36,6 +37,7 @@ const createRecommend = ({
 };
 
 const createRecommendSale = ({
+  id = "",
   name = "",
   price = "",
   saleRatio = "",
@@ -47,7 +49,7 @@ const createRecommendSale = ({
 } = {}) => {
   return /* html */ `
   <div class="swiper-slide product-brief">
-  <a href="#">
+  <a href="./detail.html?id=${id}">
     <div class="product-brief__visual">
       <img
         src="${image.thumbnail}"
@@ -69,6 +71,7 @@ const createRecommendSale = ({
 };
 
 const createSaleProduct = ({
+  id = "",
   name = "",
   description = "",
   price = "",
@@ -89,7 +92,7 @@ const createSaleProduct = ({
 } = {}) => {
   return /* html */ `
   <li class="product-brief-wrap">
-  <a href="#" class="product-brief__container">
+  <a href="./detail.html?id=${id}" class="product-brief__container">
     <div class="product-brief__visual">
       <img
         src=${image.thumbnail}
@@ -121,6 +124,7 @@ const createSaleProduct = ({
 };
 
 const createProduct = ({
+  id = "",
   name = "",
   description = "",
   price = "",
@@ -143,7 +147,7 @@ const createProduct = ({
 } = {}) => {
   return /* html */ `
   <li class="product-brief-wrap">
-  <a href="#" class="product-brief__container">
+  <a href="./detail.html?id=${id}" class="product-brief__container">
     <div class="product-brief__visual">
       <img
         src=${image.thumbnail}

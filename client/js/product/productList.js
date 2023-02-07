@@ -1,6 +1,6 @@
-import { getNode, renderProduct, renderSaleProduct } from "../../lib/index.js";
+import { renderProduct, renderSaleProduct, getNode } from "../../lib/index.js";
 
-export const productContainer = getNode(".product-brief-list");
+const productContainer = getNode(".product-brief-list");
 
 export async function rendingProductList(item) {
   try {
@@ -14,5 +14,3 @@ export async function rendingProductList(item) {
     console.log("error");
   }
 }
-
-rendingProductList();
