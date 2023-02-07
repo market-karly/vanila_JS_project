@@ -4,6 +4,8 @@ const registerForm = getNode(".register");
 const registerTermFrom = getNode(".register-term-form");
 const registerTermInputAll = getNode(".register-term-item__input-all");
 const registerTermInputs = getNodes('.register-term-item__input');
+const registerErrorMessage = getNode('.register-validation__message-error');
+const registerErrorBox = getNode('.register-validation__wrapper-error');
 
 const isCorrect = (regExp, value) => regExp.test(value);
 
@@ -20,8 +22,8 @@ function validateUserId(value, template) {
     template = "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합";
   } else {
     template = "";
-    userData.id = value;
   }
+  userData.id = value;
   return template;
 }
 
@@ -41,8 +43,8 @@ function validateUserPW(value, template) {
     template = "영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합";
   } else {
     template = "";
-    userData.pw = value;
   }
+  userData.pw = value;
   return template;
 }
 
@@ -60,8 +62,8 @@ function validateUserName(value, template) {
     template = "이름을 입력해주세요.";
   } else {
     template = "";
-    userData.name = value;
   }
+  userData.name = value;
   return template;
 }
 
@@ -69,13 +71,12 @@ function validateUserEmail(value, template) {
   const emailRegExp = /^[^@]+@[^@.]+\.+.+$/;
   if (!value) {
     template = "이메일을 입력해주세요.";
-
   } else if (!isCorrect(emailRegExp, value)) {
     template = "이메일 형식으로 입력해 주세요.";
   } else {
     template = "";
-    userData.email = value;
   }
+  userData.email = value;
   return template;
 }
 
@@ -86,8 +87,8 @@ function validateUserPhone(value, template) {
     template = "휴대폰 번호를 입력해 주세요.";
   } else {
     template = "";
-    userData.phone = value;
   }
+  userData.phone = value;
   return template;
 }
 
@@ -166,18 +167,48 @@ function createUserData(id = '', pw = '', name = '', email = '', phone = '') {
   return user;
 }
 
-function onClickHandler(e) {
+async function onClickHandler(e) {
   let target = e.target;
+  let template = "";
+  let registeredUserData = [];
   if (target.classList.contains('register__button-submit')) {
     e.preventDefault();
     const { id, pw, name, email, phone } = userData;
     let user = createUserData(id, pw, name, email, phone);
     parse.post('http://localhost:3000/users', user).then((status) => {
       if (status > 400) {
-        console.log('error');
+        alert('회원가입에 실패하였습니다.');
       }
     });
     location = "./index.html";
+  } else if (target.classList.contains('register-item__button-validation')) {
+    target = target.parentElement;
+    let response = await parse.get("http://localhost:3000/users");
+    registeredUserData = response.data;
+  } else if (target.classList.contains('register-validation__button-error')) {
+    registerErrorBox.style.display = "none";
+    document.body.style.overflow = 'visible';
+  } else {
+    return;
+  }
+
+  if (target.classList.contains('register-item__check-id')) {
+    template = validateUserId(userData.id, template);
+    let userId = registeredUserData.filter((user) => user.id === userData.id);
+    if (userId) template = "중복된 아이디 입니다.";
+    if (!template) template = "사용가능한 아이디 입니다.";
+  } else if (target.classList.contains('register-item__check-email')) {
+    template = validateUserEmail(userData.email, template);
+    let userEmail = registeredUserData.filter((user) => user.email === userData.email);
+    if (userEmail) template = "중복된 이메일 입니다.";
+    if (!template) template = "사용가능한 이메일 입니다.";
+  }
+
+  if (template) {
+    registerErrorMessage.innerHTML = '';
+    insertLast(registerErrorMessage, template);
+    registerErrorBox.style.display = 'block';
+    document.body.style.overflow = 'hidden';
   }
 }
 registerForm.addEventListener('input', onInputHandler);
