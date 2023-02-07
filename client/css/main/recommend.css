@@ -69,13 +69,13 @@
   font-size: var(--text-sm);
   text-decoration: line-through;
   margin-top: var(--spacing-xs);
-  color: var(--gray-400);
+  color: #737576;
 }
 
 .product-brief__sale-ratio {
   font-size: var(--text-md);
   font-weight: 600;
-  color: var(--accent-yellow);
+  color: #ed0000;
   margin-right: var(--spacing-xs);
 }
 
