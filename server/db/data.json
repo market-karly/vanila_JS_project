@@ -415,28 +415,6 @@
       "brand": "피쿠알리아"
     }
   ],
-  "users": [
-    {
-      "id": "bsybsy123",
-      "password": "qwer1234!",
-      "confirmPw": "qwer1234!",
-      "name": "백승연",
-      "email": "bsybsy123@gamil.com",
-      "phone": "010-1234-5678",
-      "address": "서울특별시 종로구 사직로 161",
-      "gender": "woman",
-      "birth": "1997/12/30"
-    },
-    {
-      "id": "ksuksu123",
-      "password": "qwer4567!",
-      "confirmPw": "qwer4567!",
-      "name": "김성은",
-      "email": "ksuksu123@gamil.com",
-      "phone": "010-5678-1234",
-      "address": "서울특별시 영등포구 63로 50",
-      "gender": "woman",
-      "birth": "2023/02/05"
-    }
-  ]
+  "users": [],
+  "review": []
 }
