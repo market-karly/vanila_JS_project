@@ -186,7 +186,7 @@ function generateUid(prefix = "lab11", digit = 10) {
 function createUserData(id = '', pw = '', name = '', email = '', phone = '') {
   let user = {};
   user.id = id;
-  user.pw = pw;
+  user.password = pw;
   user.name = name;
   user.email = email;
   user.phone = phone;
