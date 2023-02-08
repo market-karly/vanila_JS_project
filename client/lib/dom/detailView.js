@@ -10,6 +10,9 @@ const createDetail = ({
     info: "",
     alt: "",
   },
+  capacity = "",
+  explanation = "",
+  review = "",
 } = {}) => {
   return /* html */ `
   <div class="detail--inner">
@@ -59,7 +62,7 @@ const createDetail = ({
       </tr>
       <tr>
         <td class="detail--table-title">중량/용량</td>
-        <td class="detail--table-explain">123g*4봉</td>
+        <td class="detail--table-explain">${capacity}</td>
       </tr>
       <tr>
         <td class="detail--table-title">원산지</td>
@@ -112,7 +115,7 @@ const createDetail = ({
         <div class="detail-menu-anchor">
           <a href="#product-detail" class="is-active-a">상품설명</a>
           <a href="#product-info">상세정보</a>
-          <a href="#reviews">후기<span>(1,000)</span></a>
+          <a href="#reviews">후기<span>(${review})</span></a>
           <a href="#inquiry">문의</a>
         </div>
         <div class="detail-information">
@@ -128,15 +131,7 @@ const createDetail = ({
                 ${description}
               </p>
               <p class="detail-information-title">${name}</p>
-              <p class="detail-information-desc">
-                쫄면의 진가는 매콤새콤한 양념과 탱탱한 면발에서 찾을 수 있지요.
-                풀무원은 이 맛을 더 부담 없이 즐길 수 있도록 튀기지 않고 만든
-                탱탱쫄면을 선보입니다. 밀가루와 감자 전분을 적절히 배합해 탄력이
-                좋고, 입에 넣었을 때는 찰지게 씹히죠. 고추장을 넣어 숙성한
-                비빔장은 자연스럽고 깊은 맛을 냅니다. 간단하게 조리해 마지막 한
-                가닥까지 탱탱한 식감을 즐겨보세요. 취향에 따라 다양한 고명을
-                올려 드셔도 좋아요.
-              </p>
+              <p class="detail-information-desc">${explanation}</p>
             </figcaption>
           </figure>
           <h3 id="product-info" class="a11y-hidden">상세정보</h3>
