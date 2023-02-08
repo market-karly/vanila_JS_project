@@ -30,3 +30,12 @@ parse.get = async (url, options) => {
     ...options,
   });
 };
+
+parse.post = (url, body, options) => {
+  return parse({
+    method: 'POST',
+    url,
+    body: JSON.stringify(body),
+    ...options
+  });
+};
