@@ -21,12 +21,14 @@ const createRecommend = ({
         class="product-brief__img"
       />
       <button type="button" class="product-brief__icon">
-        <img src="./assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+        <img src="./assets/icons/Icon/Cart.svg" width="45" height="45" alt="장바구니 아이콘" />
       </button>
     </div>
     <div class="product-brief__info">
       <h3 class="product-brief__title">${name}</h3>
-      <span class="product-brief__sale-ratio is-hidden">${saleRatio * 100}%</span>
+      <span class="product-brief__sale-ratio is-hidden">${
+        saleRatio * 100
+      }%</span>
       <span class="product-brief__sale-price is-hidden">${salePrice}원</span>
       <span class="product-brief__price">${price}원</span>
     </div>
@@ -68,7 +70,6 @@ const createRecommendSale = ({
 <div>`;
 };
 
-
 const createSaleProduct = ({
   id = "",
   name = "",
@@ -76,10 +77,10 @@ const createSaleProduct = ({
   price = "",
   saleRatio = "",
   salePrice = "",
-  review ="",
+  review = "",
   badge = {
-    karly:"",
-    limit:"",
+    karly: "",
+    limit: "",
   },
   image = {
     thumbnail: "",
@@ -129,11 +130,13 @@ const createProduct = ({
   price = "",
   saleRatio = "",
   salePrice = "",
-  review ="",
+  review = "",
   badge = {
-    karly:"",
-    limit:"",
+    karly: "",
+    limit: "",
   },
+  category = "",
+  brand = "",
   image = {
     thumbnail: "",
     view: "",
@@ -152,7 +155,7 @@ const createProduct = ({
         class="product-brief__img"
       />
       <button type="button" class="product-brief__icon">
-        <img src="./assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+        <img src="./assets/icons/Icon/Cart.svg" width="45" height="45" alt="장바구니 아이콘" />
       </button>
     </div>
     <div class="product-brief__info">
@@ -192,4 +195,3 @@ export function renderProduct(target, data) {
 export function renderSaleProduct(target, data) {
   insertLast(target, createSaleProduct(data));
 }
-
