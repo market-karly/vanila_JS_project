@@ -3,6 +3,7 @@ import {
   toggleClass,
   getPriceUpdate,
   resetElements,
+  isBigInt,
 } from "../../lib/index.js";
 import { rendingProductList } from "./productList.js";
 import { getPerPage } from "./productPagination.js";
@@ -21,20 +22,20 @@ const resetBtn = getNode(".nav-filter_button");
 
 const onDropDownHandler1 = () => {
   toggleClass(dropdown1, "closed1");
-  document
-    .getElementsByName("카테고리 버튼")[0]
+    document
+    .querySelector(".nav-menu_category-svg")
     .setAttribute("alt", "카테고리 열림 상태");
 };
 const onDropDownHandler2 = () => {
   toggleClass(dropdown2, "closed2");
   document
-    .getElementsByName("브랜드 버튼")[0]
+    .querySelector(".nav-menu_brand-svg")
     .setAttribute("alt", "브랜드 메뉴 열림 상태");
 };
 const onDropDownHandler3 = () => {
   toggleClass(dropdown3, "closed3");
   document
-    .getElementsByName("가격 버튼")[0]
+    .querySelector(".nav-menu_price-svg")
     .setAttribute("alt", "가격 메뉴 열림 상태");
 };
 const onSwitchIconHandler1 = () => {
