@@ -1,4 +1,3 @@
-import { displayData } from "../../css/productPagination.js";
 import {
   getNode,
   toggleClass,
@@ -98,9 +97,7 @@ const resetFilterHandler = () => {
       obj[i].checked = false;
     }
   }
-  resetElements(".product-brief-wrap");
-  resetElements(".list-pagination__num");
-  return displayData(0);
+  resetElements(".product-brief-list li");
 };
 showingProductList();
 
