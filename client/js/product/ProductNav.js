@@ -1,4 +1,3 @@
-import { displayData } from "../../css/productPagination.js";
 import {
   getNode,
   toggleClass,
@@ -6,6 +5,8 @@ import {
   resetElements,
 } from "../../lib/index.js";
 import { rendingProductList } from "./productList.js";
+import { getPerPage } from "./productPagination.js";
+
 
 const dropdown1 = getNode(".nav-menu_ul");
 const dropdown2 = getNode(".nav-menu_ul2");
@@ -47,6 +48,18 @@ const onSwitchIconHandler3 = () => {
 };
 let productData = getPriceUpdate();
 
+const resetFilterHandler = () => {
+  let obj = document.getElementsByName("checkbox");
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].checked) {
+      obj[i].checked = false;
+    }
+  }
+  resetElements(".product-brief-wrap");
+  resetElements(".list-pagination__num");
+  return getPerPage(9);
+};
+
 async function showingProductList() {
   let trueCategory = [];
   let falseArray = [];
@@ -58,23 +71,20 @@ async function showingProductList() {
         productData.forEach((product) => {
           if (el.checked === true && product.category === el.value) {
             trueCategory.push(product);
-            console.log(trueCategory);
           } else if (el.checked === false && product.category === el.value) {
             falseArray.push(product);
-            falseCategory = trueCategory.filter(
-              (pr) => !falseArray.includes(pr)
-            );
+            falseCategory = trueCategory.filter((pr) => !falseArray.includes(pr));
           }
         });
 
         if (falseCategory.length === 0) {
-          resetElements(".product-brief-list li");
+          resetElements(".product-brief-wrap");
           for (let pr of trueCategory) {
             rendingProductList(pr);
           }
           console.log("true", trueCategory);
         } else if (falseCategory.length !== 0) {
-          resetElements(".product-brief-list li");
+          resetElements(".product-brief-wrap");
           for (let pr of falseCategory) {
             rendingProductList(pr);
           }
@@ -89,19 +99,6 @@ async function showingProductList() {
     console.log("error");
   }
 }
-showingProductList();
-
-const resetFilterHandler = () => {
-  let obj = document.getElementsByName("checkbox");
-  for (let i = 0; i < obj.length; i++) {
-    if (obj[i].checked) {
-      obj[i].checked = false;
-    }
-  }
-  resetElements(".product-brief-wrap");
-  resetElements(".list-pagination__num");
-  return displayData(0);
-};
 showingProductList();
 
 resetBtn.addEventListener("click", resetFilterHandler);
