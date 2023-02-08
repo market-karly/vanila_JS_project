@@ -1,4 +1,4 @@
-/* @import url(./normalize.css); */
+@import url(./normalize.css);
 @import url(./reset.css);
 @import url(./a11y.css);
 @import url(./theme.css);
@@ -13,3 +13,4 @@
 @import url(./login/login.css);
 @import url(./main/pop.css);
 @import url(./detail/detail.css);
+@import url(./register.css);

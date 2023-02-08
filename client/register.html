@@ -3,16 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="market Karly clone site" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" type="text/css" href="./css/main.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css" />
   <script src="./js/login/status.js" type="module"></script>
-  <script src="./js/detail.js" type="module"></script>
-  <title>마켓칼리-상세페이지</title>
+  <script src="./js/register.js" type="module" defer></script>
+  <title>마켓칼리</title>
 </head>
 
 <body>
@@ -176,9 +173,213 @@
       </nav>
     </div>
   </header>
-  <section class="detail">
 
-  </section>
+  <main class="register">
+    <h2 class="register--title">회원가입</h2>
+    <p class="register--info-necessary"><span class="register--necessary">&#42;</span>필수입력사항</p>
+    <form action="#" method="post" id="register">
+      <fieldset class="register-form">
+        <legend class="a11y-hidden">회원 정보 입력</legend>
+        <table>
+          <tbody class="register-table">
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="userId">
+                  아이디<span class="register--necessary">&#42;</span>
+                </label>
+              </td>
+              <td>
+                <input class="register-item__input" data-type="userId" type="text" id="userId" placeholder="아이디를 입력해주세요"
+                  maxlength="16" required />
+                <p class="register-item__error"></p>
+              </td>
+              <td class="register-item__check-id">
+                <button class="register-item__button-validation" type="button">
+                  중복확인
+                </button>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="userPW">
+                  비밀번호<span class="register--necessary">&#42;</span>
+                </label>
+              </td>
+              <td>
+                <input class="register-item__input" data-type="userPW" type="password" id="userPW"
+                  placeholder="비밀번호를 입력해주세요" maxlength="16" required />
+                <p class="register-item__error"></p>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="userPWcheck">비밀번호 확인<span
+                    class="register--necessary">&#42;</span></label>
+              </td>
+              <td>
+                <input class="register-item__input" data-type="userPWcheck" type="password" id="userPWcheck"
+                  placeholder="비밀번호를 한번 더 입력해주세요" maxlength="16" required />
+                <p class="register-item__error"></p>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="name">
+                  이름<span class="register--necessary">&#42;</span>
+                </label>
+              </td>
+              <td>
+                <input class="register-item__input" data-type="username" type="text" id="name" placeholder="이름을 입력해주세요"
+                  required />
+                <p class="register-item__error"></p>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="email">
+                  이메일<span class="register--necessary">&#42;</span>
+                </label>
+              </td>
+              <td>
+                <input class="register-item__input" data-type="userEmail" type="email" id="email"
+                  placeholder="예) marketkarly@karly.com" required />
+                <p class="register-item__error"></p>
+              </td>
+              <td class="register-item__check-email">
+                <button class="register-item__button-validation" type="button">
+                  중복확인
+                </button>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="phone">
+                  휴대폰<span class="register--necessary">&#42;</span>
+                </label>
+              </td>
+              <td>
+                <input class="register-item__input" data-type="phone" type="tel" id="phone" placeholder="숫자만 입력해주세요"
+                  maxlength="11" required />
+                <p class="register-item__error"></p>
+              </td>
+              <td>
+                <button class="register-item__button-validation" type="button" disabled>인증번호 받기</button>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="address">
+                  주소<span class="register--necessary">&#42;</span>
+                </label>
+              </td>
+              <td>
+                <button class="register-item__button-address" type="button">주소 검색</button>
+                <p class="register-item__info-address">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td>
+                <label class="register-item__label" for="gender">성별</label>
+              </td>
+              <td class="register-item__wrapper-radio">
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="남성" id="man" name="gender" />
+                  <label class="register-item__label-radio" for="man">남성</label>
+                </div>
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="여성" id="woman" name="gender" />
+                  <label class="register-item__label-radio" for="woman">여성</label>
+                </div>
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="선태안함" id="unselect" name="gender" />
+                  <label class="register-item__label-radio" for="unselect">선택안함</label>
+                </div>
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td><label class="register-item__label" for="birth">생년월일</label></td>
+              <td class="register--birth">
+                <input class="register--birth--input" type="text" id="birthYear" name="birthYear" placeholder="YYYY"
+                  value="" maxlength="4" />
+                &#47;
+                <input class="register--birth--input" type="text" id="birthMonth" name="birthMonth" placeholder="MM"
+                  value="" maxlength="2" />
+                &#47;
+                <input class="register--birth--input" type="text" id="birthDay" name="birthDay" placeholder="DD"
+                  value="" maxlength="2" />
+              </td>
+            </tr>
+            <tr class="register-item">
+              <td><label class="register-item__label" for="etc">추가입력 사항</label></td>
+              <td class="register-item__wrapper-radio">
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="friend" id="friend" name="etc" />
+                  <label class="register-item__label-radio" for="friend">친구초대 추천인 아이디</label>
+                </div>
+                <div class="register-item__radio">
+                  <input class="register-item__input-radio" type="radio" value="event" id="event" name="etc" />
+                  <label class="register-item__label-radio" for="event">참여 이벤트명</label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+      <fieldset class="register-term-form">
+        <legend class="a11y-hidden">이용약관 동의 폼</legend>
+        <table>
+          <tbody class="register-term-table">
+            <tr>
+              <th class="register-term-title">
+                <label class="register-item__label">
+                  이용약관 동의<span class="register--necessary">&#42;</span>
+                </label>
+              </th>
+            </tr>
+            <tr class="register-term-item">
+              <td>
+                <div class="register-term-item__detail-all">
+                  <input class="register-term-item__input-all" type="checkbox" id="agree-all" />
+                  <label class="register-term-item__label-all" for="agree-all">전체 동의합니다.</label>
+                </div>
+                <p class="register-term-item__info-all">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+              </td>
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="#">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-using-term" />
+                <label class="register-term-item__label" for="agree-using-term">이용약관 동의 &#40;필수&#41;</label>
+              </td>
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="#">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-personal-info" />
+                <label class="register-term-item__label" for="agree-personal-info">개인정보 수집 &#8226; 이용 동의
+                  &#40;필수&#41;</label>
+              </td>
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="#">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-benefit" />
+                <label class="register-term-item__label" for="agree-benefit">무료배송, 할인쿠폰 등 혜택&#47;정보 수신 동의
+                  &#40;선택&#41;</label>
+              </td>
+              <td class="register-term-item__detail">
+                <a class="register-term-item__link" href="#">약관보기</a>
+                <input class="register-term-item__input" type="checkbox" id="agree-age" />
+                <label class="register-term-item__label" for="agree-age">본인은 만 14세 이상입니다. &#40;필수&#41;</label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+    </form>
+    <button class="register__button-submit" type="submit" form="register" disabled>가입하기</button>
+    <section class="register-validation__wrapper-error">
+      <div class="register-validation-error">
+        <p class="register-validation__message-error"></p>
+        <button class="register-validation__button-error" type="button">확인</button>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-item--first">
@@ -235,7 +436,7 @@
             <dl>
               <dt>법인명(상호) :</dt>
               <dd>주식회사 칼리</dd>
-              <dd class="vertical-line"></dd>
+              <span class="vertical-line"></span>
               <dt>사업자등록번호 :</dt>
               <dd>261-81-23567</dd>
               <dd><a href="#">사업자정보 확인</a></dd>
@@ -243,21 +444,21 @@
             <dl>
               <dt>통신판매업 :</dt>
               <dd>제 2018-서울강남-01646 호</dd>
-              <dd class="vertical-line"></dd>
+              <span class="vertical-line"></span>
               <dt>개인정보보호책임자 :</dt>
               <dd>이원준</dd>
             </dl>
             <dl>
               <dt>주소 :</dt>
               <dd>서울특별시 강남구 테헤란로 133, 18층(역삼동)</dd>
-              <dd class="vertical-line"></dd>
+              <span class="vertical-line"></span>
               <dt>대표이사 :</dt>
               <dd>김슬아</dd>
             </dl>
             <dl>
               <dt>입점문의 :</dt>
               <dd><a href="#">입점문의하기</a></dd>
-              <dd class="vertical-line"></dd>
+              <span class="vertical-line"></span>
               <dt>제휴문의 :</dt>
               <dd>
                 <a href="mailto:business@karlycorp.com">business@karly.com</a>
@@ -275,69 +476,51 @@
             </dl>
           </div>
           <ul class="footer-sns">
-            <li>
-              <a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer"
-                class="footer-sns--instagram">
-                <img src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="컬리 인스타그램 바로가기" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer"
-                class="footer-sns--facebook">
-                <img src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="컬리 페이스북 바로가기" />
-              </a>
-            </li>
-            <li>
-              <a href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer"
-                class="footer-sns--blog"><img src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
-                  alt="컬리 네이버블로그 바로가기" />
-              </a>
-            </li>
-            <li>
-              <a href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer"
-                class="footer-sns--naverpost"><img src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
-                  alt="컬리 네이버포스트 바로가기" /></a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" target="_blank" rel="noreferrer"
-                class="footer-sns--youtube"><img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
-                  alt="컬리 유튜브 바로가기" /></a>
-            </li>
+            <a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer" class="footer-sns--instagram">
+              <img src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="컬리 인스타그램 바로가기" /></a><a
+              href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer" class="footer-sns--facebook">
+              <img src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="컬리 페이스북 바로가기" /></a><a
+              href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer" class="footer-sns--blog"><img
+                src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="컬리 네이버블로그 바로가기" /></a><a
+              href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer"
+              class="footer-sns--naverpost"><img src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
+                alt="컬리 네이버포스트 바로가기" /></a><a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
+              target="_blank" rel="noreferrer" class="footer-sns--youtube"><img
+                src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="컬리 유튜브 바로가기" /></a>
           </ul>
         </div>
       </div>
       <div class="footer-item--second">
         <button type="button" class="footer--first-button">
-          <img src="https://res.kurly.com/pc/ico/2208/logo_isms.svg" alt="isms 로고" class="footer-item-second-img"
-            width="45px" height="45px" />
-          <span class="footer-item-second-text">
+          <img src="https://res.kurly.com/pc/ico/2208/logo_isms.svg" alt="isms 로고" class="footer-item-second-img" />
+          <p class="footer-item-second-text">
             [인증범위] 컬리 쇼핑몰 서비스 개발·운영<br />(심사받지 않은 물리적
             인프라 제외)<br />[유효기간] 2022.01.19 ~ 2025.01.18
-          </span>
+          </p>
         </button>
         <button type="button" class="footer--first-button">
           <img src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg" alt="eprivacy plus 로고"
-            class="footer-item-second-img" width="45px" height="45px" />
-          <span class="footer-item-second-text">
+            class="footer-item-second-img" />
+          <p class="footer-item-second-text">
             개인정보보호 우수 웹사이트 ·<br />개인정보처리시스템 인증
             (ePRIVACY PLUS)
-          </span>
+          </p>
         </button>
         <button type="button" class="footer--first-button">
           <img src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg" alt="payments 로고"
-            class="footer-item-second-img" width="105px" height="30px" />
-          <span class="footer-item-second-text">
+            class="footer-item-second-img" />
+          <p class="footer-item-second-text">
             토스페이먼츠 구매안전(에스크로)<br />서비스를 이용하실 수
             있습니다.
-          </span>
+          </p>
         </button>
         <button type="button" class="footer--first-button">
-          <img src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg" alt="우리은행 로고" class="footer-item-second-img"
-            width="45px" height="45px" />
-          <span class="footer-item-second-text">
+          <img src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg" alt="우리은행 로고"
+            class="footer-item-second-img" />
+          <p class="footer-item-second-text">
             고객님이 현금으로 결제한 금액에 대해 우리은행과<br />채무지급보증
             계약을 체결하여 안전거래를 보장하고<br />있습니다.
-          </span>
+          </p>
         </button>
       </div>
     </div>
