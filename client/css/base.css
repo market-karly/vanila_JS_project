@@ -22,6 +22,7 @@ body {
   color: var(--content);
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
+  margin: 0 auto;
 }
 
 /* layout */
