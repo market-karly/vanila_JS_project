@@ -11,29 +11,27 @@ html {
 
 /* 링크 스타일 */
 a {
-  color: inherit;
+  color: #000000;
   text-decoration: none;
 }
 
 /* 본문 스타일 */
 body {
+  width: 120rem;
   font-size: 1rem;
   color: var(--content);
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
 }
 
 /* layout */
 .header,
 .footer {
-  width: 100vw;
+  width: 100%;
 }
 
 .main {
-  width: 1050px;
+  width: 65.625rem;
   margin: 0 auto;
 }
 

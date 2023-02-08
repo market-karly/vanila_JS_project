@@ -1,13 +1,13 @@
 .popup-box {
   z-index: 100;
   position: absolute;
-  left: 50vw;
-  transform: translateX(-55%);
-  top: 247px;
-  width: 440px;
-  height: 672px;
-  border-radius: 16px 16px;
-  box-shadow: 0 0 30px 1px rgba(0,0,0,0.2);
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 27.5rem;
+  height: 42rem;
+  border-radius: 1rem 1rem;
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.2);
 }
 
 .popup-image {
