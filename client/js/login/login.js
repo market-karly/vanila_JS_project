@@ -1,6 +1,7 @@
 import { getNode, insertLast, clearContents, parse } from "../../lib/index.js";
 
 const loginBtn = getNode(".login--form-button");
+const registerBtn = getNode(".login--mv-signUp");
 const alertWindow = getNode(".alert");
 const alertBackground = getNode(".alert--background");
 const alertWarning = getNode(".alert--warning");
@@ -25,6 +26,10 @@ const onGoHomeHandler = () => {
   window.location.href = "http://localhost:5500";
 };
 
+const onGoRegisterHandler = () => {
+  window.location.href = "http://localhost:5500/register.html";
+};
+
 const checkingUser = async (userId, userPw) => {
   try {
     let response = await parse.get("http://localhost:3000/users");
@@ -32,7 +37,7 @@ const checkingUser = async (userId, userPw) => {
     let currentUser = userData.find((user) => user.id === userId);
     if (currentUser?.password === userPw) {
       window.localStorage.clear();
-      localStorage.setItem('user', JSON.stringify(currentUser));
+      localStorage.setItem("user", JSON.stringify(currentUser));
       console.log("로그인 완료!");
       onGoHomeHandler();
     } else {
@@ -57,3 +62,4 @@ const onLoginHandler = (e) => {
 
 loginBtn.addEventListener("click", onLoginHandler);
 alertConfirm.addEventListener("click", onCloseAlertHandler);
+registerBtn.addEventListener("click", onGoRegisterHandler);

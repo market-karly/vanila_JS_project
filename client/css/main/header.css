@@ -1,5 +1,5 @@
 .is-active {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 /* 상위 배너 */
@@ -74,6 +74,9 @@
   font-weight: 600;
   font-size: var(--text-md);
 }
+.header--main a {
+  color: var(--gray-400);
+}
 
 .header--main-link-list::after {
   content: "";
@@ -134,6 +137,9 @@
 }
 
 /* 헤더 멤버스 */
+.header--member-register.is-display-none {
+  display: none;
+}
 .header--member {
   order: -1;
   justify-content: end;
@@ -224,9 +230,10 @@
   font-weight: 600;
   font-size: var(--text-base);
 }
-
 .header--nav-sub-menu li:hover {
   background-color: var(--gray-100);
+}
+.header--nav-sub-menu li:hover a {
   color: var(--primary);
 }
 
