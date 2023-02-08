@@ -1,29 +1,16 @@
-import {
-  renderProduct,
-  renderSaleProduct,
-  getNode,
-  parse,
-} from "../lib/index.js";
+import { renderProduct, renderSaleProduct, getNode } from "../../lib/index.js";
 
-const productContainer = getNode(".product-list");
+const productContainer = getNode(".product-brief-list");
 
-async function rendingProductList() {
+export async function rendingProductList(item) {
   try {
-    let response = await parse.get("http://localhost:3000/products");
-    let productData = response.data;
-    console.log(productData);
-
-    productData.forEach((data) => {
-      if (data.saleRatio === 0) {
-        renderProduct(productContainer, data);
-      } else if (data.saleRatio !== 0) {
-        console.log(data.saleRatio);
-        renderSaleProduct(productContainer, data);
-      }
-    });
-  } catch (err) {
+    const resultData = item;
+    if (resultData.saleRatio === 0) {
+      renderProduct(productContainer, resultData);
+    } else {
+      renderSaleProduct(productContainer, resultData);
+    }
+  } catch {
     console.log("error");
   }
 }
-
-rendingProductList();

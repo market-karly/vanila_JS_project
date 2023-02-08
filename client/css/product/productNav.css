@@ -25,7 +25,7 @@ button {
   position: sticky;
   top: 0px;
   display: flex;
-  z-index: 10;
+  z-index: 100;
   background-color: var(--white);
   justify-content: space-between;
   align-items: center;
@@ -137,7 +137,6 @@ button {
   position: absolute;
   left: 0;
   bottom: -3px;
-  z-index: 10;
   appearance: none;
 }
 
@@ -149,20 +148,11 @@ button {
   z-index: 5;
 }
 
-/* .nav-menu_ul-list input[type="checkbox"] + label::before {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  z-index: 5;
-  content: "";
-  position: absolute;
-} */
-
 .nav-menu_ul-list input[type="checkbox"]:checked + label {
   background: url("../../assets/icons/Icon/checked-box-round.svg") no-repeat 0
     0px;
   background-size: 19px 19px;
-  background-position: 3px;
+  background-position: 3px bottom;
   z-index: 18;
 }
 

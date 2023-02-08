@@ -5,19 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="preload"
+      type="text/css"
       as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+      onload="rel='stylesheet'"
     />
     <link rel="stylesheet" type="text/css" href="./css/product.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/product.js" type="module"></script>
+    <script src="./js/main/header.js" type="module"></script>
+    <script src="./js/login/status.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
 
@@ -26,7 +26,12 @@
       <div class="banner--inner">
         <p>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</p>
         <button type="button" class="banner--close-btn">
-          <img src="./assets/icons/Icon/banner-close.svg" alt="닫기 버튼" />
+          <img
+            src="./assets/icons/Icon/banner-close.svg"
+            width="42"
+            height="42"
+            alt="닫기 버튼"
+          />
         </button>
       </div>
     </div>
@@ -39,6 +44,8 @@
               <img
                 src="./assets/icons/Icon/header-logo.svg"
                 alt="마켓칼리 로고"
+                width="82"
+                height="42"
                 class="header--main-logo"
               />
             </a>
@@ -71,6 +78,8 @@
                   <button type="submit" class="form-group-button">
                     <img
                       src="./assets/icons/Icon/header-search.svg"
+                      width="19"
+                      height="19"
                       alt="검색하기"
                     />
                   </button>
@@ -82,27 +91,39 @@
             <a href="#"
               ><img
                 src="./assets/icons/Icon/header-location.svg"
+                width="36"
+                height="36"
                 alt="지역 로고"
             /></a>
 
             <a href="#"
-              ><img src="./assets/icons/Icon/header-heart.svg" alt="찜하기"
+              ><img
+                src="./assets/icons/Icon/header-heart.svg"
+                width="36"
+                height="36"
+                alt="찜하기"
             /></a>
 
             <a href="#"
-              ><img src="./assets/icons/Icon/header-cart.svg" alt="장바구니"
+              ><img
+                src="./assets/icons/Icon/header-cart.svg"
+                alt="장바구니"
+                width="36"
+                height="36"
             /></a>
           </div>
         </div>
 
         <ul class="header--member">
           <li><a href="#" class="is-active">회원가입</a></li>
-          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html" class="is-login"></a></li>
           <li>
             <a href="#"
               >고객센터
               <img
                 src="./assets/icons/Icon/header-down.svg"
+                width="8"
+                height="7"
                 alt="드롭다운 아이콘"
             /></a>
           </li>
@@ -120,6 +141,8 @@
                 >
                   <img
                     src="./assets/icons/Icon/header-hamburger.svg"
+                    width="16"
+                    height="14"
                     alt="메뉴 아이콘"
                     class="header--nav-hamburger"
                   />
@@ -130,175 +153,137 @@
                     <a href="#"
                       ><img
                         src="./assets/main/icon/menu1.svg"
+                        width="24"
+                        height="24"
                         alt="메뉴 아이콘"
                       />선물하기</a
                     >
                   </li>
                   <li>
                     <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu2.svg"
-                        alt="메뉴 아이콘"
-                      />채소</a
+                      ><img src="./assets/main/icon/menu2.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />채소</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu3.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />과일 · 견과 · 쌀</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu4.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />수산 · 해산 · 건어물</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu5.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />정육 · 계란</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu6.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />국 · 반찬 · 메인요리</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu7.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />샐러드 · 간편식</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu8.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />면 · 양념 · 오일</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu9.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />생수 · 음료 · 우유 ·
+                      커피</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu10.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />간식 · 과자 · 떡</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu11.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />베이커리 · 치즈 · 델리</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu12.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />건강식품</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu13.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />와인</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu14.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />전통주</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu15.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />생활용품 · 리빙 · 캠핑</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu16.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />스킨케어 · 메이크업</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu17.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />헤어 · 바디 · 구강</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu18.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />주방용품</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu19.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />가전제품</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu20.svg" width="24"
+                      height="24 alt="메뉴 아이콘" />반려동물</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./assets/main/icon/menu21.svg" width="24"
+                      height="24 alt="메뉴 아이콘" /> 베이비 · 키즈 · 완구</a
                     >
                   </li>
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu3.svg"
-                        alt="메뉴 아이콘"
-                      />과일 · 견과 · 쌀</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu4.svg"
-                        alt="메뉴 아이콘"
-                      />수산 · 해산 · 건어물</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu5.svg"
-                        alt="메뉴 아이콘"
-                      />정육 · 계란</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu6.svg"
-                        alt="메뉴 아이콘"
-                      />국 · 반찬 · 메인요리</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu7.svg"
-                        alt="메뉴 아이콘"
-                      />샐러드 · 간편식</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu8.svg"
-                        alt="메뉴 아이콘"
-                      />면 · 양념 · 오일</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu9.svg"
-                        alt="메뉴 아이콘"
-                      />생수 · 음료 · 우유 · 커피</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu10.svg"
-                        alt="메뉴 아이콘"
-                      />간식 · 과자 · 떡</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu11.svg"
-                        alt="메뉴 아이콘"
-                      />베이커리 · 치즈 · 델리</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu12.svg"
-                        alt="메뉴 아이콘"
-                      />건강식품</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu13.svg"
-                        alt="메뉴 아이콘"
-                      />와인</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu14.svg"
-                        alt="메뉴 아이콘"
-                      />전통주</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu15.svg"
-                        alt="메뉴 아이콘"
-                      />생활용품 · 리빙 · 캠핑</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu16.svg"
-                        alt="메뉴 아이콘"
-                      />스킨케어 · 메이크업</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu17.svg"
-                        alt="메뉴 아이콘"
-                      />헤어 · 바디 · 구강</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu18.svg"
-                        alt="메뉴 아이콘"
-                      />주방용품</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu19.svg"
-                        alt="메뉴 아이콘"
-                      />가전제품</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu20.svg"
-                        alt="메뉴 아이콘"
-                      />반려동물</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu21.svg"
-                        alt="메뉴 아이콘"
-                      />
-                      베이비 · 키즈 · 완구</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./assets/main/icon/menu22.svg"
+                        src="./assets/main/icon/menu22.svg" width="24" height="24"
                         alt="메뉴 아이콘"
                       />여행 · 티켓</a
                     >
@@ -346,6 +331,8 @@
                 <span>카테고리</span>
                 <img
                   src="./assets/icons/Icon/arrow-no-background.png"
+                  width="18"
+                  height="20"
                   name="카테고리 버튼"
                   class="nav-menu_category-svg"
                   alt="카테고리 닫힘 상태"
@@ -353,70 +340,120 @@
               </button>
               <ul class="nav-menu_ul">
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" name="checkbox" id="check-box" />
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    id="check-box"
+                    value="과일·견과·쌀"
+                  />
                   <label for="check-box">
                     과일·견과·쌀
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box2" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box2"
+                    name="checkbox"
+                    value="간식·과자·떡"
+                  />
                   <label for="check-box2">
                     간식·과자·떡
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box3" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box3"
+                    name="checkbox"
+                    value="국·반찬·메인요리"
+                  />
                   <label for="check-box3">
                     국·반찬·메인요리
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box4" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box4"
+                    name="checkbox"
+                    value="면·양념·오일"
+                  />
                   <label for="check-box4">
                     면·양념·오일
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box5" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box5"
+                    name="checkbox"
+                    value="건강식품"
+                  />
                   <label for="check-box5">
                     건강식품
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box6" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box6"
+                    name="checkbox"
+                    value="샐러드·간편식"
+                  />
                   <label for="check-box6">
                     샐러드·간편식
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box7" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box7"
+                    name="checkbox"
+                    value="수산·해산·건어물"
+                  />
                   <label for="check-box7">
                     수산·해산·건어물
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box8" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box8"
+                    name="checkbox"
+                    value="헤어·바디·구강"
+                  />
                   <label for="check-box8">
                     헤어·바디·구강
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box9" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box9"
+                    name="checkbox"
+                    value="생수·음료·우유·커피"
+                  />
                   <label for="check-box9">
                     생수·음료·우유·커피
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box10" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box10"
+                    name="checkbox"
+                    value="생활용품·리빙·캠핑"
+                  />
                   <label for="check-box10">
                     생활용품·리빙·캠핑
                     <span class="ul-list_count">0</span>
@@ -427,6 +464,8 @@
                     카테고리 더보기
                     <img
                       src="./assets/icons/Icon/arrow-no-background.png"
+                      width="18"
+                      height="20"
                       alt="카테고리 더보기 닫힘 상태"
                     />
                   </a>
@@ -439,6 +478,8 @@
                 <span>브랜드</span>
                 <img
                   src="./assets/icons/Icon/arrow-no-background.png"
+                  width="18"
+                  height="20"
                   name="브랜드 버튼"
                   alt="브랜드 메뉴 닫힘 상태"
                   class="nav-menu_brand-svg"
@@ -446,70 +487,120 @@
               </button>
               <ul class="nav-menu_ul2">
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box11" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box11"
+                    name="checkbox"
+                    value="네이쳐패스"
+                  />
                   <label for="check-box11">
                     네이쳐패스
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box12" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box12"
+                    name="checkbox"
+                    value="조선호텔"
+                  />
                   <label for="check-box12">
                     조선호텔
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box13" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box13"
+                    name="checkbox"
+                    value="피쿠알리아"
+                  />
                   <label for="check-box13">
                     피쿠알리아
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box14" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box14"
+                    name="checkbox"
+                    value="고디바"
+                  />
                   <label for="check-box14">
                     고디바
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box15" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box15"
+                    name="checkbox"
+                    value="연세우유"
+                  />
                   <label for="check-box15">
                     연세우유
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box16" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box16"
+                    name="checkbox"
+                    value="일리윤"
+                  />
                   <label for="check-box16">
                     일리윤
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box17" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box17"
+                    name="checkbox"
+                    value="우주"
+                  />
                   <label for="check-box17">
                     우주
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box18" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box18"
+                    name="checkbox"
+                    value="빕스"
+                  />
                   <label for="check-box18">
                     빕스
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box19" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box19"
+                    name="checkbox"
+                    value="그래놀라 하우스"
+                  />
                   <label for="check-box19">
                     그래놀라 하우스
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box20" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box20"
+                    name="checkbox"
+                    value="그리츠 시그니처 램"
+                  />
                   <label for="check-box20">
                     그리츠 시그니처 램
                     <span class="ul-list_count">0</span>
@@ -520,6 +611,8 @@
                     브랜드 더보기
                     <img
                       src="./assets/icons/Icon/arrow-no-background.png"
+                      width="18"
+                      height="20"
                       alt="브랜드 더보기 닫힘 상태"
                     />
                   </a>
@@ -532,6 +625,8 @@
                 <span>가격</span>
                 <img
                   src="./assets/icons/Icon/arrow-no-background.png"
+                  width="18"
+                  height="20"
                   name="가격 버튼"
                   class="nav-menu_price-svg"
                   alt="가격메뉴 닫힘 상태"
@@ -539,28 +634,48 @@
               </button>
               <ul class="nav-menu_ul3">
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box21" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box21"
+                    name="checkbox"
+                    value="5,950원 미만"
+                  />
                   <label for="check-box21">
                     5,950원 미만
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box22" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box22"
+                    name="checkbox"
+                    value="5,950원~9,900원"
+                  />
                   <label for="check-box22">
                     5,950원~9,900원
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box23" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box23"
+                    name="checkbox"
+                    value="9,900원~14,900원"
+                  />
                   <label for="check-box23">
                     9,900원~14,900원
                     <span class="ul-list_count">0</span>
                   </label>
                 </li>
                 <li class="nav-menu_ul-list">
-                  <input type="checkbox" id="check-box24" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="check-box24"
+                    name="checkbox"
+                    value="14,900원 이상d"
+                  />
                   <label for="check-box24">
                     14,900원 이상
                     <span class="ul-list_count">0</span>
@@ -607,7 +722,34 @@
           </div>
           <!-- //정렬기능  -->
           <!-- 상품 리스트 -->
-          <ul class="product-list"></ul>
+          <ul class="product-brief-list"></ul>
+
+          <!-- 페이지네이션 -->
+          <div class="list-pagination__wrapper">
+            <ul class="product-list-pagination">
+              <li
+                class="list-pagination__but list-pagination__img list-pagination__left"
+              >
+                <img
+                  src="./assets/product/page-left.webp"
+                  width="18"
+                  height="18"
+                  alt="페이지 왼쪽 이동"
+                />
+              </li>
+
+              <li
+                class="list-pagination__but list-pagination__img list-pagination__right"
+              >
+                <img
+                  src="./assets/product/page-right.webp"
+                  width="18"
+                  height="18"
+                  alt="페이지 오른쪽 이동"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -730,7 +872,7 @@
                   class="footer-sns--instagram"
                 >
                   <img
-                    src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
+                    src="./assets/icons/Icon/icon-instagram.png"
                     alt="컬리 인스타그램 바로가기"
                   />
                 </a>
@@ -743,7 +885,7 @@
                   class="footer-sns--facebook"
                 >
                   <img
-                    src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
+                    src="./assets/icons/Icon/icon-fb.png"
                     alt="컬리 페이스북 바로가기"
                   />
                 </a>
@@ -755,7 +897,7 @@
                   rel="noreferrer"
                   class="footer-sns--blog"
                   ><img
-                    src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
+                    src="./assets/icons/Icon/icon-blog.png"
                     alt="컬리 네이버블로그 바로가기"
                   />
                 </a>
@@ -767,7 +909,7 @@
                   rel="noreferrer"
                   class="footer-sns--naverpost"
                   ><img
-                    src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
+                    src="./assets/icons/Icon/icon-naverpost.png"
                     alt="컬리 네이버포스트 바로가기"
                 /></a>
               </li>
@@ -778,7 +920,7 @@
                   rel="noreferrer"
                   class="footer-sns--youtube"
                   ><img
-                    src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
+                    src="./assets/icons/Icon/icon-youtube.png"
                     alt="컬리 유튜브 바로가기"
                 /></a>
               </li>
@@ -788,9 +930,11 @@
         <div class="footer-item--second">
           <button type="button" class="footer--first-button">
             <img
-              src="https://res.kurly.com/pc/ico/2208/logo_isms.svg"
+              src="./assets/icons/Icon/logo-isms.svg"
               alt="isms 로고"
               class="footer-item-second-img"
+              width="45px"
+              height="45px"
             />
             <span class="footer-item-second-text">
               [인증범위] 컬리 쇼핑몰 서비스 개발·운영<br />(심사받지 않은 물리적
@@ -799,9 +943,11 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg"
+              src="./assets/icons/Icon/logo-privacy.svg"
               alt="eprivacy plus 로고"
               class="footer-item-second-img"
+              width="45px"
+              height="45px"
             />
             <span class="footer-item-second-text">
               개인정보보호 우수 웹사이트 ·<br />개인정보처리시스템 인증
@@ -810,9 +956,11 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg"
+              src="./assets/icons/Icon/logo-tosspayments.svg"
               alt="payments 로고"
               class="footer-item-second-img"
+              width="105px"
+              height="30px"
             />
             <span class="footer-item-second-text">
               토스페이먼츠 구매안전(에스크로)<br />서비스를 이용하실 수
@@ -821,9 +969,11 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg"
+              src="./assets/icons/Icon/logo-wooriBank.svg"
               alt="우리은행 로고"
               class="footer-item-second-img"
+              width="45px"
+              height="45px"
             />
             <span class="footer-item-second-text">
               고객님이 현금으로 결제한 금액에 대해 우리은행과<br />채무지급보증
