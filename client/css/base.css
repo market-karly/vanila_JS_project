@@ -1,0 +1,51 @@
+/* 기본 스타일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* 링크 스타일 */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* 본문 스타일 */
+body {
+  width: 120rem;
+  font-size: 1rem;
+  color: var(--content);
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+/* layout */
+.header,
+.footer {
+  width: 100%;
+}
+
+.main {
+  width: 65.625rem;
+  margin: 0 auto;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}

@@ -30,21 +30,7 @@ module.exports = {
     "max-depth": [
       "error",
       {
-        max: 1,
-      },
-    ],
-    // 삼항연산자를 허용하지 않는다
-    "no-unneeded-ternary": [
-      "error",
-      {
-        defaultAssignment: false,
-      },
-    ],
-    // console.log 는 사용할 수 없다
-    "no-console": [
-      "warn",
-      {
-        allow: ["warn", "error"],
+        max: 2,
       },
     ],
   },

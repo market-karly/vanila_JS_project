@@ -1,0 +1,89 @@
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-list-wrapper {
+  width: 783px;
+}
+
+.product {
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.product-brief-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 24px;
+  margin-top: 40px;
+}
+
+.product-brief__container {
+  display: block;
+  height: 580px;
+  margin-left: 12px;
+}
+
+.product-brief__img {
+  width: 249px;
+  height: 320px;
+}
+
+/* 샛별배송 */
+.badge_faster {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--gray-400);
+  margin-bottom: var(--spacing-xs);
+}
+
+.product-brief__info .is-hidden {
+  display: none;
+}
+
+/* 제품설명 */
+.product-brief__description {
+  display: inline-block;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--text-sm);
+  line-height: 18px;
+  color: var(--gray-400);
+}
+
+/* review */
+.product-brief__review {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.review__img {
+  width: 12px;
+  margin-right: 3px;
+}
+
+/* badge */
+.product-brief__badge {
+  margin-bottom: var(--spacing-xs);
+}
+
+.badge {
+  background-color: var(--gray-100);
+  padding: 4px;
+  margin-right: 8px;
+  border-radius: 10%;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.badge__karly-only {
+  color: var(--primary);
+}
