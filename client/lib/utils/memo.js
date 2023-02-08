@@ -1,12 +1,6 @@
 
-
-
-
-
-
-
 export const memo = (() => {
-  const cache = {}
+  const cache = {};
 
   return (key,callback) => {
     if(!callback) return cache[key];
@@ -19,25 +13,8 @@ export const memo = (() => {
     cache[key] = callback();
   
     // console.log(cache);
-  }
-})()
-
-
-
-memo('name',()=>'tiger')
-// memo('name')
-
-// console.log(memo('name',()=>'tttt'));
-
-
-
-
-// memo()('cube',()=> document.querySelector('#cube'));
-
-
-
-// console.log( memo()('cube') );
-
+  };
+})();
 
 
 
