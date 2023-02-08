@@ -1,13 +1,12 @@
 .detail {
   width: 100vw;
 }
-.detail--inner{
+.detail--inner {
   width: var(--container-width);
   display: flex;
   flex-flow: row nowrap;
   margin: 40px auto;
   gap: 90px;
-
 }
 .detail--image img {
   width: 400px;
@@ -195,4 +194,374 @@
   font-size: var(--text-base);
   font-weight: 600;
   line-height: 150%;
+}
+
+/* 하단 상세페이지 부분 */
+.detail-inner-ver2 {
+  width: var(--container-width);
+  margin: 48px auto;
+}
+.detail-menu-anchor {
+  display: flex;
+  flex-flow: row nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.detail-menu-anchor a {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 262.25px;
+  height: 54px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--gray-50);
+  font-size: var(--text-base);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-information h3,
+.detail-reviews h3,
+.detail-inquiry h3 {
+  scroll-margin-top: 60px;
+}
+.detail-menu-anchor .is-active-a {
+  background-color: var(--white);
+  color: var(--primary);
+  border-width: 1px 1px 0px 1px;
+  border-color: var(--gray-100);
+}
+.detail-menu-anchor a span {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+/* 상품 설명 */
+.detail-information {
+  margin-top: 40px;
+}
+.detail-information-fig {
+  margin-top: 76px;
+}
+.detail-information-mini-title,
+.detail-information-title {
+  text-align: center;
+  color: var(--black);
+}
+.detail-information-mini-title {
+  font-size: 1.7769rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+.detail-information-title {
+  font-size: 3.1573rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.detail-information-desc {
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 160%;
+  margin: 64px 0 96px 0;
+}
+/* 상세정보 */
+.detail-information-karly {
+  font-size: 1.7769rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+  margin-top: 72px;
+}
+/* 후기 */
+.detail-reviews {
+  margin-top: 136px;
+  position: relative;
+}
+.detail-reviews-announcement,
+.detail-inquiry-announcement {
+  margin-bottom: 56px;
+}
+.detail-reviews-announcement li,
+.detail-inquiry-announcement li {
+  color: var(--gray-500);
+  font-size: 12.003px;
+  font-weight: 600;
+}
+.detail-reviews-announcement li::before,
+.detail-inquiry-announcement li::before {
+  content: "•";
+  font-size: 108%;
+  padding: 0 5px;
+}
+.detail-reviews h3 {
+  font-size: 1.7769rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+.detail-reviews-announcement-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 150%;
+}
+.detail-reviews-add-button {
+  background-color: var(--primary);
+  color: var(--white);
+  width: 155px;
+  height: 44px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: var(--text-base);
+  line-height: 150%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.detail-reviews-gather-sort {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-reviews-gather-sort p {
+  flex-grow: 1;
+  font-size: 12.003px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.detail-reviews-gather-sort button {
+  padding: 4px;
+  gap: 4px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--gray-300);
+}
+.detail-reviews-gather-sort button.is-active-btn {
+  color: var(--content);
+}
+.detail-reviews-gather-board {
+  margin-top: var(--spacing-base);
+  border-top: 1px solid var(--black);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.detail-reviews-gather-board-notice li {
+  height: 58px;
+  line-height: 58px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-100);
+}
+.detail-reviews-gather-board-notice a {
+  font-size: var(--text-base);
+  font-weight: 600;
+  width: 100%;
+}
+.detail-reviews-gather-board-notice a::before,
+.detail-inquiry-post-title.is-notice::before {
+  content: "공지";
+  width: 37px;
+  height: 18px;
+  padding: 0 8px;
+  background-color: var(--gray-100);
+  border-radius: 1px;
+  font-size: 12.003px;
+  margin: 0 20px;
+}
+.detail-reviews-gather-board-post li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 82px;
+  padding: 20px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.detail-reviews-user {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+.detail-user-best-badge {
+  background-color: var(--secondary);
+  border-radius: 1px;
+  color: var(--white);
+  width: 48px;
+  height: 18px;
+  font-size: 12.003px !important;
+  line-height: 150%;
+  text-align: center;
+}
+.detail-user-level-badge {
+  border: 1px solid var(--primary);
+  border-radius: 1px;
+  color: var(--primary);
+  width: 37px;
+  height: 18px;
+  font-size: 12.003px;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 600;
+}
+.detail-user-name {
+  font-size: 12.003px;
+  line-height: 150%;
+  font-weight: 600;
+}
+.detail-reviews-review {
+  font-size: 12.003px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  flex-shrink: 1;
+  flex-grow: 2;
+}
+.detail-reviews-product-name,
+.detail-reviews-date {
+  font-size: 12.003px !important;
+  color: var(--gray-400);
+  font-weight: 600;
+  line-height: 150%;
+}
+.detail-reviews-text {
+  color: var(--black);
+  font-weight: 500;
+}
+.detail-reviews-page-buttons,
+.detail-inquiry-page-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px auto;
+}
+.detail-reviews-page-buttons button,
+.detail-inquiry-page-buttons button {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gray-100);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* 상품문의 */
+.detail-inquiry {
+  margin-top: 72px;
+  position: relative;
+}
+.detail-inquiry h3 {
+  font-size: 1.7769rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+.detail-inquiry-add-button {
+  background-color: var(--primary);
+  color: var(--white);
+  width: 155px;
+  height: 44px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: var(--text-base);
+  line-height: 150%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.detail-inquiry-table {
+  width: 1050px;
+}
+.detail-inquiry-table thead {
+  border-width: 2px 0px 1px 0px;
+  border-style: solid;
+  border-color: var(--black);
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+.detail-inquiry-table tbody {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+}
+.detail-inquiry-table tbody td {
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: var(--gray-400);
+}
+.detail-inquiry-table tbody tr {
+  border-bottom: 1px solid var(--gray-100);
+}
+.detail-inquiry-post-title.is-notice::before {
+  margin: 0 20px 0 0;
+}
+.detail-inquiry-table tbody .detail-inquiry-post-title {
+  color: var(--content);
+  text-align: start;
+  padding-left: 20px;
+}
+.detail-inquiry-table tbody .detail-inquiry-post-title.is-secret {
+  color: var(--gray-400);
+}
+.detail-inquiry-secret-lock {
+  margin-left: 20px;
+}
+.detail-inquiry-table tbody td.is-complete {
+  color: var(--primary);
+}
+
+.detail-inquiry-post-summary {
+  text-align: left;
+  background-color: var(--gray-50);
+}
+.detail-inquiry-post-summary td{
+  padding: 20px;
+}
+.detail-inquiry-post-summary-q,
+.detail-inquiry-post-summary-a {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  margin: 40px auto;
+}
+.question-badge,
+.answer-badge {
+  background-color: var(--secondary);
+  border-radius: 50%;
+  flex-basis: 24px !important;
+  height: 24px;
+  text-align: center;
+  font-size: 12.003px;
+  line-height: 24px;
+  color: var(--white);
+  margin-right:20px;
+  flex-shrink: 0;
+}
+.answer-badge {
+  background-color: var(--primary);
+}
+
+.detail-inquiry-post-summary-q-text,
+.detail-inquiry-post-summary-a-text {
+  color: var(--content);
+  line-height: 160%;
+  text-align: justify;
+}
+
+.detail-inquiry-post-date {
+  padding-left: 44px;
+  margin-top: -30px;
 }
