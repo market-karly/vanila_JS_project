@@ -1,25 +1,20 @@
 <h1><img src="https://user-images.githubusercontent.com/104200167/217735903-164f261d-d227-4e04-9acb-7973933afa67.png" width="30" height="30"/>
 마켓칼리</h1>
 
-<p align="center">
-  <br>
-  <img src="" />
-  <br>
-</p>
-
-목차
-
 ## 프로젝트 소개
 
-<p align="justify">
-프로젝트 개요/동기
-</p>
-
-<p align="center">
-GIF Images
-</p>
+- 🦁 멋쟁이 사자처럼 프론트엔드 4기 바닐라 자바스크립트로 진행한 팀 프로젝트입니다.
+- 🛒 제공된 시안을 토대로 요구사항을 정의하고 팀원들과 토의하여 백로그를 작성하여 작업하였습니다.
+- 🛍️ 본 프로젝트는 자바스크립트만 사용하여 마켓컬리 디자인을 클론코딩한 프로젝트입니다.
 
 <br>
+
+## 팀원 구성 및 역할
+- 🙋🏻‍♀️ 김성은 : 데이터 관리 [🔗GitHub](https://github.com/sungeunnn) 
+- 🙋🏼‍♂️ 백승연 : 페이지 관리 담당 [🔗GitHub](https://github.com/qorbaxk)
+- 🙋🏼‍♂️ 윤새한 : 스크럼 마스터 및 성능최적화, 접근성 [🔗GitHub](https://github.com/ovelute53)
+- 🙋🏻‍♀️ 전원근 : 회의록 작성 및 Daily scrum [🔗GitHub](https://github.com/supermantoman)
+- 🙋🏼‍♂️ 전하준 : 최종 코드 리뷰어 [🔗GitHub](https://github.com/Majesty-jun)
 
 ## 기술 스택
 
