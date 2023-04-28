@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "build": "^0.1.4",
+    "gh-pages": "^5.0.0",
     "pretendard": "^1.3.6"
-  }
+  },
+  "homepage": "https://market-karly.github.io/vanila_JS_project/"
 }
