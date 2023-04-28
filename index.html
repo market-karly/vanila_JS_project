@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
-    <meta name="description" content="market karly clone site" />
+    <meta name="description" content="market Karly clone site" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-      rel="stylesheet"
+      rel="preload as=style"
+      onload="rel='stylesheet'"
     />
-    <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    <script src="./js/login/login.js" type="module"></script>
-    <title>마켓칼리-로그인페이지</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      rel="preload"
+      as="style"
+      onload="rel='stylesheet'"
+    />
+    <link rel="stylesheet" type="text/css" href="./client/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./client/js/login/status.js" type="module"></script>
+    <script src="./client/js/main.js" type="module"></script>
+    <title>마켓칼리</title>
   </head>
   <body>
     <div class="banner">
@@ -21,7 +30,7 @@
         <p>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</p>
         <button type="button" class="banner--close-btn">
           <img
-            src="./assets/icons/Icon/banner-close.svg"
+            src="./client/assets/icons/Icon/banner-close.svg"
             width="42"
             height="42"
             alt="닫기 버튼"
@@ -29,35 +38,43 @@
         </button>
       </div>
     </div>
+    <div class="popup-box">
+      <a href="#"
+        ><img
+          src="./client/assets/main/popup/popup-image.webp"
+          width="440"
+          height="586"
+          class="popup-image"
+          alt="이벤트 이미지"
+      /></a>
+      <button class="close-during-oneday is-open">오늘 하루 안 보기</button>
+      <button class="close is-open">닫기</button>
+    </div>
     <header class="header">
       <div class="header--inner">
         <div class="header--main">
           <h1 class="a11y-hidden">마켓컬리</h1>
           <div class="header--main-link-list">
-            <a href="../index.html">
+            <a href="./index.html">
               <img
-                src="./assets/icons/Icon/header-logo.svg"
+                src="./client/assets/icons/Icon/header-logo.svg"
+                alt="마켓칼리 로고"
                 width="82"
                 height="42"
-                alt="마켓칼리 로고"
                 class="header--main-logo"
               />
             </a>
-            <a href="../index.html" class="is-active">마켓칼리</a>
+            <a href="./index.html" class="is-active">마켓칼리</a>
             <a href="#">뷰티칼리</a>
             <img
-              src="./assets/icons/Icon/header-new.svg"
+              src="./client/assets/icons/Icon/header-new.svg"
               alt="new 아이콘"
               class="new-badge"
             />
           </div>
           <div>
             <h2 class="a11y-hidden">검색</h2>
-            <form
-              action="http://localhost:3000/users"
-              method="post"
-              class="header--main-search-form"
-            >
+            <form action="#" method="post" class="header--main-search-form">
               <fieldset>
                 <legend>검색 폼</legend>
                 <div class="header--main-search-form-inner">
@@ -75,7 +92,7 @@
                   </div>
                   <button type="submit" class="form-group-button">
                     <img
-                      src="./assets/icons/Icon/header-search.svg"
+                      src="./client/assets/icons/Icon/header-search.svg"
                       width="19"
                       height="19"
                       alt="검색하기"
@@ -88,39 +105,43 @@
           <div class="header--main-icons">
             <a href="#"
               ><img
-                src="./assets/icons/Icon/header-location.svg"
+                src="./client/assets/icons/Icon/header-location.svg"
                 width="36"
                 height="36"
                 alt="지역 로고"
             /></a>
-
             <a href="#"
-              ><img src="./assets/icons/Icon/header-heart.svg" alt="찜하기"
+              ><img
+                src="./client/assets/icons/Icon/header-heart.svg"
+                width="36"
+                height="36"
+                alt="찜하기"
             /></a>
-
             <a href="#"
-              ><img src="./assets/icons/Icon/header-cart.svg" alt="장바구니"
+              ><img
+                src="./client/assets/icons/Icon/header-cart.svg"
+                width="36"
+                height="36"
+                alt="장바구니"
             /></a>
           </div>
         </div>
-
         <ul class="header--member">
           <li class="header--member-register">
-            <a href="./register.html" class="is-active">회원가입</a>
+            <a href="./client/register.html" class="is-active"></a>
           </li>
-          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./client/login.html" class="is-login"></a></li>
           <li>
             <a href="#"
               >고객센터
               <img
-                src="./assets/icons/Icon/header-down.svg"
+                src="./client/assets/icons/Icon/header-down.svg"
                 width="8"
                 height="7"
                 alt="드롭다운 아이콘"
             /></a>
           </li>
         </ul>
-
         <nav class="header--nav">
           <h2 class="a11y-hidden">메인 메뉴</h2>
           <div class="header--nav-menu">
@@ -132,7 +153,7 @@
                   aria-label="카테고리 열기"
                 >
                   <img
-                    src="./assets/icons/Icon/header-hamburger.svg"
+                    src="./client/assets/icons/Icon/header-hamburger.svg"
                     width="16"
                     height="14"
                     alt="메뉴 아이콘"
@@ -144,7 +165,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu1.svg"
+                        src="./client/assets/main/icon/menu1.svg"
                         alt="메뉴 아이콘"
                       />선물하기</a
                     >
@@ -152,7 +173,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu2.svg"
+                        src="./client/assets/main/icon/menu2.svg"
                         alt="메뉴 아이콘"
                       />채소</a
                     >
@@ -160,7 +181,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu3.svg"
+                        src="./client/assets/main/icon/menu3.svg"
                         alt="메뉴 아이콘"
                       />과일 · 견과 · 쌀</a
                     >
@@ -168,7 +189,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu4.svg"
+                        src="./client/assets/main/icon/menu4.svg"
                         alt="메뉴 아이콘"
                       />수산 · 해산 · 건어물</a
                     >
@@ -176,7 +197,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu5.svg"
+                        src="./client/assets/main/icon/menu5.svg"
                         alt="메뉴 아이콘"
                       />정육 · 계란</a
                     >
@@ -184,7 +205,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu6.svg"
+                        src="./client/assets/main/icon/menu6.svg"
                         alt="메뉴 아이콘"
                       />국 · 반찬 · 메인요리</a
                     >
@@ -192,7 +213,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu7.svg"
+                        src="./client/assets/main/icon/menu7.svg"
                         alt="메뉴 아이콘"
                       />샐러드 · 간편식</a
                     >
@@ -200,7 +221,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu8.svg"
+                        src="./client/assets/main/icon/menu8.svg"
                         alt="메뉴 아이콘"
                       />면 · 양념 · 오일</a
                     >
@@ -208,7 +229,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu9.svg"
+                        src="./client/assets/main/icon/menu9.svg"
                         alt="메뉴 아이콘"
                       />생수 · 음료 · 우유 · 커피</a
                     >
@@ -216,7 +237,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu10.svg"
+                        src="./client/assets/main/icon/menu10.svg"
                         alt="메뉴 아이콘"
                       />간식 · 과자 · 떡</a
                     >
@@ -224,7 +245,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu11.svg"
+                        src="./client/assets/main/icon/menu11.svg"
                         alt="메뉴 아이콘"
                       />베이커리 · 치즈 · 델리</a
                     >
@@ -232,7 +253,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu12.svg"
+                        src="./client/assets/main/icon/menu12.svg"
                         alt="메뉴 아이콘"
                       />건강식품</a
                     >
@@ -240,7 +261,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu13.svg"
+                        src="./client/assets/main/icon/menu13.svg"
                         alt="메뉴 아이콘"
                       />와인</a
                     >
@@ -248,7 +269,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu14.svg"
+                        src="./client/assets/main/icon/menu14.svg"
                         alt="메뉴 아이콘"
                       />전통주</a
                     >
@@ -256,7 +277,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu15.svg"
+                        src="./client/assets/main/icon/menu15.svg"
                         alt="메뉴 아이콘"
                       />생활용품 · 리빙 · 캠핑</a
                     >
@@ -264,7 +285,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu16.svg"
+                        src="./client/assets/main/icon/menu16.svg"
                         alt="메뉴 아이콘"
                       />스킨케어 · 메이크업</a
                     >
@@ -272,7 +293,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu17.svg"
+                        src="./client/assets/main/icon/menu17.svg"
                         alt="메뉴 아이콘"
                       />헤어 · 바디 · 구강</a
                     >
@@ -280,7 +301,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu18.svg"
+                        src="./client/assets/main/icon/menu18.svg"
                         alt="메뉴 아이콘"
                       />주방용품</a
                     >
@@ -288,7 +309,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu19.svg"
+                        src="./client/assets/main/icon/menu19.svg"
                         alt="메뉴 아이콘"
                       />가전제품</a
                     >
@@ -296,7 +317,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu20.svg"
+                        src="./client/assets/main/icon/menu20.svg"
                         alt="메뉴 아이콘"
                       />반려동물</a
                     >
@@ -304,7 +325,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu21.svg"
+                        src="./client/assets/main/icon/menu21.svg"
                         alt="메뉴 아이콘"
                       />
                       베이비 · 키즈 · 완구</a
@@ -313,7 +334,7 @@
                   <li>
                     <a href="#"
                       ><img
-                        src="./assets/main/icon/menu22.svg"
+                        src="./client/assets/main/icon/menu22.svg"
                         alt="메뉴 아이콘"
                       />여행 · 티켓</a
                     >
@@ -323,16 +344,16 @@
             </ul>
             <ul class="header--nav-menu-group">
               <li class="header--nav-menu-item">
-                <a href="./product.html"> 신상품 </a>
+                <a href="./client/product.html"> 신상품 </a>
               </li>
               <li class="header--nav-menu-item">
-                <a href="./product.html"> 베스트 </a>
+                <a href="./client/product.html"> 베스트 </a>
               </li>
               <li class="header--nav-menu-item">
-                <a href="./product.html"> 알뜰쇼핑 </a>
+                <a href="./client/product.html"> 알뜰쇼핑 </a>
               </li>
               <li class="header--nav-menu-item">
-                <a href="./product.html"> 특가/혜택 </a>
+                <a href="./client/product.html"> 특가/혜택 </a>
               </li>
             </ul>
             <ul>
@@ -346,45 +367,148 @@
         </nav>
       </div>
     </header>
-    <section class="login">
-      <div class="alert--background"></div>
-      <div class="alert">
-        <p class="alert--warning"></p>
-        <button type="button" class="alert--button is-active">확인</button>
+    <main class="main">
+      <section class="main-banner">
+        <h2 class="a11y-hidden">메인 배너</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="./client/assets/main/banner/banner01.webp"
+                  width="1900"
+                  height="370"
+                  alt="컬리 과일 가게. 앵콜 특가 멜론 9900원. 10월 20일부터 10월 27일까지"
+              /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="./client/assets/main/banner/banner02.webp"
+                  width="1900"
+                  height="370"
+                  alt="한눈에 보는 이달의 카드 혜택. 최대 10% 카드 쿠폰 받기 10월 1일부터 10월 31일까지"
+              /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="./client/assets/main/banner/banner03.webp"
+                  width="1900"
+                  height="370"
+                  alt="컬리 퍼플 위크. 적립률UP + 3종 쿠폰팩, 더 풍성해진 혜택! 10월 24일부터 10월 28일까지"
+              /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="./client/assets/main/banner/banner05.webp"
+                  width="1900"
+                  height="370"
+                  alt="이 주의 특가 한 눈에 보기. 우측 상단 특가, 혜택에서 확인하세요!"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="swiper-button-prev swiper-button main-banner--button-prev"
+          ></div>
+          <div
+            class="swiper-button-next swiper-button main-banner--button-next"
+          ></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="recommend">
+        <h2 class="a11y-hidden">추천상품</h2>
+        <p class="recommend__title">이 상품 어때요?</p>
+        <div class="slider-wrapper">
+          <div class="swiper-recommend--product product-swiper">
+            <div class="swiper-wrapper recommend-product"></div>
+          </div>
+          <div
+            class="swiper-recommend--product--button-prev swiper-recommend-button-prev"
+          ></div>
+          <div
+            class="swiper-recommend--product--button-next swiper-recommend-button-next"
+          ></div>
+        </div>
+      </section>
+      <div class="line-banner">
+        <img
+          src="./client/assets/mainPage/lineBanner/line-banner.webp"
+          width="1050"
+          height="139"
+          alt="적립률 높아지고 3종 쿠폰팩이 제공되는 10월 퍼플위크 배너"
+        />
       </div>
-      <div class="login--inner">
-        <h2 class="login--title">로그인</h2>
-        <form
-          action="http://localhost:3000/users"
-          class="login--form"
-          method="post"
-        >
-          <fieldset>
-            <legend>회원 로그인 폼</legend>
-            <input
-              type="text"
-              id="userId"
-              name="userId"
-              placeholder="아이디를 입력해주세요"
-              required
-            />
-            <input
-              type="password"
-              id="userPw"
-              name="userPw"
-              placeholder="비밀번호를 입력해주세요"
-              required
-            />
-            <button type="submit" class="login--form-button">로그인</button>
-          </fieldset>
-        </form>
-        <button type="button" class="login--mv-signUp">회원가입</button>
-        <ul class="login--find">
-          <li><a href="#">아이디 찾기</a></li>
-          <li><a href="#">비밀번호 찾기</a></li>
-        </ul>
+      <section class="recommend">
+        <h2 class="a11y-hidden">추천할인</h2>
+        <p class="recommend__title">놓치면 후회할 가격</p>
+        <div class="slider-wrapper">
+          <div class="swiper-recommend--price product-swiper">
+            <div class="swiper-wrapper recommend-sale"></div>
+          </div>
+          <div
+            class="swiper-recommend--price--button-prev swiper-recommend-button-prev"
+          ></div>
+          <div
+            class="swiper-recommend--price--button-next swiper-recommend-button-next"
+          ></div>
+        </div>
+      </section>
+      <div class="aside">
+        <div class="aside-bar">
+          <div class="aside-box">
+            <button
+              aria-disabled="true"
+              type="button"
+              title="prev"
+              class="aside-btn"
+            >
+              <svg
+                width="10"
+                height="10"
+                fill="#999999"
+                stroke="#ddd"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                  stroke="#ddd"
+                  stroke-width="1.3"
+                />
+              </svg>
+            </button>
+            <p>최근&nbsp;본&nbsp;상품</p>
+            <div class="aside-img">
+              <ul class="aside-item"></ul>
+            </div>
+            <button
+              aria-disabled="true"
+              type="button"
+              title="next"
+              class="aside-btn"
+            >
+              <svg
+                width="10"
+                height="10"
+                fill="#999999"
+                stroke="#ddd"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  stroke="#ddd"
+                  stroke-width="1.3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-    </section>
+    </main>
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-item--first">
@@ -503,7 +627,7 @@
                   class="footer-sns--instagram"
                 >
                   <img
-                    src="./assets/icons/Icon/icon-instagram.png"
+                    src="./client/assets/icons/Icon/icon-instagram.png"
                     alt="컬리 인스타그램 바로가기"
                   />
                 </a>
@@ -516,7 +640,7 @@
                   class="footer-sns--facebook"
                 >
                   <img
-                    src="./assets/icons/Icon/icon-fb.png"
+                    src="./client/assets/icons/Icon/icon-fb.png"
                     alt="컬리 페이스북 바로가기"
                   />
                 </a>
@@ -528,7 +652,7 @@
                   rel="noreferrer"
                   class="footer-sns--blog"
                   ><img
-                    src="./assets/icons/Icon/icon-blog.png"
+                    src="./client/assets/icons/Icon/icon-blog.png"
                     alt="컬리 네이버블로그 바로가기"
                   />
                 </a>
@@ -540,7 +664,7 @@
                   rel="noreferrer"
                   class="footer-sns--naverpost"
                   ><img
-                    src="./assets/icons/Icon/icon-naverpost.png"
+                    src="./client/assets/icons/Icon/icon-naverpost.png"
                     alt="컬리 네이버포스트 바로가기"
                 /></a>
               </li>
@@ -551,7 +675,7 @@
                   rel="noreferrer"
                   class="footer-sns--youtube"
                   ><img
-                    src="./assets/icons/Icon/icon-youtube.png"
+                    src="./client/assets/icons/Icon/icon-youtube.png"
                     alt="컬리 유튜브 바로가기"
                 /></a>
               </li>
@@ -561,7 +685,7 @@
         <div class="footer-item--second">
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-isms.svg"
+              src="./client/assets/icons/Icon/logo-isms.svg"
               alt="isms 로고"
               class="footer-item-second-img"
               width="45"
@@ -574,7 +698,7 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-privacy.svg"
+              src="./client/assets/icons/Icon/logo-privacy.svg"
               alt="eprivacy plus 로고"
               class="footer-item-second-img"
               width="45"
@@ -587,7 +711,7 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-tosspayments.svg"
+              src="./client/assets/icons/Icon/logo-tosspayments.svg"
               alt="payments 로고"
               class="footer-item-second-img"
               width="105"
@@ -600,7 +724,7 @@
           </button>
           <button type="button" class="footer--first-button">
             <img
-              src="./assets/icons/Icon/logo-wooriBank.svg"
+              src="./client/assets/icons/Icon/logo-wooriBank.svg"
               alt="우리은행 로고"
               class="footer-item-second-img"
               width="45"
